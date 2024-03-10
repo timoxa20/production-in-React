@@ -1,7 +1,6 @@
 {
-  "name": "production-project",
+  "name": "artem",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "webpack server --env port=3000",
@@ -9,7 +8,7 @@
     "build:dev": " webpack --env mode=development"
   },
   "keywords": [],
-  "author": "",
+  "author": "artem",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.19",
@@ -35,5 +34,14 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timoxa20/production-in-React.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timoxa20/production-in-React/issues"
+  },
+  "homepage": "https://github.com/timoxa20/production-in-React#readme",
+  "description": ""
 }
