@@ -35,13 +35,13 @@ export function buildLoader({isDev}: BuildOptions): webpack.RuleSetRule[] {
     };
 
     const fileLoader = {
-            test: /\.(png|jpe?g|gif|woff2|woff)$/i,
-            use: [
-                {
-                    loader: 'file-loader',
-                },
-            ],
-        }
+        test: /\.(png|jpe?g|gif|woff2|woff)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+            },
+        ],
+    }
     return [
         typescripLoader,
         cssLoaders,

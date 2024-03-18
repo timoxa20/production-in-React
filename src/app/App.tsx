@@ -1,11 +1,11 @@
-import React, {Suspense, useContext, useState} from 'react';
+import React, {Suspense} from 'react';
 import './styles/index.scss'
 import {classNames} from "shared/lib/classNames/classNames";
 import {useTheme} from "app/providers/ThemeProvider/lib/useTheme";
 import {AppRouter} from "app/providers/router";
 import {Nawbar} from "widgets/nawbar";
 import {Sidebar} from "widgets/Sidebar";
-import {useTranslation} from "react-i18next";
+
 
 
 const App = () => {
@@ -20,7 +20,6 @@ const App = () => {
                     <AppRouter/>
                 </div>
             </Suspense>
-
         </div>
 
     );
