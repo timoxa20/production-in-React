@@ -1,7 +1,10 @@
 import { useTheme } from "./lib/useTheme";
 import themeProvider from "./ui/ThemeProvider";
+import {Theme} from "./lib/ThemeContext";
 
-export default  {
+
+export {
+    useTheme,
     themeProvider,
-    useTheme
+    Theme
 }
