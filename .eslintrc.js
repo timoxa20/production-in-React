@@ -1,7 +1,8 @@
 module.exports = {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
     "extends": [
         "eslint:recommended",
@@ -38,17 +39,17 @@ module.exports = {
         "indent": [2, 4],
         "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".tsx"] }],
         "import/no-unresolved": 'off',
-        "import/prefer-defaul-export": "off",
+        "import/prefer-default-export": "off",
         'no-unused-vars': 'warn',
         "react/require-default-props": "off",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-props-no-spreading": "warn",
         "react/function-component-definition": "off",
         "no-shadow" : "off",
         "import/extension": "off",
         "import/no-extraneous-dependencies": "off",
         "no_underscore-dangle": "off",
         "react/no-deprecated": "off",
+        'react/jsx-props-no-spreading': 'off',
     },
     globals: {
         '__IS_DEV_': true,
