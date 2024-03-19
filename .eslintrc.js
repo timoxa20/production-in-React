@@ -6,7 +6,8 @@ module.exports = {
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:i18next/recommended"
     ],
     "overrides": [
         {
@@ -28,7 +29,8 @@ module.exports = {
     },
     "plugins": [
         "@typescript-eslint",
-        "react"
+        "react",
+        "i18next"
     ],
     "rules": {
         "react/jsx-indent": [2, 4],
@@ -46,7 +48,7 @@ module.exports = {
         "import/extension": "off",
         "import/no-extraneous-dependencies": "off",
         "no_underscore-dangle": "off",
-        "react/no-deprecated": "off"
+        "react/no-deprecated": "off",
     },
     globals: {
         '__IS_DEV_': true,
