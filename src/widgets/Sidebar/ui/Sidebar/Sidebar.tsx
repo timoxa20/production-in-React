@@ -4,7 +4,6 @@ import React, {useState} from "react";
 import {ThemeSwitchet} from "widgets/ThemeSwitcher";
 import {LangSwitcher} from "shared/ui/LangSwitcher/LangSwitcher";
 import {Button} from "shared/ui/Button/Button";
-import {t} from "i18next";
 
 interface SidebarProps {
     className?: string;
