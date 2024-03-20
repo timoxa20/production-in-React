@@ -2,5 +2,8 @@
   "Тестовый пример": "Test example",
   "Перевод" : "Translate",
   "Язык": "English",
-  "Toggle" : "Toggle"
+  "Toggle" : "Toggle",
+  "Страница не найденна": "Page not found",
+  "Произошла ошибка": "An error has occurred",
+  "Обновить страницу": "Refresh the page"
 }
