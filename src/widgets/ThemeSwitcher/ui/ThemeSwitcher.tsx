@@ -1,15 +1,14 @@
 import {classNames} from "shared/lib/classNames/classNames";
-import React from "react";
 import {useTheme, Theme} from "app/providers/ThemeProvider";
 import IconsLight from 'shared/assets/icons/theme-light.svg'
 import IconsDark from 'shared/assets/icons/theme-dark.svg'
 import {Button, ThemeButton} from "shared/ui/Button/Button";
 
-interface ThemeSwitchetProps {
+interface ThemeSwitcherProps {
     className?: string;
 }
 
-export const ThemeSwitchet = ({className}: ThemeSwitchetProps) => {
+export const ThemeSwitcher = ({className}: ThemeSwitcherProps) => {
     const {theme, toggleTheme} = useTheme()
     return (
         <Button
