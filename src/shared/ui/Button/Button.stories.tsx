@@ -1,7 +1,7 @@
-import type {Meta, StoryObj} from '@storybook/react';
+import type { Meta, StoryObj} from '@storybook/react';
 import {fn} from '@storybook/test';
 import {Button, ThemeButton} from './Button';
-import 'app/styles/index.scss'
+
 const meta = {
     title: 'shared /Button',
     component: Button,
@@ -10,7 +10,7 @@ const meta = {
     },
     tags: ['autodocs'],
     argTypes: {
-        backgroundColor: {control: 'color'},
+
     },
     args: {onClick: fn()},
 } satisfies Meta<typeof Button>;
