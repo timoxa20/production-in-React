@@ -1,8 +1,7 @@
 import type {Preview} from "@storybook/react";
-import {StyleDecorator} from "../../src/shared/config/storybook/StyleDecorator/StyleDecorator";
+import {StyleDecorator as SD} from "../../src/shared/config/storybook/StyleDecorator/StyleDecorator";
 import {ThemeDecorator} from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import {Theme} from "app/providers/ThemeProvider";
-import React from "react";
 import {RouteDecorator} from "shared/config/storybook/RouteDecorator/RouteDecorator";
 
 const preview: Preview = {
@@ -15,7 +14,7 @@ const preview: Preview = {
         },
     },
     decorators: [
-        StyleDecorator,
+        SD,
         ThemeDecorator(Theme.NORMAL),
         RouteDecorator
     ],
