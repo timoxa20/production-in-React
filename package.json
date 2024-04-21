@@ -64,6 +64,7 @@
     "jest-transform-css": "^6.0.1",
     "jest-transform-stub": "^2.0.0",
     "mini-css-extract-plugin": "^2.8.1",
+    "reg-cli": "^0.18.1",
     "regenerator-runtime": "^0.14.1",
     "sass": "^1.74.1",
     "sass-loader": "^14.1.1",
