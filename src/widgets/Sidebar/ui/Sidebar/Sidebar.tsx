@@ -7,8 +7,8 @@ import {Button, ButtonSize, ThemeButton} from "shared/ui/Button/Button";
 import {useTranslation} from "react-i18next";
 import {AppLinks, AppLinkTheme} from "shared/ui/AppLink/AppLinks";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
-import AboutIcons from 'shared/assets/icons/about-20-20.svg'
-import MainIcons from 'shared/assets/icons/main-20-20.svg'
+import  AboutIcons  from 'shared/assets/icons/about-20-20.svg'
+import   MainIcons  from 'shared/assets/icons/main-20-20.svg'
 
 interface SidebarProps {
     className?: string;

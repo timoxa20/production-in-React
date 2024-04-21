@@ -1,8 +1,5 @@
 import React from "react";
 
+export default 'SvgrURL'
+export const ReactComponent = 'div'
 
-const jestEmptyComponent = () => {
-    return <div />;
-}
-
-export default jestEmptyComponent()
