@@ -32,7 +32,8 @@ module.exports = {
     "plugins": [
         "@typescript-eslint",
         "react",
-        "i18next"
+        "i18next",
+        "react-hooks"
     ],
     "rules": {
         "react/jsx-indent": [2, 4],
@@ -51,6 +52,8 @@ module.exports = {
         "no_underscore-dangle": "off",
         "react/no-deprecated": "off",
         'react/jsx-props-no-spreading': 'off',
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error"
     },
     globals: {
         '__IS_DEV_': true,
