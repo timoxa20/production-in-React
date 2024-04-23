@@ -3,7 +3,9 @@
 @import url('themes/dark.scss');
 @import url('themes/normal.scss');
 
-body {
+
+.app,
+.app_modal {
   font: var(--font-m);
   color: var(--primary-color);
 }
