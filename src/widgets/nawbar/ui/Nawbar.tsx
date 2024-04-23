@@ -1,7 +1,6 @@
 import React, {useCallback, useState} from 'react';
 import {classNames} from "shared/lib/classNames/classNames";
 import cls from './Navbar.module.scss'
-import {Modal} from "shared/ui/Modal/Modal";
 import {useTranslation} from "react-i18next";
 import {Button, ThemeButton} from "shared/ui/Button/Button";
 import {LoginModal} from "features/AuthByUserName";
