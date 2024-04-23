@@ -10,5 +10,7 @@
   "ru": "en",
   "Главная": "About",
   "О сайте": "Main",
-  "Войти": "Войти"
+  "Войти": "Войти",
+  "increment": "increment",
+  "decrement": "decrement"
 }
