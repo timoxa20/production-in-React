@@ -38,7 +38,7 @@ export const AuthNawbar: Story = {
     decorators: [
         ThemeDecorator(Theme.DARK),
         StoreDecorator({
-            user: {authData: {id: 1, username: 'sadas'}}
+            user: {authData: {id: '1', username: 'sadas'}}
         })
     ]
 };
