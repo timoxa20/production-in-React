@@ -1,6 +1,0 @@
-git commit -m "run: npm run build:prod"
-git commit -m "run: npm run lint:ts"
-git commit -m "run: npm run lint:scss"
-git commit -m "run: npm run test:unit"
-git commit -m "run: npm run storybook:build"
-
