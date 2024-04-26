@@ -1,10 +1,10 @@
 import {Decorator} from "@storybook/react";
 import React from "react";
 import {StateSchema, StoreProvider} from "app/providers/StoreProvider";
-import {ReducersMapObject} from "@reduxjs/toolkit";
 import {loginReducer} from "features/AuthByUserName/model/slice/loginSlice";
+import {ReducerList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 
-const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
+const defaultAsyncReducers: ReducerList = {
     LoginForm: loginReducer,
 }
 // eslint-disable-next-line react/display-name
