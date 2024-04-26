@@ -57,6 +57,7 @@ module.exports = {
         "@typescript-eslint/no-explicit-any": "off"
     },
     globals: {
-        '__IS_DEV_': true,
+        __IS_DEV_: true,
+        __API__: true,
     }
 }

@@ -10,7 +10,7 @@ export interface SidebarItemType {
     Icon: React.VFC<React.SVGProps<SVGSVGElement>>
 }
 
-export const SidebarItemsList: SidebarItemType[] = [
+export const SidebarItemsList: SidebarItemType[]  = [
     {
         path: RoutePath.main,
         Icon: MainIcons,

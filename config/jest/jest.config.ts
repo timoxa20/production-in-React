@@ -8,7 +8,8 @@ import path from "path";
 
 const config: Config = {
     globals: {
-        __IS_DEV_: true
+        __IS_DEV_: true,
+        __API__: ''
     },
     clearMocks: true,
     testEnvironment: "jsdom",

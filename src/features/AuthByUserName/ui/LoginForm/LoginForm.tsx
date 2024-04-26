@@ -3,7 +3,7 @@ import cls from './LoginForm.module.scss'
 import {useTranslation} from "react-i18next";
 import {Button, ThemeButton} from "shared/ui/Button/Button";
 import {Input} from "shared/ui/Input/Input";
-import {useDispatch, useSelector} from "react-redux";
+import { useSelector} from "react-redux";
 import {memo, useCallback} from "react";
 import {loginActions, loginReducer} from "../../model/slice/loginSlice";
 import {loginByUserName} from "../../model/services/loginByUserName/loginByUserName";
@@ -45,7 +45,9 @@ const LoginForm = memo(({className, onSuccess}: LoginFormProps) => {
     const onLoginClick = useCallback(async () => {
         const result = await dispatch(loginByUserName({username, password}))
         if (result.meta.requestStatus === 'fulfilled') {
-            onSuccess();
+            if (onSuccess) {
+                onSuccess();
+            }
         }
     }, [dispatch, username, password, onSuccess])
 

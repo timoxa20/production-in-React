@@ -15,4 +15,5 @@ declare module "*.svg" {
     export default SVG;
 }
 
-declare const __IS_DEV_: boolean
+declare const __IS_DEV_: boolean;
+declare const __API__: string;
