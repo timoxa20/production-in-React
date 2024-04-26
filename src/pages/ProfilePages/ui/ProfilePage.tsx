@@ -2,7 +2,7 @@ import {classNames} from "shared/lib/classNames/classNames";
 import cls from './ProfilePage.module.scss'
 import {useTranslation} from "react-i18next";
 import {DynamicModuleLoader, ReducerList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import {profileReducer} from "entities/Profile";
+import {profileReducer} from "../../../entities/Profile";
 
 const redusers: ReducerList = {
     profile: profileReducer

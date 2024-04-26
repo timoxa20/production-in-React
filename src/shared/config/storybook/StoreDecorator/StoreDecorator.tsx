@@ -5,7 +5,7 @@ import {ReducersMapObject} from "@reduxjs/toolkit";
 import {loginReducer} from "features/AuthByUserName/model/slice/loginSlice";
 
 const defaultAsyncReducers: Partial<ReducersMapObject<StateSchema>> = {
-    LoginForm: loginReducer
+    LoginForm: loginReducer,
 }
 // eslint-disable-next-line react/display-name
 export const StoreDecorator = (state: Partial<StateSchema>): Decorator => ( Story) => (
