@@ -20,6 +20,8 @@ export const StoreProvider = (props: StoreProviderProps) => {
 
     const navigate = useNavigate()
 
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
     const store = createReduxStore(initialState, asyncReducers, navigate)
     return (
         <Provider store={store}>

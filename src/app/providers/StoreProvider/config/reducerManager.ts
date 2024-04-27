@@ -10,6 +10,7 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
     return {
         getReducerMap: () => reducers,
         reduce: (state: StateSchema, action: PayloadAction<any>) => {
+
             if (keysToRemove.length > 0) {
                 state = { ...state }
                 keysToRemove.forEach((key) => {
@@ -17,6 +18,8 @@ export function createReducerManager(initialReducers: ReducersMapObject<StateSch
                 })
                 keysToRemove = []
             }
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             return combinedReducer(state, action)
         },
         add: (key: StateSchemaKey, reducer: Reducer) => {

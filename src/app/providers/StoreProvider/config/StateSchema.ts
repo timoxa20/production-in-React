@@ -35,3 +35,5 @@ export interface ThunkConfig<T> {
     extra: ThunkExtraArg;
     dispatch: Dispatch;
 }
+
+
