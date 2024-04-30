@@ -56,8 +56,14 @@ module.exports = {
         "react-hooks/exhaustive-deps": "error",
         "@typescript-eslint/no-explicit-any": "off"
     },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
     globals: {
         __IS_DEV_: true,
         __API__: true,
+        __PROJECT__: true
     }
 }
