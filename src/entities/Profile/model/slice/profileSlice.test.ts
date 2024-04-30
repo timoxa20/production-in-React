@@ -56,7 +56,8 @@ describe('profileSlice.test', () => {
         }
         expect(profileReducer(
             state as ProfileSchema,
-            // @ts-ignore
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             updateProfileData.pending,
         )).toEqual({
             isLoading: true,
