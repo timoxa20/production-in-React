@@ -35,7 +35,7 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
             })
 
         }
-    }, [])
+    }, [reducers, removeAfterUnmount, store.reducerManager])
 
     return (
         <>
