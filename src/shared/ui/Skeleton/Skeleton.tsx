@@ -28,3 +28,5 @@ export const Skeleton = memo((props: SkeletonProps) => {
         </div>
     );
 });
+
+Skeleton.displayName = 'Skeleton'

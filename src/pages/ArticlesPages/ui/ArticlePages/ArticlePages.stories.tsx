@@ -2,7 +2,7 @@ import type {Meta, StoryObj} from '@storybook/react';
 import ArticlePages from './ArticlePages';
 
 const meta = {
-    title: 'shared /ArticlePages',
+    title: 'pages /ArticlePages',
     component: ArticlePages,
     parameters: {},
     tags: ['autodocs'],

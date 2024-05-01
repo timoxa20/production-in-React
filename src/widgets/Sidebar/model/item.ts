@@ -4,7 +4,6 @@ import  AboutIcons  from 'shared/assets/icons/about-20-20.svg'
 import   MainIcons  from 'shared/assets/icons/main-20-20.svg'
 import   ProfileIcons  from 'shared/assets/icons/profile-20-20.svg'
 import   ArticleIcons  from 'shared/assets/icons/article-20-20.svg'
-import   ArticleDetailsIcons  from 'shared/assets/icons/profile-20-20.svg'
 
 export interface SidebarItemType {
     path: string;
