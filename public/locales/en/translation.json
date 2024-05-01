@@ -19,5 +19,6 @@
   "Вы ввели неправельный логин или пароль": "You entered the wrong username or password",
   "Выйти": "Exit",
   "Укажите валюту": "Specify the currency",
-  "Укажите страну": "Specify the country"
+  "Укажите страну": "Specify the country",
+  "Пойзошла ошибка": "Пойзошла ошибка"
 }

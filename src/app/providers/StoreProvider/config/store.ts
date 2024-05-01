@@ -7,8 +7,8 @@ import type {To} from "@remix-run/router";
 import type {NavigateOptions} from "react-router/dist/lib/context";
 
 export function createReduxStore(
-    initialState: StateSchema ,
-    asyncReducers?: Partial<ReducersMapObject<StateSchema>>,
+    initialState: StateSchema | undefined,
+    asyncReducers?: Partial<ReducersMapObject<StateSchema>> | undefined,
     navigate?: (to: To, options?: NavigateOptions) => void
 ) {
 

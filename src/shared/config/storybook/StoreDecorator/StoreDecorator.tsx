@@ -9,9 +9,8 @@ const defaultAsyncReducers: ReducerList = {
     LoginForm: loginReducer,
     profile: profileReducer,
 }
-// eslint-disable-next-line react/display-name
-export const StoreDecorator = (state: Partial<StateSchema>): Decorator => ( Story) => (
-    <StoreProvider initialState={state} asyncReducers={defaultAsyncReducers}>
+export const StoreDecorator = (state: Partial<StateSchema>, asyncReducers?: ReducerList): Decorator => (Story) => (
+    <StoreProvider initialState={state} asyncReducers={{...defaultAsyncReducers, ...asyncReducers}}>
         <Story/>
     </StoreProvider>
 );

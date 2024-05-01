@@ -16,9 +16,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {},
-    decorators: [StoreDecorator({
-        LoginForm: {username: 'admin', password: '123'}
-    })]
+    decorators: [
+        StoreDecorator({
+            LoginForm: {username: 'admin', password: '123'}
+        })]
 };
 
 export const Error: Story = {

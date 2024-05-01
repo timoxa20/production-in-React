@@ -18,11 +18,9 @@ const preview: Preview = {
         SD,
         ThemeDecorator(Theme.NORMAL),
         RouteDecorator,
-        StoreDecorator({}),
+        StoreDecorator({})
     ],
 };
-
-
 
 
 export default preview;

@@ -5,11 +5,13 @@ import {ProfileSchema} from "entities/Profile";
 import {AxiosInstance} from "axios";
 import type {To} from "@remix-run/router";
 import type {NavigateOptions} from "react-router/dist/lib/context";
+import {ArticleDetailsSchema} from "entities/Article";
 
 export interface StateSchema {
-    user?: UserSchema
-    LoginForm?: LoginSchema
-    profile?: ProfileSchema
+    user?: UserSchema;
+    LoginForm?: LoginSchema;
+    profile?: ProfileSchema;
+    articleDetails?: ArticleDetailsSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;
