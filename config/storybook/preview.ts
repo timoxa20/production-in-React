@@ -3,7 +3,6 @@ import {StyleDecorator as SD} from "../../src/shared/config/storybook/StyleDecor
 import {ThemeDecorator} from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
 import {Theme} from "app/providers/ThemeProvider";
 import {RouteDecorator} from "shared/config/storybook/RouteDecorator/RouteDecorator";
-import {StoreDecorator} from "shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const preview: Preview = {
     parameters: {
@@ -18,7 +17,6 @@ const preview: Preview = {
         SD,
         ThemeDecorator(Theme.NORMAL),
         RouteDecorator,
-        StoreDecorator({})
     ],
 };
 
