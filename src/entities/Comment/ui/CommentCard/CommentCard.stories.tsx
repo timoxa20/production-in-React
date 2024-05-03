@@ -1,9 +1,8 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {fn} from '@storybook/test';
 import {CommentCard} from './CommentCard';
 
 const meta = {
-    title: 'shared /CommentCard',
+    title: 'entities/Comment/CommentCard',
     component: CommentCard,
     parameters: {},
     tags: ['autodocs'],
@@ -15,5 +14,17 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-    args: {},
+    args: {
+        comment: {
+            id: '1',
+            text: 'hello word',
+            user: {id: '1', username: 'Artem'}
+        }
+    },
+};
+
+export const Loading: Story = {
+    args: {
+        isLoading: true
+    },
 };
