@@ -33,10 +33,6 @@ const ArticlePages = ({className}: ArticlePagesProps) => {
     const error = useSelector(getArticlePagesError)
     const isLoading = useSelector(getArticlePagesIsLoading)
 
-    if (error) {
-        return null
-    }
-
     const onChangeView = useCallback((view: ArticleView) => {
         dispatch(articlePagesAction.setView(view))
     }, [dispatch])
@@ -52,6 +48,10 @@ const ArticlePages = ({className}: ArticlePagesProps) => {
             page: 1
         }))
     })
+
+    if (error) {
+        return null
+    }
 
 
     return (

@@ -7,8 +7,9 @@ import {
 import {articlePagesAction} from "pages/ArticlesPages/model/slice/articlePagesSlice";
 import {fetchArticleList} from "pages/ArticlesPages/model/service/fetchArticleList";
 
+
 export const fetchNextArticlePage = createAsyncThunk<void, void, ThunkConfig<string>>(
-    'articlePages/fetchNextArticlePage',
+    'articlePagesNext/fetchNextArticlePage',
     async (_, thunkApi) => {
         const {getState, dispatch} = thunkApi
         const hasMore = getArticlePagesHasMore(getState())
@@ -17,10 +18,7 @@ export const fetchNextArticlePage = createAsyncThunk<void, void, ThunkConfig<str
 
         if (hasMore && !isLoading) {
             dispatch(articlePagesAction.initPage(page + 1))
-            // @ts-ignore
-            dispatch(fetchArticleList({
-                page: page + 1
-            }))
+            dispatch(fetchArticleList({ page: page + 1 }));
         }
     },
 )

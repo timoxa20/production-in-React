@@ -1,6 +1,6 @@
 import  {UserSchema} from "../../../../entities/User";
 import {LoginSchema} from "features/AuthByUserName";
-import {Dispatch, EnhancedStore, PayloadAction, Reducer, ReducersMapObject} from "@reduxjs/toolkit";
+import {EnhancedStore, PayloadAction, Reducer, ReducersMapObject} from "@reduxjs/toolkit";
 import {ProfileSchema} from "entities/Profile";
 import {AxiosInstance} from "axios";
 import type {To} from "@remix-run/router";
@@ -9,6 +9,7 @@ import {ArticleDetailsSchema} from "entities/Article";
 import {ArticleDetailsCommentsSchema} from "pages/ArticleDetailsPage";
 import {AddCommentFormSchema} from "features/addCommentForm";
 import {ArticlePagesSchema} from "pages/ArticlesPages";
+import {AppDispatch} from "app/providers/StoreProvider/config/store";
 
 export interface StateSchema {
     user?: UserSchema;
@@ -41,7 +42,7 @@ export interface ThunkExtraArg {
 export interface ThunkConfig<T> {
     rejectValue: T;
     extra: ThunkExtraArg;
-    dispatch: Dispatch;
+    dispatch: AppDispatch;
     state: StateSchema
 }
 
