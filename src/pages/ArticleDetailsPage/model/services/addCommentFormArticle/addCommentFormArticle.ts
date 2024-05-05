@@ -11,13 +11,12 @@ import {
 export const addCommentFormArticle = createAsyncThunk<
     Comment,
     string,
-    {rejectValue: string, extra: ThunkExtraArg}
+    { rejectValue: string, extra: ThunkExtraArg }
 >(
     'articleDetails/addCommentFormArticle',
     async (text, thunkApi) => {
 
-        const { rejectWithValue, extra, getState, dispatch} = thunkApi
-
+        const {rejectWithValue, extra, getState, dispatch} = thunkApi
         // @ts-ignore
         const userData = getUserAuthData(getState());
         // @ts-ignore

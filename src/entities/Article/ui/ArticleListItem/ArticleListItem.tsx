@@ -88,3 +88,5 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         </div>
     );
 });
+
+ArticleListItem.displayName = 'ArticleListItem'

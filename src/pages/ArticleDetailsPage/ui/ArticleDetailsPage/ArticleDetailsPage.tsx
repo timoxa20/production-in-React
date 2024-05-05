@@ -21,6 +21,7 @@ import {
 } from "../../model/services/addCommentFormArticle/addCommentFormArticle";
 import {Button, ThemeButton} from "shared/ui/Button/Button";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
+import {Page} from "shared/ui/Page/Page";
 
 
 interface ArticleDetailsPageProps {
@@ -53,15 +54,15 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
 
     if (!id) {
         return (
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 {t('Это недорозумение (^_^)')}
-            </div>
+            </Page>
         )
     }
 
     return (
         <DynamicModuleLoader reducers={reducer} removeAfterUnmount>
-            <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+            <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
                 <Button onClick={onToBackList} theme={ThemeButton.OUTLINE}>
                     {t('Назад к списку')}
                 </Button>
@@ -72,7 +73,7 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
                     isLoading={commentsIsLoading}
                     comments={comments}
                 />
-            </div>
+            </Page>
         </DynamicModuleLoader>
     );
 };

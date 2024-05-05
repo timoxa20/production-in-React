@@ -11,7 +11,7 @@ import {Icon} from "shared/ui/Icon/Icon";
 interface ArticleViewSelectProps {
     className?: string;
     view?: ArticleView;
-    onViewClick: (view: ArticleView) => void
+    onViewClick?: (view: ArticleView) => void
 }
 
 const viewTypes = [
@@ -42,6 +42,7 @@ export const ArticleViewSelect = memo((props: ArticleViewSelectProps) => {
         <div className={classNames(cls.ArticleViewSelect, {}, [className])}>
             {viewTypes.map(viewType => (
                 <Button
+                    key={viewType.view}
                     theme={ThemeButton.CLEAR}
                     onClick={onClickView(viewType.view)}
                 >
@@ -54,3 +55,5 @@ export const ArticleViewSelect = memo((props: ArticleViewSelectProps) => {
         </div>
     );
 });
+
+ArticleViewSelect.displayName = 'ArticleViewSelect'
