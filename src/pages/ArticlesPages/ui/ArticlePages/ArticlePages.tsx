@@ -6,7 +6,6 @@ import {DynamicModuleLoader, ReducerList} from "shared/lib/components/DynamicMod
 import {articlePagesAction, articlePagesReducer, getArticle} from "pages/ArticlesPages/model/slice/articlePagesSlice";
 import {useInitialEffect} from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import {fetchArticleList} from "../../model/service/fetchArticleList";
 import {useSelector} from "react-redux";
 import {
     getArticlePagesError,
@@ -15,7 +14,8 @@ import {
 } from "../../model/selectors/articlePagesSelector";
 import {ArticleViewSelect} from "features/ArticleViewSelect/ArticleViewSelect";
 import {Page} from "shared/ui/Page/Page";
-import {fetchNextArticlePage} from "pages/ArticlesPages/model/service/fetchNextArticlePage/fetchNextArticlePage";
+import {fetchNextArticlePage} from "../../model/service/fetchNextArticlePage/fetchNextArticlePage";
+import {initedArticlePage} from "../../model/service/initedArticlePage/initedArticlePage";
 
 
 interface ArticlePagesProps {
@@ -33,6 +33,7 @@ const ArticlePages = ({className}: ArticlePagesProps) => {
     const error = useSelector(getArticlePagesError)
     const isLoading = useSelector(getArticlePagesIsLoading)
 
+
     const onChangeView = useCallback((view: ArticleView) => {
         dispatch(articlePagesAction.setView(view))
     }, [dispatch])
@@ -43,10 +44,7 @@ const ArticlePages = ({className}: ArticlePagesProps) => {
 
 
     useInitialEffect(() => {
-        dispatch(articlePagesAction.initState())
-        dispatch(fetchArticleList({
-            page: 1
-        }))
+        dispatch(initedArticlePage())
     })
 
     if (error) {
@@ -55,7 +53,7 @@ const ArticlePages = ({className}: ArticlePagesProps) => {
 
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
+        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
             <Page onScrollEnd={onLoadNextPart} className={classNames(cls.ArticlePages, {}, [className])}>
                 <ArticleViewSelect view={view} onViewClick={onChangeView}/>
                 <ArticleList

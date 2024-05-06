@@ -5,7 +5,7 @@ import {StateSchemaKey} from "app/providers/StoreProvider/config/StateSchema";
 import {Reducer} from "@reduxjs/toolkit";
 
 export type ReducerList = {
- [name in StateSchemaKey]?: Reducer
+    [name in StateSchemaKey]?: Reducer
 }
 
 // type ReducerListEntry = [StateSchemaKey, Reducer]
@@ -26,14 +26,19 @@ export const DynamicModuleLoader: FC<DynamicModuleLoaderProps> = (props) => {
     const store = useStore() as ReduxStoreWithManager
 
     useEffect(() => {
+        const mountedReducer = store.reducerManager.getMountedReducer();
         Object.entries(reducers).forEach(([name, reducer]) => {
-            store.reducerManager.add(name as StateSchemaKey, reducer)
+            const mounted = mountedReducer[name as StateSchemaKey]
+            if (!mounted) {
+                store.reducerManager.add(name as StateSchemaKey, reducer)
+            }
+
         })
 
 
         return () => {
             Object.entries(reducers).forEach(([name]) => {
-                if(removeAfterUnmount) {
+                if (removeAfterUnmount) {
                     store.reducerManager.remove(name as StateSchemaKey)
                 }
             })

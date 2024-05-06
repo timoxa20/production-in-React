@@ -3,8 +3,6 @@ import {LoginSchema} from "features/AuthByUserName";
 import {EnhancedStore, PayloadAction, Reducer, ReducersMapObject} from "@reduxjs/toolkit";
 import {ProfileSchema} from "entities/Profile";
 import {AxiosInstance} from "axios";
-import type {To} from "@remix-run/router";
-import type {NavigateOptions} from "react-router/dist/lib/context";
 import {ArticleDetailsSchema} from "entities/Article";
 import {ArticleDetailsCommentsSchema} from "pages/ArticleDetailsPage";
 import {AddCommentFormSchema} from "features/addCommentForm";
@@ -19,15 +17,18 @@ export interface StateSchema {
     articleDetailsComments?: ArticleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
     articlePages?: ArticlePagesSchema;
+
 }
 
 export type StateSchemaKey = keyof StateSchema;
+export type MountedReducer = OptionalRecord<StateSchemaKey, boolean>;
 
 export interface ReducerManager {
     getReducerMap: () => ReducersMapObject<StateSchema>,
     reduce: (state: StateSchema, action: PayloadAction<any>) => StateSchema;
     add: (key: StateSchemaKey, reducer: Reducer) => void;
     remove: (key: StateSchemaKey) => void;
+    getMountedReducer: () => MountedReducer
 }
 
 export interface ReduxStoreWithManager extends EnhancedStore<StateSchema>{
@@ -36,7 +37,6 @@ export interface ReduxStoreWithManager extends EnhancedStore<StateSchema>{
 
 export interface ThunkExtraArg {
     api: AxiosInstance;
-    navigate?:((to: To, options?: NavigateOptions) => void) | undefined
 }
 
 export interface ThunkConfig<T> {
