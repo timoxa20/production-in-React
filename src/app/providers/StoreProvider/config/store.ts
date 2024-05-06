@@ -3,6 +3,7 @@ import {StateSchema, ThunkExtraArg} from "./StateSchema";
 import { userReducer } from "../../../../entities/User";
 import {createReducerManager} from "./reducerManager";
 import {$api} from "shared/api/api";
+import {scrollSaveReducer} from "features/ScrollSave";
 
 export function createReduxStore(
     initialState: StateSchema | undefined,
@@ -14,6 +15,9 @@ export function createReduxStore(
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
         user: userReducer,
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
+        scrollSave: scrollSaveReducer
     }
     const reduceManager = createReducerManager(rootReducer)
     const extraArg : ThunkExtraArg = {

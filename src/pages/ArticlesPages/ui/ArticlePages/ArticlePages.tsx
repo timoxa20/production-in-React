@@ -13,7 +13,7 @@ import {
     getArticlePagesView
 } from "../../model/selectors/articlePagesSelector";
 import {ArticleViewSelect} from "features/ArticleViewSelect/ArticleViewSelect";
-import {Page} from "shared/ui/Page/Page";
+import {Page} from "widgets/Page/Page";
 import {fetchNextArticlePage} from "../../model/service/fetchNextArticlePage/fetchNextArticlePage";
 import {initedArticlePage} from "../../model/service/initedArticlePage/initedArticlePage";
 

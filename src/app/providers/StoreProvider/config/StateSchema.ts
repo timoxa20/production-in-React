@@ -8,6 +8,7 @@ import {ArticleDetailsCommentsSchema} from "pages/ArticleDetailsPage";
 import {AddCommentFormSchema} from "features/addCommentForm";
 import {ArticlePagesSchema} from "pages/ArticlesPages";
 import {AppDispatch} from "app/providers/StoreProvider/config/store";
+import {ScrollSaveSchema} from "features/ScrollSave";
 
 export interface StateSchema {
     user?: UserSchema;
@@ -17,7 +18,7 @@ export interface StateSchema {
     articleDetailsComments?: ArticleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
     articlePages?: ArticlePagesSchema;
-
+    scrollSave?: ScrollSaveSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
