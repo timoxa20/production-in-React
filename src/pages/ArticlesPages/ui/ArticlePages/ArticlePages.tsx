@@ -1,7 +1,7 @@
 import {classNames} from "shared/lib/classNames/classNames";
 import cls from './ArticlePages.module.scss'
 import {memo, useCallback} from "react";
-import {ArticleList, ArticleView} from "entities/Article";
+import {ArticleList, ArticleView} from "../../../../entities/Article";
 import {DynamicModuleLoader, ReducerList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import {articlePagesAction, articlePagesReducer, getArticle} from "pages/ArticlesPages/model/slice/articlePagesSlice";
 import {useInitialEffect} from "shared/lib/hooks/useInitialEffect/useInitialEffect";

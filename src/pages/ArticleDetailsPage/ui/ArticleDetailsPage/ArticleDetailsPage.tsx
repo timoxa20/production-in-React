@@ -5,7 +5,7 @@ import {memo, useCallback} from "react";
 import {ArticleDetails} from "../../../../entities/Article";
 import {useNavigate, useParams} from "react-router-dom";
 import {Text} from "shared/ui/Text/Text";
-import {CommentList} from "entities/Comment";
+import {CommentList} from "../../../../entities/Comment";
 import {DynamicModuleLoader, ReducerList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import {articleDetailsCommentReducer, getArticleComments} from "../../model/slice/articleDetailsCommentsSlice";
 import {useSelector} from "react-redux";
