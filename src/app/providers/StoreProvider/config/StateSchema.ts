@@ -1,10 +1,10 @@
-import  {UserSchema} from "../../../../entities/User";
+import {UserSchema} from "../../../../entities/User";
 import {LoginSchema} from "features/AuthByUserName";
 import {EnhancedStore, PayloadAction, Reducer, ReducersMapObject} from "@reduxjs/toolkit";
 import {ProfileSchema} from "entities/Profile";
 import {AxiosInstance} from "axios";
 import {ArticleDetailsSchema} from "entities/Article";
-import {ArticleDetailsCommentsSchema} from "pages/ArticleDetailsPage";
+import {ArticleDetailsPageSchema} from "pages/ArticleDetailsPage";
 import {AddCommentFormSchema} from "features/addCommentForm";
 import {ArticlePagesSchema} from "pages/ArticlesPages";
 import {AppDispatch} from "app/providers/StoreProvider/config/store";
@@ -15,10 +15,10 @@ export interface StateSchema {
     LoginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
-    articleDetailsComments?: ArticleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
     articlePages?: ArticlePagesSchema;
     scrollSave?: ScrollSaveSchema;
+    articleDetailsPage?: ArticleDetailsPageSchema
 }
 
 export type StateSchemaKey = keyof StateSchema;

@@ -6,18 +6,19 @@ import {ReducerList} from "shared/lib/components/DynamicModuleLoader/DynamicModu
 import {profileReducer} from "../../../../entities/Profile/model/slice/profileSlice";
 import {articleDetailsReducer} from "../../../../entities/Article/model/slice/articleDetailsSlice";
 import {addCommentFormReducer} from "features/addCommentForm/model/slice/addCommentFormSlice";
-import {articleDetailsCommentReducer} from "pages/ArticleDetailsPage/model/slice/articleDetailsCommentsSlice";
+import {articleDetailsPageReducer} from "pages/ArticleDetailsPage/model/slice";
 
 const defaultAsyncReducers: ReducerList = {
     LoginForm: loginReducer,
     profile: profileReducer,
     articleDetails: articleDetailsReducer,
     addCommentForm: addCommentFormReducer,
-    articleDetailsComments: articleDetailsCommentReducer
+    articleDetailsPage: articleDetailsPageReducer
 }
 // eslint-disable-next-line react/display-name
-export const StoreDecorator = (state: Partial<StateSchema>, asyncReducers?: ReducerList): Decorator =>(Story) => (
-    <StoreProvider initialState={state} asyncReducers={{...defaultAsyncReducers, ...asyncReducers}}>
+export const StoreDecorator = (state: Partial<StateSchema>): Decorator => (Story) => (
+
+    <StoreProvider initialState={state} asyncReducers={defaultAsyncReducers}>
         <Story/>
     </StoreProvider>
 );
