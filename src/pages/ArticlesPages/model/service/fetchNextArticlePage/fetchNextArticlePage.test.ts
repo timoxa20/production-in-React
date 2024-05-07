@@ -1,6 +1,7 @@
 import {TestAsyncThunk} from "shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
 import {fetchNextArticlePage} from "./fetchNextArticlePage";
 import {fetchArticleList} from "../fetchArticleList";
+import {ArticleSortField} from "../../../../../entities/Article";
 
 
 jest.mock('../fetchArticleList')
@@ -14,7 +15,10 @@ describe('fetchNextArticlePage.test', () => {
                 entities: {},
                 limit: 5,
                 isLoading: false,
-                hasMore: true
+                hasMore: true,
+                order: 'asc',
+                sort: ArticleSortField.CREATED,
+                search: ''
             }
         })
         await thunk.callThumnk()
@@ -30,7 +34,10 @@ describe('fetchNextArticlePage.test', () => {
                 entities: {},
                 limit: 5,
                 isLoading: false,
-                hasMore: false
+                hasMore: false,
+                order: 'asc',
+                sort: ArticleSortField.CREATED,
+                search: ''
             }
         })
         await thunk.callThumnk()
