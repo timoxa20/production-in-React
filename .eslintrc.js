@@ -33,7 +33,8 @@ module.exports = {
         "@typescript-eslint",
         "react",
         "i18next",
-        "react-hooks"
+        "react-hooks",
+        "artem-plugin"
     ],
     "rules": {
         "react/jsx-indent": [2, 4],
@@ -54,7 +55,8 @@ module.exports = {
         'react/jsx-props-no-spreading': 'off',
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off",
+        "artem-plugin/path-checker": 'error',
     },
     globals: {
         __IS_DEV_: true,

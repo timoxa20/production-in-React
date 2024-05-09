@@ -3,7 +3,7 @@ import cls from './ArticlePages.module.scss'
 import {memo, useCallback} from "react";
 import {ArticleList} from "../../../../entities/Article";
 import {DynamicModuleLoader, ReducerList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import {articlePagesReducer, getArticle} from "pages/ArticlesPages/model/slice/articlePagesSlice";
+import {articlePagesReducer, getArticle} from "../../model/slice/articlePagesSlice";
 import {useInitialEffect} from "shared/lib/hooks/useInitialEffect/useInitialEffect";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
 import {useSelector} from "react-redux";
@@ -15,7 +15,7 @@ import {
 import {Page} from "widgets/Page/Page";
 import {fetchNextArticlePage} from "../../model/service/fetchNextArticlePage/fetchNextArticlePage";
 import {initedArticlePage} from "../../model/service/initedArticlePage/initedArticlePage";
-import {ArticlePagesFilter} from "pages/ArticlesPages/ui/ArticlePagesFilter/ArticlePagesFilter";
+import {ArticlePagesFilter} from "../ArticlePagesFilter/ArticlePagesFilter";
 import { useSearchParams } from "react-router-dom";
 
 

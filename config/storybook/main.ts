@@ -30,3 +30,7 @@ const config: StorybookConfig = {
 
 };
 export default config;
+
+module.exports = {
+    eslint: undefined,
+};

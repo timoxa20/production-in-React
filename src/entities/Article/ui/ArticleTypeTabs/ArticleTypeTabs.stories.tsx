@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {ArticleTypeTabs} from './ArticleTypeTabs';
-import {ArticleType} from "entities/Article";
+import {ArticleType} from "../../model/types/article";
 import {action} from "@storybook/addon-actions";
 
 const meta = {

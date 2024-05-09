@@ -20,11 +20,11 @@ import {getArticleRecomendation} from "../../model/slice/articleDetailsPageRecom
 import {getArticleRecommendationIsLoading} from "../../model/selectors/recommendations";
 import {
     fetchArticleRecommendations
-} from "pages/ArticleDetailsPage/model/services/fetchArticleRecomendation/fetchArticleRecomendation";
-import {articleDetailsPageReducer} from "pages/ArticleDetailsPage/model/slice";
+} from "../../model/services/fetchArticleRecomendation/fetchArticleRecomendation";
+import {articleDetailsPageReducer} from "../..//model/slice";
 import {
     ArticleDetailsPageHeaders
-} from "pages/ArticleDetailsPage/ui/ArticleDetailsPage/ArticleDetailsPageHeaders/ArticleDetailsPageHeaders";
+} from "./ArticleDetailsPageHeaders/ArticleDetailsPageHeaders";
 
 
 interface ArticleDetailsPageProps {

@@ -10,7 +10,7 @@ import {
     addCommentFormSelectorText
 } from "../../model/selectors/addCommentFormSelector";
 import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import {addCommentFormActions, addCommentFormReducer} from "features/addCommentForm/model/slice/addCommentFormSlice";
+import {addCommentFormActions, addCommentFormReducer} from "../../model/slice/addCommentFormSlice";
 import {DynamicModuleLoader, ReducerList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 
 
