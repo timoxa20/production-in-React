@@ -14,12 +14,12 @@
   "articles": [
     {
       "id": "1",
-      "title": "JavaScript news Свежая " ,
+      "title": "JavaScript news Свежая ",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 1022,
       "createdAt": "26.04.2024",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -43,7 +43,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 1300,
       "createdAt": "26.03.2023",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -67,7 +67,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 2456,
       "createdAt": "26.02.2022",
-      "userId" : "2",
+      "userId": "2",
       "type": [
         "IT"
       ],
@@ -91,7 +91,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 2532,
       "createdAt": "26.02.2022",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -115,7 +115,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 4234,
       "createdAt": "26.07.2021",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -139,7 +139,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 2423,
       "createdAt": "26.01.2024",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -163,7 +163,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 1312,
       "createdAt": "26.09.2022",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -187,7 +187,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 2343,
       "createdAt": "31.07.2022",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -211,7 +211,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 2343,
       "createdAt": "26.02.2024",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -235,7 +235,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 3423,
       "createdAt": "31.07.2021",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -259,7 +259,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 1231,
       "createdAt": "26.02.2020",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -283,7 +283,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 3434,
       "createdAt": "26.02.2019",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -307,7 +307,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -331,7 +331,7 @@
       "img": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "userId" : "1",
+      "userId": "1",
       "type": [
         "IT"
       ],
@@ -385,6 +385,18 @@
       "userId": "1",
       "text": "Hello world",
       "id": "04oww61"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "text": "fgfdg",
+      "id": "qBy_TS3"
+    },
+    {
+      "articleId": "6",
+      "userId": "1",
+      "text": "dfsgdfgsdf",
+      "id": "OHfCeB7"
     }
   ],
   "users": [

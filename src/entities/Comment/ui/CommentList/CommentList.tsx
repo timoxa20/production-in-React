@@ -1,10 +1,10 @@
 import {classNames} from "shared/lib/classNames/classNames";
-import cls from './CommentList.module.scss'
 import {memo} from "react";
 import {Text, TextAlign} from "shared/ui/Text/Text";
 import {useTranslation} from "react-i18next";
 import {CommentCard} from "../CommentCard/CommentCard";
 import {Comment} from '../../model/types/comment'
+import {VStack} from "shared/ui/Stack";
 
 
 interface CommentListProps {
@@ -23,23 +23,23 @@ export const CommentList = memo((props: CommentListProps) => {
 
     if (isLoading) {
         return (
-            <div className={classNames('', {}, [className])}>
+            <VStack gap='8' max className={classNames('', {}, [className])}>
                 <CommentCard isLoading/>
                 <CommentCard isLoading/>
                 <CommentCard isLoading/>
-            </div>
+            </VStack>
         )
     }
 
     return (
-        <div className={classNames('', {}, [className])}>
+        <VStack gap='16' max className={classNames('', {}, [className])}>
             {comments?.length
                 ? comments.map((coment) => (
-                    <CommentCard key={coment.id} className={cls.comment} comment={coment}/>
+                    <CommentCard key={coment.id} comment={coment}/>
                 ))
                 : <Text align={TextAlign.CENTER} text={t('Комментарий отсудствуют')}/>
             }
-        </div>
+        </VStack>
     );
 });
 
