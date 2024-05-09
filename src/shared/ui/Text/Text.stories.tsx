@@ -83,4 +83,12 @@ export const TextL: Story = {
     },
 };
 
+export const TextS: Story = {
+    args: {
+        title: 'Text lorem ipsum',
+        text: 'Text describe',
+        size: TextSize.S
+    },
+};
+
 
