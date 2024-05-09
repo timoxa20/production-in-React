@@ -9,6 +9,8 @@ import {getUserAuthData, userActions} from "../../../entities/User";
 import {Text, TextTheme} from "shared/ui/Text/Text";
 import {AppLinks, AppLinkTheme} from "shared/ui/AppLink/AppLinks";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
+import {Dropdown} from "shared/ui/Dropdown/Dropdown";
+import {Avatar} from "shared/ui/Avatar/Avatar";
 
 interface NavbarProps {
     className?: string;
@@ -46,13 +48,21 @@ export const Nawbar = memo(({className}: NavbarProps) => {
                 >
                     {t('Создать пост')}
                 </AppLinks>
-                <Button
-                    theme={ThemeButton.CLEAR_INVERTED}
-                    className={cls.links}
-                    onClick={onLogout}
-                >
-                    {t('Выйти')}
-                </Button>
+                <Dropdown
+                    className={cls.dropdown}
+                    active
+                    items={[
+                        {
+                            content: t('Выйти'),
+                            onClick: onLogout
+                        },
+                        {
+                            content: t('Профиль пользователя'),
+                            href: RoutePath.profile + authData.id
+                        }
+                    ]}
+                    trigger={<Avatar size={'30px'} src={authData.avatar}/>}
+                />
             </header>
         )
     }
