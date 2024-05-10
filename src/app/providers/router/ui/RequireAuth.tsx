@@ -3,7 +3,6 @@ import {getUserAuthData, getUserRole, UserRole} from "entities/User";
 import {Navigate, useLocation} from "react-router-dom";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
 import {useMemo} from "react";
-import {} from "entities/User/model/selectors/roleSelectors/roleSelectors";
 
 
 interface RequireAuthProps {
@@ -21,9 +20,7 @@ export function RequireAuth({children, roles}: RequireAuthProps) {
             return true
         }
         return roles.some(requiredRole => {
-            const hasRole = userRole?.includes(requiredRole)
-
-            return hasRole
+            return userRole?.includes(requiredRole)
         })
     }, [roles, userRole])
 
