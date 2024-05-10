@@ -6,7 +6,7 @@ import {
 } from '@headlessui/react'
 import {ReactNode} from 'react'
 import cls from './ListBox.module.scss'
-import {Button} from "shared/ui/Button/Button";
+import {Button} from "../Button/Button";
 import {classNames} from "shared/lib/classNames/classNames";
 
 

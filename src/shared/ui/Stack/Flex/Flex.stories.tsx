@@ -1,6 +1,6 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {fn} from '@storybook/test';
 import {Flex} from './Flex';
+import { t } from 'i18next';
 
 const meta = {
     title: 'shared /Flex',
@@ -18,10 +18,10 @@ export const DirectionRow: Story = {
     args: {
         children: (
             <>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
             </>
         )
     },
@@ -32,10 +32,10 @@ export const DirectionColumn: Story = {
         direction: 'colum',
         children: (
             <>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
             </>
         )
     },
@@ -47,10 +47,10 @@ export const DirectionColumn16: Story = {
         direction: 'colum',
         children: (
             <>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
             </>
         )
     },
@@ -62,10 +62,10 @@ export const RowGap4: Story = {
         justify: 'center',
         children: (
             <>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
             </>
         )
     },
@@ -77,10 +77,10 @@ export const RowGap8: Story = {
         justify: 'center',
         children: (
             <>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
             </>
         )
     },
@@ -92,10 +92,10 @@ export const RowGap16: Story = {
         justify: 'center',
         children: (
             <>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
-                <div>first</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
+                <div>{t('first')}</div>
             </>
         )
     },

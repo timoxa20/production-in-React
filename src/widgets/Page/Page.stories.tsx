@@ -1,8 +1,9 @@
 import type {Meta, StoryObj} from '@storybook/react';
 import {Page} from './Page';
+import {StoreDecorator} from "shared/config/storybook/StoreDecorator/StoreDecorator";
 
 const meta = {
-    title: 'shared /Page',
+    title: 'widget/Page',
     component: Page,
     parameters: {},
     tags: ['autodocs'],
@@ -17,4 +18,5 @@ export const Normal: Story = {
     args: {
         children: '31314134'
     },
+    decorators: [StoreDecorator({})]
 };

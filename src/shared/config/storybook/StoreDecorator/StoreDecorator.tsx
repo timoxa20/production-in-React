@@ -3,10 +3,10 @@ import React from "react";
 import {StateSchema, StoreProvider} from "app/providers/StoreProvider";
 import {loginReducer} from "features/AuthByUserName/model/slice/loginSlice";
 import {ReducerList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import {profileReducer} from "../../../../entities/Profile/model/slice/profileSlice";
-import {articleDetailsReducer} from "../../../../entities/Article/model/slice/articleDetailsSlice";
 import {addCommentFormReducer} from "features/addCommentForm/model/slice/addCommentFormSlice";
 import {articleDetailsPageReducer} from "pages/ArticleDetailsPage/model/slice";
+import {profileReducer} from "features/editableProfileCard";
+import {articleDetailsReducer} from "../../../../entities/Article/model/slice/articleDetailsSlice";
 
 const defaultAsyncReducers: ReducerList = {
     LoginForm: loginReducer,

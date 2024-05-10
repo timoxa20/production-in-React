@@ -2,8 +2,7 @@ import {Menu, MenuButton, MenuItem, MenuItems} from '@headlessui/react'
 import cls from './Dropdown.module.scss'
 import {classNames} from "shared/lib/classNames/classNames";
 import {Fragment, ReactNode} from "react";
-import {AppLinks} from "shared/ui/AppLink/AppLinks";
-import {RoutePath} from "shared/config/routeConfig/routeConfig";
+import {AppLinks} from "../AppLink/AppLinks";
 
 export interface DropdownItem {
     disabled?: boolean;
@@ -38,13 +37,13 @@ export function Dropdown(props: DropdownProps) {
                     </button>
                     if (item.href) {
                         return (
-                            <MenuItem as={AppLinks} to={item.href}>
+                            <MenuItem key={item.href} as={AppLinks} to={item.href}>
                                 {content}
                             </MenuItem>
                         )
                     }
                     return (
-                        <MenuItem as={Fragment}>
+                        <MenuItem key={item.href} as={Fragment}>
                             {content}
                         </MenuItem>
                     )
