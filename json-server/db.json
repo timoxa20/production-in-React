@@ -404,14 +404,21 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "role": "ADMIN",
+      "roles": ["ADMIN"],
       "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "role": "USER",
+      "roles": ["USER"],
+      "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
+    },
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "123",
+      "roles": ["MANAGER"],
       "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
     }
   ],
