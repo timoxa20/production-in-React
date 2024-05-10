@@ -9,8 +9,6 @@ import { useArticleRecommendationList} from "../../api/articleRecommendationApi"
 interface ArticleReacommendationListProps {
     className?: string;
 }
-
-
 export const ArticleReacommendationList = memo((props: ArticleReacommendationListProps) => {
     const {className} = props;
     const {t} = useTranslation('article');
