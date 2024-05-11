@@ -1,6 +1,6 @@
 import {classNames, Mods} from "shared/lib/classNames/classNames";
 import cls from './Modal.module.scss'
-import {ReactNode} from "react";
+import {ReactNode, useCallback} from "react";
 import {Portal} from "../Portal/Portal";
 import {useTheme} from "app/providers/ThemeProvider";
 import {Overlay} from "../Overlay/Overlay";
@@ -13,7 +13,6 @@ interface ModalProps {
     onClose?: () => void;
     lazy?: boolean;
 }
-
 export const Modal = (props: ModalProps) => {
     const ANIMATION_DELAY = 300;
     const {theme} = useTheme()
@@ -34,7 +33,6 @@ export const Modal = (props: ModalProps) => {
             onClose,
             isOpen
         })
-
 
     const mods: Mods = {
         [cls.opened]: isOpen,
