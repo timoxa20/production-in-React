@@ -1,9 +1,8 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {fn} from '@storybook/test';
 import {NotificationButton} from './NotificationButton';
 
 const meta = {
-    title: 'shared /NotificationButton',
+    title: 'features/NotificationButton',
     component: NotificationButton,
     parameters: {},
     tags: ['autodocs'],

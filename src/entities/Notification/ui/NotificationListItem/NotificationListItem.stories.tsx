@@ -1,9 +1,8 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {fn} from '@storybook/test';
 import {NotificationListItem} from './NotificationListItem';
 
 const meta = {
-    title: 'shared /NotificationListItem',
+    title: 'entities/Notification/NotificationListItem',
     component: NotificationListItem,
     parameters: {},
     tags: ['autodocs'],
@@ -15,5 +14,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-    args: {},
+    args: {
+        item:
+            {
+                title: 'adasfa',
+                href: 'title.czx',
+                description: 'asfafafasfafa',
+                id: '1'
+            },
+
+    },
 };

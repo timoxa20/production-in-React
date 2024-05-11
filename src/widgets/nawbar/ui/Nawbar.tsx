@@ -4,16 +4,16 @@ import cls from './Navbar.module.scss'
 import {useTranslation} from "react-i18next";
 import {Button, ThemeButton} from "shared/ui/Button/Button";
 import {LoginModal} from "features/AuthByUserName";
-import {useDispatch, useSelector} from "react-redux";
-import {getUserAuthData, isUserAdmin, isUserManager, userActions} from "../../../entities/User";
+import {useSelector} from "react-redux";
+import {getUserAuthData} from "../../../entities/User";
 import {Text, TextTheme} from "shared/ui/Text/Text";
 import {AppLinks, AppLinkTheme} from "shared/ui/AppLink/AppLinks";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
-import {Dropdown} from "shared/ui/Dropdown/Dropdown";
-import {Avatar} from "shared/ui/Avatar/Avatar";
 import {HStack} from "shared/ui/Stack";
 import {NotificationButton} from "features/NotificationButton";
 import {AvatarDropdown} from "features/avatarDropdown/ui/avatarDropdown/avatarDropdown";
+import {Drawer} from "shared/ui/Drower/Drawer";
+import {NotificationList} from "entities/Notification";
 
 interface NavbarProps {
     className?: string;
@@ -32,7 +32,6 @@ export const Nawbar = memo(({className}: NavbarProps) => {
     const onShowModal = useCallback(() => {
         setIsAuthModal(true)
     }, [])
-
 
 
     if (authData) {

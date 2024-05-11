@@ -1,14 +1,15 @@
 import type {Meta, StoryObj} from '@storybook/react';
-import {AvatarDropdown} from './avatarDropdown';
+import {fn} from '@storybook/test';
+import {Overlay} from './Overlay';
 
 const meta = {
-    title: 'features /AvatarDropdown',
-    component: AvatarDropdown,
+    title: 'shared /Overlay',
+    component: Overlay,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof AvatarDropdown>;
+} satisfies Meta<typeof Overlay>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
