@@ -1,10 +1,9 @@
-import {classNames} from "shared/lib/classNames/classNames";
+import {classNames} from "@/shared/lib/classNames/classNames";
 import cls from './NotificationListItem.module.scss'
 import {memo} from "react";
 import {Notification} from "../../model/types/notification";
-import {Card, CardTheme} from "shared/ui/Card/Card";
-import {Text} from "shared/ui/Text/Text";
-import {AppLinks} from "shared/ui/AppLink/AppLinks";
+import {Card, CardTheme} from "@/shared/ui/Card/Card";
+import {Text} from "@/shared/ui/Text/Text";
 
 
 interface NotificationListItemProps {

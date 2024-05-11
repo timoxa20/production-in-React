@@ -1,11 +1,11 @@
-import {classNames} from "shared/lib/classNames/classNames";
+import {classNames} from "@/shared/lib/classNames/classNames";
 import cls from './ArticlePages.module.scss'
 import {memo, useCallback} from "react";
-import {DynamicModuleLoader, ReducerList} from "shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
+import {DynamicModuleLoader, ReducerList} from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
 import {articlePagesReducer} from "../../model/slice/articlePagesSlice";
-import {useInitialEffect} from "shared/lib/hooks/useInitialEffect/useInitialEffect";
-import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import {Page} from "widgets/Page/Page";
+import {useInitialEffect} from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
+import {useAppDispatch} from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import {Page} from "@/widgets/Page/Page";
 import {fetchNextArticlePage} from "../../model/service/fetchNextArticlePage/fetchNextArticlePage";
 import {initedArticlePage} from "../../model/service/initedArticlePage/initedArticlePage";
 import {ArticlePagesFilter} from "../ArticlePagesFilter/ArticlePagesFilter";

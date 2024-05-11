@@ -3,9 +3,9 @@ import {
     ArticleView,
     ArticleSortField,
     ArticleType
-} from "entities/Article";
+} from "@/entities/Article";
 import {EntityState} from "@reduxjs/toolkit";
-import {SortOrder} from "shared/types";
+import {SortOrder} from "@/shared/types";
 
 export interface ArticlePagesSchema extends EntityState<Article, string> {
     isLoading?: boolean;

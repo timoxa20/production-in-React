@@ -33,6 +33,10 @@ export default ({config}: { config: webpack.Configuration }) => {
         use: ['@svgr/webpack'],
     })
     config!.module!.rules!.push(buildCssLoaders(true))
+    config!.resolve!.alias = {
+        ...config!.resolve!.alias,
+        '@': paths.src,
+    };
 
 
     config!.plugins!.push(new DefinePlugin({
@@ -40,5 +44,7 @@ export default ({config}: { config: webpack.Configuration }) => {
         __API__: JSON.stringify('https://testapi.ru'),
         __PROJECT__: JSON.stringify('storybook')
     }))
+
+
     return config
 }

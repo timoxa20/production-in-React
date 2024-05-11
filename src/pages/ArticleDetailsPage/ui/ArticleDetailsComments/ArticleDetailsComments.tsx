@@ -1,21 +1,21 @@
-import {classNames} from "shared/lib/classNames/classNames";
+import {classNames} from "@/shared/lib/classNames/classNames";
 import {memo, useCallback} from "react";
 import {useTranslation} from "react-i18next";
-import {Text, TextSize} from "shared/ui/Text/Text";
-import {AddCommentForm} from "features/addCommentForm";
-import {CommentList} from "../../../../entities/Comment";
+import {Text, TextSize} from "@/shared/ui/Text/Text";
+import {AddCommentForm} from "@/features/addCommentForm";
+import {CommentList} from "@/entities/Comment";
 import {useSelector} from "react-redux";
 import {getArticleComments} from "../../model/slice/articleDetailsCommentsSlice";
 import {getArticleCommentsIsLoading} from "../../model/selectors/comment";
 import {
     addCommentFormArticle
 } from "../../model/services/addCommentFormArticle/addCommentFormArticle";
-import {useAppDispatch} from "shared/lib/hooks/useAppDispatch/useAppDispatch";
-import {useInitialEffect} from "shared/lib/hooks/useInitialEffect/useInitialEffect";
+import {useAppDispatch} from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
+import {useInitialEffect} from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
 import {
     fetchCommentsArticleById
 } from "../../model/services/fetchCommentsArticleById/fetchCommentsArticleById";
-import {VStack} from "shared/ui/Stack";
+import {VStack} from "@/shared/ui/Stack";
 
 
 interface ArticleDetailsCommentsProps {

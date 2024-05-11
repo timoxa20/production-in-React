@@ -1,6 +1,6 @@
 import {Decorator} from '@storybook/react';
-import {Theme} from "app/providers/ThemeProvider/lib/ThemeContext";
-import {ThemeProvider} from "app/providers/ThemeProvider";
+import {Theme} from "@/app/providers/ThemeProvider/lib/ThemeContext";
+import {ThemeProvider} from "@/app/providers/ThemeProvider";
 import React from "react";
 
 // eslint-disable-next-line react/display-name

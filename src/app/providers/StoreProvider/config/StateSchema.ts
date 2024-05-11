@@ -1,15 +1,15 @@
-import {UserSchema} from "../../../../entities/User";
-import {LoginSchema} from "features/AuthByUserName";
+import {UserSchema} from "@/entities/User";
+import {LoginSchema} from "@/features/AuthByUserName";
 import {EnhancedStore, PayloadAction, Reducer, ReducersMapObject} from "@reduxjs/toolkit";
 import {AxiosInstance} from "axios";
-import {ArticleDetailsSchema} from "entities/Article";
-import {ArticleDetailsPageSchema} from "pages/ArticleDetailsPage";
-import {AddCommentFormSchema} from "features/addCommentForm";
-import {ArticlePagesSchema} from "pages/ArticlesPages";
-import {AppDispatch} from "app/providers/StoreProvider/config/store";
-import {ScrollSaveSchema} from "features/ScrollSave";
-import {rtkApi} from "shared/api/rtkApi";
-import {ProfileSchema} from "features/editableProfileCard";
+import {ArticleDetailsSchema} from "@/entities/Article";
+import {ArticleDetailsPageSchema} from "@/pages/ArticleDetailsPage";
+import {AddCommentFormSchema} from "@/features/addCommentForm";
+import {ArticlePagesSchema} from "@/pages/ArticlesPages";
+import {AppDispatch} from "@/app/providers/StoreProvider/config/store";
+import {ScrollSaveSchema} from "@/features/ScrollSave";
+import {rtkApi} from "@/shared/api/rtkApi";
+import {ProfileSchema} from "@/features/editableProfileCard";
 
 export interface StateSchema {
     user?: UserSchema;

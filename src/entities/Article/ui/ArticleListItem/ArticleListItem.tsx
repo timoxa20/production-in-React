@@ -1,17 +1,17 @@
-import {classNames} from "shared/lib/classNames/classNames";
+import {classNames} from "@/shared/lib/classNames/classNames";
 import cls from './ArticleListItem.module.scss'
 import React, {HTMLAttributeAnchorTarget, memo} from "react";
 import {useTranslation} from "react-i18next";
 import {Article, ArticleBlockType, ArticleTextBlock, ArticleView} from "../../model/types/article";
-import {Text} from "shared/ui/Text/Text";
-import {Icon} from "shared/ui/Icon/Icon";
-import EyeIcon from 'shared/assets/icons/eye-20-20.svg'
-import {Card} from "shared/ui/Card/Card";
-import {Avatar} from "shared/ui/Avatar/Avatar";
-import {Button, ThemeButton} from "shared/ui/Button/Button";
+import {Text} from "@/shared/ui/Text/Text";
+import {Icon} from "@/shared/ui/Icon/Icon";
+import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
+import {Card} from "@/shared/ui/Card/Card";
+import {Avatar} from "@/shared/ui/Avatar/Avatar";
+import {Button, ThemeButton} from "@/shared/ui/Button/Button";
 import {ArticleTextBlockComponent} from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
-import {RoutePath} from "shared/config/routeConfig/routeConfig";
-import {AppLinks} from "shared/ui/AppLink/AppLinks";
+import {RoutePath} from "@/shared/config/routeConfig/routeConfig";
+import {AppLinks} from "@/shared/ui/AppLink/AppLinks";
 
 
 interface ArticleListItemProps {
