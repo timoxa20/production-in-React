@@ -1,3 +1,1 @@
-import {Nawbar} from "./ui/Nawbar";
-
-export {Nawbar}
+export {Nawbar} from "./ui/Nawbar";

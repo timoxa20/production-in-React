@@ -11,6 +11,9 @@ import {AppLinks, AppLinkTheme} from "shared/ui/AppLink/AppLinks";
 import {RoutePath} from "shared/config/routeConfig/routeConfig";
 import {Dropdown} from "shared/ui/Dropdown/Dropdown";
 import {Avatar} from "shared/ui/Avatar/Avatar";
+import {HStack} from "shared/ui/Stack";
+import {NotificationButton} from "features/NotificationButton";
+import {AvatarDropdown} from "features/avatarDropdown/ui/avatarDropdown/avatarDropdown";
 
 interface NavbarProps {
     className?: string;
@@ -20,9 +23,7 @@ export const Nawbar = memo(({className}: NavbarProps) => {
     const {t} = useTranslation()
     const [isAuthModal, setIsAuthModal] = useState(false)
     const authData = useSelector(getUserAuthData)
-    const dispatch = useDispatch()
-    const isAdmin = useSelector(isUserAdmin)
-    const isManager = useSelector(isUserManager)
+
 
     const onCloseModal = useCallback(() => {
         setIsAuthModal(false)
@@ -32,11 +33,7 @@ export const Nawbar = memo(({className}: NavbarProps) => {
         setIsAuthModal(true)
     }, [])
 
-    const onLogout = useCallback(() => {
-        dispatch(userActions.logout())
-    }, [dispatch])
 
-    const isAdminPanelAvailable = isAdmin || isManager
 
     if (authData) {
         return (
@@ -52,25 +49,10 @@ export const Nawbar = memo(({className}: NavbarProps) => {
                 >
                     {t('Создать пост')}
                 </AppLinks>
-                <Dropdown
-                    className={cls.dropdown}
-                    active
-                    items={[
-                        ...(isAdminPanelAvailable ? [{
-                            content: t('Админка'),
-                            href: RoutePath.admin_panel
-                        }] : []),
-                        {
-                            content: t('Выйти'),
-                            onClick: onLogout
-                        },
-                        {
-                            content: t('Профиль пользователя'),
-                            href: RoutePath.profile + authData.id
-                        }
-                    ]}
-                    trigger={<Avatar size={'30px'} src={authData.avatar}/>}
-                />
+                <HStack gap='16' className={cls.actions}>
+                    <NotificationButton/>
+                    <AvatarDropdown/>
+                </HStack>
             </header>
         )
     }
@@ -84,7 +66,7 @@ export const Nawbar = memo(({className}: NavbarProps) => {
             >
                 {t('Войти')}
             </Button>
-            { isAuthModal && <LoginModal
+            {isAuthModal && <LoginModal
                 isOpen={isAuthModal}
                 onClose={onCloseModal}
             />}
