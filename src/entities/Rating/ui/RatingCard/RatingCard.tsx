@@ -1,5 +1,4 @@
 import {classNames} from "@/shared/lib/classNames/classNames";
-import cls from './RatingCard.module.scss'
 import {memo, useCallback, useState} from "react";
 import {Card} from "@/shared/ui/Card/Card";
 import {HStack, VStack} from "@/shared/ui/Stack";
@@ -78,7 +77,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
     )
 
     return (
-        <Card max className={classNames(cls.RatingCard, {}, [className])}>
+        <Card max className={classNames('', {}, [className])}>
             <VStack align='center' gap='16'>
                 <Text title={startCount ? t('Спасибо за оценку') : title}/>
                 <StarRating selectStart={startCount} size={40} onSelect={onSelectsStart}/>

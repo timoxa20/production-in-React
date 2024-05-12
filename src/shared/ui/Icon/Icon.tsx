@@ -1,9 +1,9 @@
 import {classNames} from "@/shared/lib/classNames/classNames";
 import cls from './Icon.module.scss'
-import React, {memo} from "react";
+import React, {memo, SVGAttributes} from "react";
 
 
-interface IconProps extends React.VFC<React.SVGProps<SVGSVGElement>>{
+interface IconProps extends SVGAttributes<SVGElement>{
     className?: string;
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
     inverted?: boolean

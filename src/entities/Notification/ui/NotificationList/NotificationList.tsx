@@ -1,5 +1,4 @@
 import {classNames} from "@/shared/lib/classNames/classNames";
-import cls from './NotificationList.module.scss'
 import {memo} from "react";
 import {useNotifications} from "../../api/notificationApi";
 import {VStack} from "@/shared/ui/Stack";
@@ -18,7 +17,7 @@ export const NotificationList = memo(({className}: NotificationListProps) => {
 
     if (isLoading) {
         return (
-            <VStack gap='16' max className={classNames(cls.NotificationList, {}, [className])}>
+            <VStack gap='16' max className={classNames('', {}, [className])}>
                 <Skeleton width={500} border={'8px'} height={80}/>
                 <Skeleton width={500} border={'8px'} height={80}/>
                 <Skeleton width={500} border={'8px'} height={80}/>
@@ -27,7 +26,7 @@ export const NotificationList = memo(({className}: NotificationListProps) => {
     }
 
     return (
-        <VStack gap='16'  className={classNames(cls.NotificationList, {}, [className])}>
+        <VStack gap='16'  className={classNames('', {}, [className])}>
             {data?.map(item => (
                 <NotificationListItem key={item.id} item={item}/>
             ))}
