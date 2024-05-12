@@ -2,8 +2,8 @@ import {classNames} from "@/shared/lib/classNames/classNames";
 import cls from './ArticleViewSelect.module.scss'
 import {memo} from "react";
 import {ArticleView} from "@/entities/Article";
-import ListIcons from '@/shared/assets/icons/list-24-24.svg'
-import TiledIcons from '@/shared/assets/icons/tiled-24-24.svg'
+import ListIcons from '@/shared/assets/icons/list-24-24.svg?react'
+import TiledIcons from '@/shared/assets/icons/tiled-24-24.svg?react'
 import {Button, ThemeButton} from "@/shared/ui/Button/Button";
 import {Icon} from "@/shared/ui/Icon/Icon";
 
