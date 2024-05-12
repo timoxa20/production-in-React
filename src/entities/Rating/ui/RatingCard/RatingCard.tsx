@@ -18,8 +18,9 @@ interface RatingCardProps {
     title?: string;
     feedbackTitle?: string;
     hasFeedback?: boolean;
-    onCancel?: (startCount: number) => void
-    onAccept?: (startCount: number, feedback?: string) => void
+    onCancel?: (startCount: number) => void;
+    onAccept?: (startCount: number, feedback?: string) => void;
+    rate?: number
 }
 
 export const RatingCard = memo((props: RatingCardProps) => {
@@ -29,11 +30,12 @@ export const RatingCard = memo((props: RatingCardProps) => {
         feedbackTitle,
         hasFeedback,
         onCancel,
-        onAccept
+        onAccept,
+        rate
     } = props
     const {t} = useTranslation()
     const [isModalOpen, setIsModalOpen] = useState(false)
-    const [startCount, setStartCount] = useState(0)
+    const [startCount, setStartCount] = useState(rate)
     const [feedback, setFeedback] = useState('')
 
 
@@ -48,12 +50,16 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
     const acceptHandle = useCallback(() => {
         setIsModalOpen(false)
-        onAccept?.(startCount, feedback)
+        if (startCount !== undefined) {
+            onAccept?.(startCount, feedback)
+        }
     }, [feedback, onAccept, startCount])
 
     const cancelHandle = useCallback(() => {
         setIsModalOpen(false)
-        onCancel?.(startCount)
+        if (startCount !== undefined) {
+            onCancel?.(startCount)
+        }
     }, [onCancel, startCount])
 
     const modalContent = (
@@ -72,21 +78,19 @@ export const RatingCard = memo((props: RatingCardProps) => {
     )
 
     return (
-        <Card className={classNames(cls.RatingCard, {}, [className])}>
+        <Card max className={classNames(cls.RatingCard, {}, [className])}>
             <VStack align='center' gap='16'>
-                <Text title={title}/>
-                <StarRating size={40} onSelect={onSelectsStart}/>
-                <BrowserView>
-                    <Modal isOpen={isModalOpen} lazy>
-                        {modalContent}
-                    </Modal>
-                </BrowserView>
-                <MobileView>
-                    <Drawer isOpen={isModalOpen} lazy onClose={cancelHandle}>
-
-                    </Drawer>
-                </MobileView>
+                <Text title={startCount ? t('Спасибо за оценку') : title}/>
+                <StarRating selectStart={startCount} size={40} onSelect={onSelectsStart}/>
             </VStack>
+            <BrowserView>
+                <Modal isOpen={isModalOpen} lazy>
+                    {modalContent}
+                </Modal>
+            </BrowserView>
+            <MobileView>
+                <Drawer isOpen={isModalOpen} lazy onClose={cancelHandle}/>
+            </MobileView>
         </Card>
     );
 });

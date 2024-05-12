@@ -497,5 +497,44 @@
       "username": "artem",
       "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
     }
+  ],
+  "article-rating": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "6",
+      "rate": 5,
+      "feedback": "aadsfasdfsd",
+      "id": "L2SeXdz"
+    }
+  ],
+  "profile-rating": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Хорошая статья",
+      "userId": "1",
+      "profileId": "2"
+    }
   ]
 }

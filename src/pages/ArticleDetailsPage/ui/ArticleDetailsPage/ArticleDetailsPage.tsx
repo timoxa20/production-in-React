@@ -11,6 +11,7 @@ import {ArticleDetailsPageHeaders} from "./ArticleDetailsPageHeaders/ArticleDeta
 import {VStack} from "@/shared/ui/Stack";
 import {ArticleReacommendationList} from "@/features/articleReacommendationList";
 import {ArticleDetailsComments} from "../ArticleDetailsComments/ArticleDetailsComments";
+import {ArticleRating} from "@/features/articleRating";
 
 
 interface ArticleDetailsPageProps {
@@ -39,6 +40,7 @@ const ArticleDetailsPage = ({className}: ArticleDetailsPageProps) => {
                 <VStack gap='16' max>
                     <ArticleDetailsPageHeaders/>
                     <ArticleDetails id={id}/>
+                    <ArticleRating articleId={id}/>
                     <ArticleReacommendationList/>
                     <ArticleDetailsComments id={id}/>
                 </VStack>
