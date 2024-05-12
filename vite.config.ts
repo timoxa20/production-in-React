@@ -4,7 +4,11 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
     plugins: [
-        svgr(),
+        svgr({
+            svgrOptions : {
+                icon : true ,
+            } ,
+        }),
         react()
     ],
     resolve: {
