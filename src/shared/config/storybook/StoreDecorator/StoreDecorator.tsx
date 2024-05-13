@@ -1,10 +1,10 @@
 import {Decorator} from "@storybook/react";
 import React from "react";
 import {StateSchema, StoreProvider} from "@/app/providers/StoreProvider";
-import {loginReducer} from "@/features/AuthByUserName/model/slice/loginSlice";
+import {loginReducer} from "@/features/AuthByUserName/testing";
 import {ReducerList} from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import {addCommentFormReducer} from "@/features/addCommentForm/model/slice/addCommentFormSlice";
-import {articleDetailsPageReducer} from "@/pages/ArticleDetailsPage/model/slice";
+import {addCommentFormReducer} from "@/features/addCommentForm/testing";
+import {articleDetailsPageReducer} from "@/pages/ArticleDetailsPage/testing";
 import {profileReducer} from "@/features/editableProfileCard";
 import {articleDetailsReducer} from "@/entities/Article";
 

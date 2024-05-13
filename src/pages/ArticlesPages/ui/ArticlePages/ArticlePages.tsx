@@ -5,7 +5,7 @@ import {DynamicModuleLoader, ReducerList} from "@/shared/lib/components/DynamicM
 import {articlePagesReducer} from "../../model/slice/articlePagesSlice";
 import {useInitialEffect} from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
 import {useAppDispatch} from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-import {Page} from "@/widgets/Page/Page";
+import {Page} from "@/widgets/Page";
 import {fetchNextArticlePage} from "../../model/service/fetchNextArticlePage/fetchNextArticlePage";
 import {initedArticlePage} from "../../model/service/initedArticlePage/initedArticlePage";
 import {ArticlePagesFilter} from "../ArticlePagesFilter/ArticlePagesFilter";

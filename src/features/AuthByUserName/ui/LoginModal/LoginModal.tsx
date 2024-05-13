@@ -3,7 +3,7 @@ import cls from './LoginModal.module.scss'
 import {Modal} from "@/shared/ui/Modal/Modal";
 import {Suspense} from "react";
 import {LoginFormAsync} from "../LoginForm/LoginForm.async";
-import Loader from "@/widgets/Loader/Loader";
+import {Loader} from "@/widgets/Loader";
 
 interface LoginModalProps {
     className?: string;

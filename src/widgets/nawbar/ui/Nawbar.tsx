@@ -10,7 +10,7 @@ import {Text, TextTheme} from "@/shared/ui/Text/Text";
 import {AppLinks, AppLinkTheme} from "@/shared/ui/AppLink/AppLinks";
 import {HStack} from "@/shared/ui/Stack";
 import {NotificationButton} from "@/features/NotificationButton";
-import {AvatarDropdown} from "@/features/avatarDropdown/ui/avatarDropdown/avatarDropdown";
+import {AvatarDropdown} from "@/features/avatarDropdown";
 import {RoutePath} from "@/shared/const/route";
 
 interface NavbarProps {

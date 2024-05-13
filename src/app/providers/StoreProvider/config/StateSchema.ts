@@ -6,7 +6,7 @@ import {ArticleDetailsSchema} from "@/entities/Article";
 import {ArticleDetailsPageSchema} from "@/pages/ArticleDetailsPage";
 import {AddCommentFormSchema} from "@/features/addCommentForm";
 import {ArticlePagesSchema} from "@/pages/ArticlesPages";
-import {AppDispatch} from "@/app/providers/StoreProvider/config/store";
+import {AppDispatch} from "./store";
 import {ScrollSaveSchema} from "@/features/ScrollSave";
 import {rtkApi} from "@/shared/api/rtkApi";
 import {ProfileSchema} from "@/features/editableProfileCard";

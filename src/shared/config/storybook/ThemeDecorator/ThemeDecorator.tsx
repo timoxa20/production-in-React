@@ -1,7 +1,7 @@
 import {Decorator} from '@storybook/react';
-import {Theme} from "@/app/providers/ThemeProvider/lib/ThemeContext";
-import {ThemeProvider} from "@/app/providers/ThemeProvider";
 import React from "react";
+import {Theme} from "../../../const/theme";
+import {ThemeProvider} from "@/app/providers/ThemeProvider";
 
 // eslint-disable-next-line react/display-name
 export const ThemeDecorator = (theme: Theme): Decorator => (Story) => (

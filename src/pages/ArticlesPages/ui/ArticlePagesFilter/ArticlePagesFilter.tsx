@@ -24,7 +24,7 @@ import {Card} from "@/shared/ui/Card/Card";
 import {Input} from "@/shared/ui/Input/Input";
 import {SortOrder} from "@/shared/types";
 import {useDebounce} from "@/shared/lib/hooks/useDebounce/useDebounce";
-import {ArticleViewSelect} from "@/features/ArticleViewSelect/ArticleViewSelect";
+import {ArticleViewSelect} from "@/features/ArticleViewSelect";
 
 
 interface ArticlePagesFilterProps {

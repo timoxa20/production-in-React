@@ -4,7 +4,7 @@ import {useTranslation} from "react-i18next";
 import {Text, TextAlign, TextTheme} from "@/shared/ui/Text/Text";
 import {Input} from "@/shared/ui/Input/Input";
 import {Profile} from "../../model/types/profile";
-import Loader from "@/widgets/Loader/Loader";
+import {Loader} from "@/widgets/Loader";
 import {Avatar} from "@/shared/ui/Avatar/Avatar";
 import {Currency, CurrencySelect} from "../../../Currency";
 import {Country, CountrySelect} from "../../../Country";

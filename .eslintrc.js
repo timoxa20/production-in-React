@@ -56,6 +56,21 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
         "@typescript-eslint/no-explicit-any": "off",
+        'artem-plugin/path-checker': ['error', { alias: '@' }],
+        'artem-plugin/layer-imports': [
+            'off',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing', '**/StoreDecorator.tsx', '**/ThemeDecorator.tsx', '**/RouteDecorator.tsx'],
+            },
+        ],
+        'artem-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx', '**/ThemeDecorator.tsx', '**/RouteDecorator.tsx'],
+            },
+        ],
     },
     globals: {
         __IS_DEV_: true,
