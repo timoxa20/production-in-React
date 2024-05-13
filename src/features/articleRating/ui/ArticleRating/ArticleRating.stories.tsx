@@ -5,11 +5,26 @@ import {StoreDecorator} from "@/shared/config/storybook/StoreDecorator/StoreDeco
 const meta = {
     title: 'features/ArticleRating',
     component: ArticleRating,
-    parameters: {},
+    parameters: {
+        mockData: [
+            {
+                url: `${__API__}/article-rating?userId=1&articleId=1`,
+                method: 'GET',
+                status: 200,
+                response: [
+                    {rate: 4}
+                ],
+            },
+        ],
+    },
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-    decorators: [StoreDecorator({})]
+    decorators: [StoreDecorator({
+        user: {
+            authData: {id: '1', username: 'Artem'}
+        }
+    })]
 } satisfies Meta<typeof ArticleRating>;
 
 export default meta;

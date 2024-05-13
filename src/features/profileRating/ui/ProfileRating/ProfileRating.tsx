@@ -1,7 +1,6 @@
-import {classNames} from "@/shared/lib/classNames/classNames";
 import {memo, useCallback} from "react";
 import {useTranslation} from "react-i18next";
-import {useGetProfileRating, useRateProfile} from "@/features/profileRating/api/ProfileRatingApi";
+import {useGetProfileRating, useRateProfile} from "../../api/ProfileRatingApi";
 import {useSelector} from "react-redux";
 import {getUserAuthData} from "@/entities/User";
 import {Skeleton} from "@/shared/ui/Skeleton/Skeleton";
@@ -10,10 +9,10 @@ import {RatingCard} from "@/entities/Rating";
 
 export interface ProfileRatingProps {
     className?: string;
-    profileId: string | undefined
+    profileId: string
 }
 
-const ProfileRating = ({className, profileId}: ProfileRatingProps) => {
+const ProfileRating = ({ profileId}: ProfileRatingProps) => {
     const {t} = useTranslation()
     const userData = useSelector(getUserAuthData)
 
