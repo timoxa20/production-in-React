@@ -56,7 +56,6 @@ module.exports = {
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "error",
         "@typescript-eslint/no-explicit-any": "off",
-        "artem-plugin/path-checker": ['error', {alias: '@'}]
     },
     globals: {
         __IS_DEV_: true,
