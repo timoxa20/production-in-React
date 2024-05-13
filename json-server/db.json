@@ -535,6 +535,12 @@
       "feedback": "Хорошая статья",
       "userId": "1",
       "profileId": "2"
+    },
+    {
+      "userId": "1",
+      "profileId": "3",
+      "rate": 3,
+      "id": "usqbPSl"
     }
   ]
 }
