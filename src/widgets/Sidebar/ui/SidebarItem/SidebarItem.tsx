@@ -2,7 +2,7 @@ import cls from './SidebarItem.module.scss'
 import {useTranslation} from "react-i18next";
 import {AppLinks, AppLinkTheme} from "@/shared/ui/AppLink";
 import React, {memo} from "react";
-import {SidebarItemType} from "../../model/item";
+import {SidebarItemType} from "../../model/types/item";
 import {classNames} from "@/shared/lib/classNames/classNames";
 import {useSelector} from "react-redux";
 import {getUserAuthData} from "@/entities/User";

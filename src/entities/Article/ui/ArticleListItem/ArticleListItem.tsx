@@ -11,12 +11,12 @@ import {Avatar} from "@/shared/ui/Avatar";
 import {Button, ThemeButton} from "@/shared/ui/Button";
 import {ArticleTextBlockComponent} from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
 import {AppLinks} from "@/shared/ui/AppLink";
-import {RoutePath} from "@/shared/const/route";
+import {getRouteArticleDetails} from "@/shared/const/route";
 
 
 interface ArticleListItemProps {
     className?: string;
-    article?: Article;
+    article: Article;
     view?: ArticleView;
     target?: HTMLAttributeAnchorTarget;
 }
@@ -58,7 +58,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     <div className={cls.footer}>
                         <AppLinks
                             target={target}
-                            to={RoutePath.article_details + article?.id}
+                            to={getRouteArticleDetails(article?.id) }
                         >
                             <Button
                                 theme={ThemeButton.OUTLINE}
@@ -76,7 +76,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     return (
         <AppLinks
             target={target}
-            to={RoutePath.article_details + article?.id}
+            to={getRouteArticleDetails(article?.id) }
             className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
         >
             <Card className={cls.Card}>

@@ -5,7 +5,7 @@ import {Avatar} from "@/shared/ui/Avatar";
 import {Dropdown} from "@/shared/ui/Dropdown";
 import {useDispatch, useSelector} from "react-redux";
 import {getUserAuthData, isUserAdmin, isUserManager, userActions} from "@/entities/User";
-import {RoutePath} from "@/shared/const/route";
+import {getRouteAdminPanel, getRouteProfile} from "@/shared/const/route";
 
 
 interface avatarDropdownProps {
@@ -36,7 +36,7 @@ export const AvatarDropdown = memo(({className}: avatarDropdownProps) => {
             items={[
                 ...(isAdminPanelAvailable ? [{
                     content: t('Админка'),
-                    href: RoutePath.admin_panel
+                    href: getRouteAdminPanel()
                 }] : []),
                 {
                     content: t('Выйти'),
@@ -44,7 +44,7 @@ export const AvatarDropdown = memo(({className}: avatarDropdownProps) => {
                 },
                 {
                     content: t('Профиль пользователя'),
-                    href: RoutePath.profile + authData?.id
+                    href: getRouteProfile(authData?.id)
                 }
             ]}
             trigger={<Avatar size={'30px'} src={authData?.avatar}/>}
