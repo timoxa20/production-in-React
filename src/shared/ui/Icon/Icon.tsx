@@ -3,7 +3,7 @@ import cls from './Icon.module.scss'
 import React, {memo, SVGAttributes} from "react";
 
 
-interface IconProps extends SVGAttributes<SVGElement>{
+interface IconProps extends SVGAttributes<SVGElement> {
     className?: string;
     Svg: React.VFC<React.SVGProps<SVGSVGElement>>;
     inverted?: boolean
