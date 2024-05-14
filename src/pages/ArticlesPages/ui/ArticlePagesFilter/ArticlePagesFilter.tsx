@@ -14,9 +14,7 @@ import {articlePagesAction} from "../../model/slice/articlePagesSlice";
 import {fetchArticleList} from "../../model/service/fetchArticleList";
 import {
     ArticleSortField,
-    ArticleSortSelector,
     ArticleType,
-    ArticleTypeTabs,
     ArticleView
 } from "@/entities/Article";
 import {useAppDispatch} from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
@@ -25,6 +23,8 @@ import {Input} from "@/shared/ui/Input";
 import {SortOrder} from "@/shared/types";
 import {useDebounce} from "@/shared/lib/hooks/useDebounce/useDebounce";
 import {ArticleViewSelect} from "@/features/ArticleViewSelect";
+import {ArticleTypeTabs} from "@/features/ArticleTypeTabs";
+import {ArticleSortSelector} from "@/features/ArticleSortSelector";
 
 
 interface ArticlePagesFilterProps {
