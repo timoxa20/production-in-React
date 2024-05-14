@@ -4,7 +4,6 @@
  */
 
 import type {Config} from 'jest';
-import path from "path";
 
 const config: Config = {
     globals: {
@@ -40,7 +39,8 @@ const config: Config = {
     setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts'],
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
-        '\\.svg$': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+        '\\.svg\\?react$': '<rootDir>/config/jest/svgMock.ts',
+        "^@/(.*)$": "<rootDir>/src/$1"
     },
     extensionsToTreatAsEsm: ['.ts'],
     reporters: [
