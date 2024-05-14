@@ -12,7 +12,6 @@ export const AppImage = memo((props: AppImageProps) => {
         className,
         src,
         alt = 'image',
-        width,
         fallback,
         errorFallback,
         ...otherProps

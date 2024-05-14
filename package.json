@@ -22,10 +22,12 @@
     "test:ui:html": "cd .loki && reg-cli ./current/ ./reference/ ./reg-diff/ -R ./report.html",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
     "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
-    "prepare": "husky install",
     "storybook:build": "storybook build -c ./config/storybook",
     "generate:slice": "node ./scripts/createSlice/index.js",
     "postinstall": "node ./scripts/clear-cache.js"
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": "eslint"
   },
   "keywords": [],
   "author": "artem",
@@ -92,6 +94,7 @@
     "jest-transform-css": "^6.0.1",
     "jest-transform-stub": "^2.0.0",
     "json-server": "^0.17.4",
+    "lint-staged": "^15.2.2",
     "mini-css-extract-plugin": "^2.8.1",
     "react-refresh": "^0.14.2",
     "reg-cli": "^0.18.1",

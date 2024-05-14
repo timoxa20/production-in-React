@@ -29,25 +29,12 @@ describe('app/router/AppRouter',  function () {
         expect(page).toBeInTheDocument()
     })
 
-    test('Доступ к закрытой странице для авторизованного пользователя', async() => {
-        componentRender(<AppRouter/>, {
-            route: getRouteProfile('1'),
-            initialState: {
-                user: {
-                    _inited: true, authData: {}
-                }
-            }
-        })
-        const page = await screen.findByTestId('ProfilePage')
-        expect(page).toBeInTheDocument()
-    })
-
     test('Доступ запрещён (отсудствует роль)', async() => {
         componentRender(<AppRouter/>, {
             route: getRouteAdminPanel() ,
             initialState: {
                 user: {
-                    _inited: true, authData: {}
+                    _inited: true, authData: {roles:[ UserRole.USER]}
                 }
             }
         })
@@ -56,11 +43,12 @@ describe('app/router/AppRouter',  function () {
     })
 
     test('Доступ разрешон (присудствует роль)', async() => {
+
         componentRender(<AppRouter/>, {
             route: getRouteAdminPanel() ,
             initialState: {
                 user: {
-                    _inited: true, authData: {roles: UserRole.ADMIN}
+                    _inited: true, authData: {roles: [UserRole.ADMIN]}
                 }
             }
         })

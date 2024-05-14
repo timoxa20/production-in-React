@@ -9,7 +9,7 @@ import {useInitialEffect} from "@/shared/lib/hooks/useInitialEffect/useInitialEf
 import {useSelector} from "react-redux";
 import {StateSchema} from "@/app/providers/StoreProvider";
 import {useThrottle} from "@/shared/lib/hooks/useThrottle/useThrottle";
-import {TestProps} from "@/shared/types/test";
+import {TestProps} from "@/shared/types/testid";
 
 
 interface PageProps extends TestProps{
