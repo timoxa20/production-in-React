@@ -2,10 +2,10 @@ import React, {memo, useMemo, useState} from "react";
 import {classNames} from "@/shared/lib/classNames/classNames";
 import cls from './Sidebar.module.scss'
 import {ThemeSwitcher} from "@/features/ThemeSwitcher";
-import {Button, ButtonSize, ThemeButton} from "@/shared/ui/Button/Button";
+import {Button, ButtonSize, ThemeButton} from "@/shared/ui/Button";
 import {SidebarItemsList} from "../../model/item";
 import {SidebarItem} from "../SidebarItem/SidebarItem";
-import {VStack} from "@/shared/ui/Stack/VStack/VStack";
+import {VStack} from "@/shared/ui/Stack";
 import {LangSwitcher} from "@/features/LangSwitcher";
 
 

@@ -1,7 +1,7 @@
 import {classNames} from "@/shared/lib/classNames/classNames";
 import IconsLight from '@/shared/assets/icons/theme-light.svg?react'
 import IconsDark from '@/shared/assets/icons/theme-dark.svg?react'
-import {Button, ThemeButton} from "@/shared/ui/Button/Button";
+import {Button, ThemeButton} from "@/shared/ui/Button";
 import {memo} from "react";
 import {Theme} from "@/shared/const/theme";
 import {useTheme} from "@/shared/lib/hooks/useTheme/useTheme";

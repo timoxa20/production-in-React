@@ -3,14 +3,14 @@ import cls from './ArticleListItem.module.scss'
 import React, {HTMLAttributeAnchorTarget, memo} from "react";
 import {useTranslation} from "react-i18next";
 import {Article, ArticleBlockType, ArticleTextBlock, ArticleView} from "../../model/types/article";
-import {Text} from "@/shared/ui/Text/Text";
-import {Icon} from "@/shared/ui/Icon/Icon";
+import {Text} from "@/shared/ui/Text";
+import {Icon} from "@/shared/ui/Icon";
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg?react'
-import {Card} from "@/shared/ui/Card/Card";
-import {Avatar} from "@/shared/ui/Avatar/Avatar";
-import {Button, ThemeButton} from "@/shared/ui/Button/Button";
+import {Card} from "@/shared/ui/Card";
+import {Avatar} from "@/shared/ui/Avatar";
+import {Button, ThemeButton} from "@/shared/ui/Button";
 import {ArticleTextBlockComponent} from "../ArticleTextBlockComponent/ArticleTextBlockComponent";
-import {AppLinks} from "@/shared/ui/AppLink/AppLinks";
+import {AppLinks} from "@/shared/ui/AppLink";
 import {RoutePath} from "@/shared/const/route";
 
 

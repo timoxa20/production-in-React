@@ -1,12 +1,12 @@
 import {classNames} from "@/shared/lib/classNames/classNames";
 import cls from './NotificationButton.module.scss'
 import React, {memo, useCallback, useState} from "react";
-import {Button, ThemeButton} from "@/shared/ui/Button/Button";
-import {Icon} from "@/shared/ui/Icon/Icon";
+import {Button, ThemeButton} from "@/shared/ui/Button";
+import {Icon} from "@/shared/ui/Icon";
 import NotificationIcons from "@/shared/assets/icons/notification-20-20.svg?react";
 import {NotificationList} from "@/entities/Notification";
-import {Popover} from "@/shared/ui/Popover/Popover";
-import {Drawer} from "@/shared/ui/Drower/Drawer";
+import {Popover} from "@/shared/ui/Popover";
+import {Drawer} from "@/shared/ui/Drower";
 import {BrowserView, MobileView} from "react-device-detect";
 
 
