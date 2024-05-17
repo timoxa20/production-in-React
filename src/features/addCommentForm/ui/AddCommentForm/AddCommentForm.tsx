@@ -45,14 +45,16 @@ const AddCommentForm = ({className, onSendComment}: AddCommentFormProps) => {
 
     return (
         <DynamicModuleLoader reducers={reducer} removeAfterUnmount>
-            <HStack justify='between' max className={classNames(cls.AddCommentForm, {}, [className])}>
+            <HStack data-testid='AddCommentForm' justify='between' max className={classNames(cls.AddCommentForm, {}, [className])}>
                 <Input
+                    data-testid='AddCommentForm.Input'
                     className={cls.input}
                     value={text}
                     onChange={onCommentTextChange}
                     placeholder={t('Введите текст коментария')}
                 />
                 <Button
+                    data-testid='AddCommentForm.Button'
                     onClick={onSendHandler}
                     theme={ThemeButton.OUTLINE}
                 >
