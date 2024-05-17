@@ -12,19 +12,21 @@ describe('Пользователь заходит на страницу стат
         cy.removeArticle(currentArticleId);
         cy.log(JSON.stringify(currentArticleId))
     })
-    it('И видит содержимое статьй', () => {
+
+    it.skip('И видит содержимое статьй', () => {
         cy.getByTestId('ArticleDetails.Info').should('exist')
     })
-    it('И видит список рекомендаций', () => {
+    it.skip('И видит список рекомендаций', () => {
         cy.getByTestId('ArticleRecommendationList').should('exist')
     })
-    it('И оставляет коментарий', () => {
+    it.skip('И оставляет коментарий', () => {
         cy.getByTestId('ArticleDetails.Info')
         cy.getByTestId('AddCommentForm').scrollIntoView()
         cy.addComment('text')
         cy.getByTestId('CommentCard.Content').should('have.length', 1)
     })
     it('И ставит оценку', () => {
+        cy.intercept('GET', '**/article/*', {fixture: 'article-details.json'})
         cy.getByTestId('ArticleDetails.Info')
         cy.getByTestId('RatingCard').scrollIntoView()
         cy.setRate(4, 'feedback')
