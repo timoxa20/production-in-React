@@ -24,7 +24,7 @@ export const getSidebarItems = createSelector(
             },
         ];
 
-        if (userData) {
+        if (userData && userData.id) {
             sidebarItemsList.push(
                 {
                     path: getRouteProfile(userData.id),

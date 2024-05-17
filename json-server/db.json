@@ -472,6 +472,15 @@
         "MANAGER"
       ],
       "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "ADMIN"
+      ],
+      "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
     }
   ],
   "profile": [
@@ -519,6 +528,13 @@
       "rate": 5,
       "feedback": "aadsfasdfsd",
       "id": "L2SeXdz"
+    },
+    {
+      "userId": "2",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "jiHmGY9"
     }
   ],
   "profile-rating": [

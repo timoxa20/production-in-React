@@ -34,19 +34,23 @@ export const CommentCard = memo(({className, comment, isLoading}: CommentCardPro
         return null
     }
 
+    if (comment.user.id) {
+        return (
+            <VStack gap='8' max className={classNames(cls.CommentCard, {}, [className])}>
+                <AppLinks
+                    to={getRouteProfile(comment?.user.id )}
+                    className={cls.header}
+                >
+                    {comment?.user.avatar ? <Avatar size={'30px'} src={comment?.user.avatar}/> : null}
+                    <Text className={cls.username} title={comment?.user.username}/>
+                </AppLinks>
+                <Text className={cls.text} text={comment?.text}/>
+            </VStack>
+        );
+    }
 
-    return (
-        <VStack gap='8' max className={classNames(cls.CommentCard, {}, [className])}>
-            <AppLinks
-                to={getRouteProfile(comment?.user.id)}
-                className={cls.header}
-            >
-                {comment?.user.avatar ? <Avatar size={'30px'} src={comment?.user.avatar}/> : null}
-                <Text className={cls.username} title={comment?.user.username}/>
-            </AppLinks>
-            <Text className={cls.text} text={comment?.text}/>
-        </VStack>
-    );
+
+
 });
 
 CommentCard.displayName = 'CommentCard'
