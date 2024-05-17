@@ -1,6 +1,10 @@
-export type Mods = Record<string, boolean | string | undefined>
+export type Mods = Record<string, boolean | string | undefined>;
 
-export function classNames(cls: string, mods: Mods = {}, additional: Array<string | undefined> = []): string {
+export function classNames(
+    cls: string,
+    mods: Mods = {},
+    additional: Array<string | undefined> = [],
+): string {
     return [
         cls,
         ...additional.filter(Boolean),
@@ -8,6 +12,5 @@ export function classNames(cls: string, mods: Mods = {}, additional: Array<strin
             // eslint-disable-next-line no-unused-vars,@typescript-eslint/no-unused-vars
             .filter(([_, value]) => Boolean(value))
             .map(([className]) => className),
-    ]
-        .join(' ');
+    ].join(' ');
 }

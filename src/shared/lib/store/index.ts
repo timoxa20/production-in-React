@@ -1,2 +1,2 @@
-export {buildSlice} from './buildSlice'
-export {buildSelectors} from './buildSelectors'
+export { buildSlice } from './buildSlice';
+export { buildSelectors } from './buildSelectors';

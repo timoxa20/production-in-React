@@ -1,19 +1,19 @@
-import {User} from "../../../User";
+import { User } from '../../../User';
 
 export enum ArticleSortField {
     VIEWS = 'views',
     TITLE = 'title',
-    CREATED = 'createdAt'
+    CREATED = 'createdAt',
 }
 export enum ArticleBlockType {
-    CODE = "CODE",
-    IMAGE = "IMAGE",
-    TEXT = "TEXT",
+    CODE = 'CODE',
+    IMAGE = 'IMAGE',
+    TEXT = 'TEXT',
 }
 
-export interface ArticleBlockBase  {
-    id: string,
-    type: ArticleBlockType
+export interface ArticleBlockBase {
+    id: string;
+    type: ArticleBlockType;
 }
 export interface ArticleCodeBlock extends ArticleBlockBase {
     type: ArticleBlockType.CODE;
@@ -29,21 +29,24 @@ export interface ArticleImageBlock extends ArticleBlockBase {
 export interface ArticleTextBlock extends ArticleBlockBase {
     type: ArticleBlockType.TEXT;
     title?: string;
-    paragraphs: string[]
+    paragraphs: string[];
 }
 
-export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock
+export type ArticleBlock =
+    | ArticleCodeBlock
+    | ArticleImageBlock
+    | ArticleTextBlock;
 
-export enum ArticleType  {
-    IT = "IT",
-    ALL = "ALL",
-    SCIENCE = "SCIENCE",
-    ECONOMICS = "ECONOMICS"
+export enum ArticleType {
+    IT = 'IT',
+    ALL = 'ALL',
+    SCIENCE = 'SCIENCE',
+    ECONOMICS = 'ECONOMICS',
 }
 
 export enum ArticleView {
     BIG = 'BIG',
-    SMALL = 'SMALL'
+    SMALL = 'SMALL',
 }
 
 export interface Article {
@@ -53,7 +56,7 @@ export interface Article {
     subtitle: string;
     img: string;
     views: number;
-    createdAt:  string;
+    createdAt: string;
     type: ArticleType[];
-    blocks: ArticleBlock[]
+    blocks: ArticleBlock[];
 }

@@ -1,7 +1,7 @@
-import {StateSchema} from "@/app/providers/StoreProvider";
-import {getProfileForm} from "./getProfileForm";
-import {Country} from "../../../../../entities/Country";
-import {Currency} from "../../../../../entities/Currency";
+import { StateSchema } from '@/app/providers/StoreProvider';
+import { getProfileForm } from './getProfileForm';
+import { Country } from '../../../../../entities/Country';
+import { Currency } from '../../../../../entities/Currency';
 
 describe('getLoginError.test', () => {
     test('should return error', () => {
@@ -13,16 +13,16 @@ describe('getLoginError.test', () => {
             first: 'Artem',
             city: 'SADAS',
             currency: Currency.EURO,
-        }
+        };
         const state: Partial<StateSchema> = {
             profile: {
-                form: data
-            }
-        }
-        expect(getProfileForm(state)).toEqual(data)
-    })
+                form: data,
+            },
+        };
+        expect(getProfileForm(state)).toEqual(data);
+    });
     test('should return error', () => {
-        const state: Partial<StateSchema> = {}
-        expect(getProfileForm(state)).toEqual(undefined)
-    })
-})
+        const state: Partial<StateSchema> = {};
+        expect(getProfileForm(state)).toEqual(undefined);
+    });
+});

@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ListBox} from './ListBox';
-import {action} from "@storybook/addon-actions";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ListBox } from './ListBox';
+import { action } from '@storybook/addon-actions';
 
 const meta = {
     title: 'shared /ListBox',
@@ -19,6 +19,6 @@ export const Normal: Story = {
         items: [],
         value: '41341',
         defaultValue: '432432',
-        onChange: action('sadasda')
+        onChange: action('sadasda'),
     },
 };

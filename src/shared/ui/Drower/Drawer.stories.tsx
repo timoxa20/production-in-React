@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {Drawer} from './Drawer';
-import {action} from "@storybook/addon-actions";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Drawer } from './Drawer';
+import { action } from '@storybook/addon-actions';
 
 const meta = {
     title: 'shared /Drawer',
@@ -22,5 +22,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-    args: {children: 'vsdvsdsdfsdf'},
+    args: { children: 'vsdvsdsdfsdf' },
 };

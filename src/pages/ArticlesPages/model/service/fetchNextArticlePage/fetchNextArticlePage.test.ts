@@ -1,10 +1,9 @@
-import {TestAsyncThunk} from "@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk";
-import {fetchNextArticlePage} from "./fetchNextArticlePage";
-import {fetchArticleList} from "../fetchArticleList";
-import {ArticleSortField} from "../../../../../entities/Article";
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { fetchNextArticlePage } from './fetchNextArticlePage';
+import { fetchArticleList } from '../fetchArticleList';
+import { ArticleSortField } from '../../../../../entities/Article';
 
-
-jest.mock('../fetchArticleList')
+jest.mock('../fetchArticleList');
 
 describe('fetchNextArticlePage.test', () => {
     test('success', async () => {
@@ -18,12 +17,12 @@ describe('fetchNextArticlePage.test', () => {
                 hasMore: true,
                 order: 'asc',
                 sort: ArticleSortField.CREATED,
-                search: ''
-            }
-        })
-        await thunk.callThumnk()
-        expect(thunk.dispatch).toBeCalledTimes(4)
-        expect(fetchArticleList).toHaveBeenCalled()
+                search: '',
+            },
+        });
+        await thunk.callThumnk();
+        expect(thunk.dispatch).toBeCalledTimes(4);
+        expect(fetchArticleList).toHaveBeenCalled();
     });
 
     test('fetchArticleList not called', async () => {
@@ -37,11 +36,11 @@ describe('fetchNextArticlePage.test', () => {
                 hasMore: false,
                 order: 'asc',
                 sort: ArticleSortField.CREATED,
-                search: ''
-            }
-        })
-        await thunk.callThumnk()
-        expect(thunk.dispatch).toBeCalledTimes(2)
-        expect(fetchArticleList).not.toHaveBeenCalled()
+                search: '',
+            },
+        });
+        await thunk.callThumnk();
+        expect(thunk.dispatch).toBeCalledTimes(2);
+        expect(fetchArticleList).not.toHaveBeenCalled();
     });
-})
+});

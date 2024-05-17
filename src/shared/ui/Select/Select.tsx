@@ -1,8 +1,8 @@
-import {classNames, Mods} from "@/shared/lib/classNames/classNames";
-import cls from './Select.module.scss'
-import {ChangeEvent, useMemo} from "react";
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import cls from './Select.module.scss';
+import { ChangeEvent, useMemo } from 'react';
 
-export interface SelectOptions <T extends string> {
+export interface SelectOptions<T extends string> {
     value: T;
     content: string;
 }
@@ -12,42 +12,35 @@ interface SelectProps<T extends string> {
     label?: string;
     options?: SelectOptions<T>[];
     value?: T;
-    onChange?: (value: T) => void
-    readonly?: boolean
+    onChange?: (value: T) => void;
+    readonly?: boolean;
 }
 
 // eslint-disable-next-line react/display-name
 export const Select = <T extends string>(props: SelectProps<T>) => {
-    const {
-        className,
-        label,
-        options,
-        value,
-        onChange,
-        readonly,
-    } = props
+    const { className, label, options, value, onChange, readonly } = props;
 
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
-        onChange?.(e.target.value as T)
-    }
+        onChange?.(e.target.value as T);
+    };
 
     const optionsList = useMemo(() => {
-        return options?.map(opt => (
+        return options?.map((opt) => (
             <option
                 className={cls.option}
                 key={opt.value}
                 value={opt.value}
-            >{opt.content}</option>
-        ))
-    }, [options])
+            >
+                {opt.content}
+            </option>
+        ));
+    }, [options]);
 
-    const mods: Mods = {}
+    const mods: Mods = {};
 
     return (
         <div className={classNames(cls.Wrapper, mods, [className])}>
-            {label && (
-                <span className={cls.label}>{label + '>'}</span>
-            )}
+            {label && <span className={cls.label}>{label + '>'}</span>}
             <select
                 className={cls.select}
                 value={value}
@@ -59,6 +52,3 @@ export const Select = <T extends string>(props: SelectProps<T>) => {
         </div>
     );
 };
-
-
-

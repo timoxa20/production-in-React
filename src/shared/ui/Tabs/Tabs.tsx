@@ -1,42 +1,45 @@
-import {classNames} from "@/shared/lib/classNames/classNames";
-import cls from './Tabs.module.scss'
-import {memo, ReactNode, useCallback} from "react";
-import {Card, CardTheme} from "../Card/Card";
+import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './Tabs.module.scss';
+import { memo, ReactNode, useCallback } from 'react';
+import { Card, CardTheme } from '../Card/Card';
 
 export interface TabsItem {
     value: string;
-    content: ReactNode
+    content: ReactNode;
 }
 
 interface TabsProps {
     className?: string;
     tabs: TabsItem[];
     value: string;
-    onTabsClick?: (tab: TabsItem) => void
+    onTabsClick?: (tab: TabsItem) => void;
 }
 
 export const Tabs = memo((props: TabsProps) => {
-    const {
-        className,
-        tabs,
-        onTabsClick,
-        value
-    } = props
+    const { className, tabs, onTabsClick, value } = props;
 
-    const clickHandle = useCallback((tab: TabsItem) => () => {
-        if (onTabsClick) {
-            onTabsClick(tab)
-        }
-    }, [onTabsClick])
+    const clickHandle = useCallback(
+        (tab: TabsItem) => () => {
+            if (onTabsClick) {
+                onTabsClick(tab);
+            }
+        },
+        [onTabsClick],
+    );
 
     return (
         <div className={classNames(cls.Tabs, {}, [className])}>
-            {tabs.map(tab => (
+            {tabs.map((tab) => (
                 <Card
-                    theme={tab.value === value ? CardTheme.NORMAL : CardTheme.OUTLINED}
+                    theme={
+                        tab.value === value
+                            ? CardTheme.NORMAL
+                            : CardTheme.OUTLINED
+                    }
                     key={tab.value}
                     onClick={clickHandle(tab)}
-                    className={cls.tab}>
+                    className={cls.tab}
+                >
                     {tab.content}
                 </Card>
             ))}
@@ -44,4 +47,4 @@ export const Tabs = memo((props: TabsProps) => {
     );
 });
 
-Tabs.displayName = 'Tabs'
+Tabs.displayName = 'Tabs';

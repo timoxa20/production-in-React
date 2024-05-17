@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ArticleViewSelect} from './ArticleViewSelect';
+import type { Meta, StoryObj } from '@storybook/react';
+import { ArticleViewSelect } from './ArticleViewSelect';
 
 const meta = {
     title: 'features/ArticleViewSelect',

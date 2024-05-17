@@ -1,28 +1,18 @@
-import {Button} from "@/shared/ui/Button";
-import {useEffect, useState} from "react";
-
+import { Button } from '@/shared/ui/Button';
+import { useEffect, useState } from 'react';
 
 //Компонент для тестирования
 export const BugButton = () => {
-    const [error, setError] = useState(false)
-    const throwError = 'throw error'
+    const [error, setError] = useState(false);
+    const throwError = 'throw error';
     const toggleError = () => {
-        setError(true)
-    }
+        setError(true);
+    };
 
     useEffect(() => {
-        if(error) {
+        if (error) {
             throw new Error();
         }
-    }, [error])
-    return (
-        <Button
-            onClick={toggleError}
-        >
-            {throwError}
-        </Button>
-    );
+    }, [error]);
+    return <Button onClick={toggleError}>{throwError}</Button>;
 };
-
-
-

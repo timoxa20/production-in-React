@@ -9,6 +9,6 @@ fs.remove(modulePath)
     .then(() => {
         console.log('Папка удалена успешно');
     })
-    .catch(err => {
+    .catch((err) => {
         console.error('Ошибка при удалении папки:', err);
     });

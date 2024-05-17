@@ -1,11 +1,11 @@
-import {Decorator} from '@storybook/react';
+import { Decorator } from '@storybook/react';
 import '@/app/styles/index.scss';
-import {MemoryRouter} from "react-router-dom";
+import { MemoryRouter } from 'react-router-dom';
 
 export const RouteDecorator: Decorator = (Story) => {
     return (
         <MemoryRouter initialEntries={['/']}>
-            <Story/>
+            <Story />
         </MemoryRouter>
     );
 };

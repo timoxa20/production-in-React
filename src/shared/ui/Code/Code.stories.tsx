@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {Code} from './Code';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Code } from './Code';
 
 const meta = {
     title: 'shared /Code',
@@ -15,20 +15,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
     args: {
-        text: 'import type {Meta, StoryObj} from \'@storybook/react\';\n' +
-            'import {fn} from \'@storybook/test\';\n' +
-            'import {Code} from \'./Code\';\n' +
+        text:
+            "import type {Meta, StoryObj} from '@storybook/react';\n" +
+            "import {fn} from '@storybook/test';\n" +
+            "import {Code} from './Code';\n" +
             '\n' +
             'const meta = {\n' +
-            '    title: \'shared /Code\',\n' +
+            "    title: 'shared /Code',\n" +
             '    component: Code,\n' +
             '    parameters: {},\n' +
-            '    tags: [\'autodocs\'],\n' +
+            "    tags: ['autodocs'],\n" +
             '    argTypes: {},\n' +
             '    args: {},\n' +
             '} satisfies Meta<typeof Code>;\n' +
             '\n' +
             'export default meta;\n' +
-            'type Story = StoryObj<typeof meta>;'
+            'type Story = StoryObj<typeof meta>;',
     },
 };

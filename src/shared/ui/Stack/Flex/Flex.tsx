@@ -1,6 +1,6 @@
-import {classNames, Mods} from "@/shared/lib/classNames/classNames";
-import cls from './Flex.module.scss'
-import {DetailedHTMLProps, HTMLAttributes, ReactNode} from "react";
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import cls from './Flex.module.scss';
+import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
 export type FlexAlign = 'start' | 'center' | 'end';
@@ -12,18 +12,18 @@ const justifyClasses: Record<FlexJustify, string> = {
     center: cls.justifyCenter,
     end: cls.justifyEnd,
     between: cls.justifyBetween,
-}
+};
 
 const alignClasses: Record<FlexAlign, string> = {
     start: cls.alignStart,
     center: cls.alignCenter,
     end: cls.alignEnd,
-}
+};
 
 const directionClasses: Record<FlexDirection, string> = {
     row: cls.directionRow,
     colum: cls.directionColumn,
-}
+};
 
 const gapClasses: Record<FlexGap, string> = {
     4: cls.gap4,
@@ -31,9 +31,12 @@ const gapClasses: Record<FlexGap, string> = {
     16: cls.gap16,
     24: cls.gap24,
     32: cls.gap32,
-}
+};
 
-type DivProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
+type DivProps = DetailedHTMLProps<
+    HTMLAttributes<HTMLDivElement>,
+    HTMLDivElement
+>;
 
 export interface FlexProps extends DivProps {
     className?: string;
@@ -55,25 +58,25 @@ export const Flex = (props: FlexProps) => {
         gap,
         max,
         ...otherProps
-    }
-        = props
+    } = props;
 
     const classes = [
         className,
         justifyClasses[justify],
         alignClasses[align],
         directionClasses[direction],
-        gap && gapClasses[gap]
-    ]
+        gap && gapClasses[gap],
+    ];
 
     const mods: Mods = {
-        [cls.max]: max
-    }
+        [cls.max]: max,
+    };
 
     return (
         <div
             {...otherProps}
-            className={classNames(cls.Flex, mods, classes)}>
+            className={classNames(cls.Flex, mods, classes)}
+        >
             {children}
         </div>
     );

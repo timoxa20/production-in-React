@@ -1,7 +1,7 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ArticleReacommendationList} from './ArticleReacommendationList';
-import {StoreDecorator} from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import {Article} from "@/entities/Article";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ArticleReacommendationList } from './ArticleReacommendationList';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Article } from '@/entities/Article';
 const article: Article = {
     id: '1',
     img: '',
@@ -10,9 +10,9 @@ const article: Article = {
     subtitle: 'Retng',
     blocks: [],
     views: 123,
-    user: {id: '1', username: 'Pavel'},
-    createdAt: ''
-}
+    user: { id: '1', username: 'Pavel' },
+    createdAt: '',
+};
 const meta = {
     title: 'features /ArticleReacommendationList',
     component: ArticleReacommendationList,
@@ -23,9 +23,9 @@ const meta = {
                 method: 'GET',
                 status: 200,
                 response: [
-                    {...article, id: '1'},
-                    {...article, id: '2'},
-                    {...article, id: '3'}
+                    { ...article, id: '1' },
+                    { ...article, id: '2' },
+                    { ...article, id: '3' },
                 ],
             },
         ],
@@ -38,9 +38,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-
-
 export const Normal: Story = {
     args: {},
-    decorators: [StoreDecorator({})]
+    decorators: [StoreDecorator({})],
 };

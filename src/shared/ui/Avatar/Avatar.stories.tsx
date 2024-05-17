@@ -1,12 +1,11 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {Avatar} from "./Avatar";
-import StoryIcon from '../../assets/storybook.jpg'
+import type { Meta, StoryObj } from '@storybook/react';
+import { Avatar } from './Avatar';
+import StoryIcon from '../../assets/storybook.jpg';
 
 const meta = {
     title: 'shared /Avatar ',
     component: Avatar,
-    parameters: {
-    },
+    parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
@@ -18,18 +17,13 @@ type Story = StoryObj<typeof meta>;
 export const PRIMARY: Story = {
     args: {
         size: '150',
-        src: StoryIcon
+        src: StoryIcon,
     },
 };
 
 export const Small: Story = {
     args: {
         size: '50',
-        src: StoryIcon
+        src: StoryIcon,
     },
 };
-
-
-
-
-

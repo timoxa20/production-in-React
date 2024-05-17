@@ -1,8 +1,8 @@
-import {Menu, MenuButton, MenuItem, MenuItems} from '@headlessui/react'
-import cls from './Dropdown.module.scss'
-import {classNames} from "@/shared/lib/classNames/classNames";
-import {Fragment, ReactNode} from "react";
-import {AppLinks} from "../AppLink/AppLinks";
+import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react';
+import cls from './Dropdown.module.scss';
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { Fragment, ReactNode } from 'react';
+import { AppLinks } from '../AppLink/AppLinks';
 
 export interface DropdownItem {
     disabled?: boolean;
@@ -19,24 +19,33 @@ interface DropdownProps {
 }
 
 export function Dropdown(props: DropdownProps) {
-    const {className, active, trigger, items} = props
+    const { className, active, trigger, items } = props;
     return (
         <Menu
-            as='div'
+            as="div"
             className={classNames(cls.Dropdown, {}, [className])}
         >
             <MenuButton className={cls.btn}>{trigger}</MenuButton>
-            <MenuItems className={cls.menu} anchor="bottom">
+            <MenuItems
+                className={cls.menu}
+                anchor="bottom"
+            >
                 {items.map((item, index) => {
-                    const content = <button
-                        disabled={item.disabled}
-                        type={'button'}
-                        onClick={item.onClick}
-                        className={classNames(cls.item, {[cls.active]: active}, [className])}>
-                        {item.content}
-                    </button>
+                    const content = (
+                        <button
+                            disabled={item.disabled}
+                            type={'button'}
+                            onClick={item.onClick}
+                            className={classNames(
+                                cls.item,
+                                { [cls.active]: active },
+                                [className],
+                            )}
+                        >
+                            {item.content}
+                        </button>
+                    );
                     if (item.href) {
-
                         return (
                             <MenuItem
                                 key={`dropdown-key${index}`}
@@ -45,15 +54,18 @@ export function Dropdown(props: DropdownProps) {
                             >
                                 {content}
                             </MenuItem>
-                        )
+                        );
                     }
                     return (
-                        <MenuItem key={`dropdown-key${index}`} as={Fragment}>
+                        <MenuItem
+                            key={`dropdown-key${index}`}
+                            as={Fragment}
+                        >
                             {content}
                         </MenuItem>
-                    )
+                    );
                 })}
             </MenuItems>
         </Menu>
-    )
+    );
 }

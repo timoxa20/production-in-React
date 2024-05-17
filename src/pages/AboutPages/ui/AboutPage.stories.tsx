@@ -1,14 +1,13 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ThemeDecorator} from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import AboutPage from "./AboutPage";
-import {StoreDecorator} from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import {Theme} from "@/shared/const/theme";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import AboutPage from './AboutPage';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Theme } from '@/shared/const/theme';
 
 const meta = {
     title: 'pages /AboutPage ',
     component: AboutPage,
-    parameters: {
-    },
+    parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
@@ -19,16 +18,10 @@ type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
     args: {},
-    decorators: [StoreDecorator({})]
+    decorators: [StoreDecorator({})],
 };
 
 export const Dark: Story = {
     args: {},
-    decorators: [ThemeDecorator(Theme.DARK)]
+    decorators: [ThemeDecorator(Theme.DARK)],
 };
-
-
-
-
-
-

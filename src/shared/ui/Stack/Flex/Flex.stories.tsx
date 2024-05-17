@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {Flex} from './Flex';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Flex } from './Flex';
 import { t } from 'i18next';
 
 const meta = {
@@ -23,7 +23,7 @@ export const DirectionRow: Story = {
                 <div>{t('first')}</div>
                 <div>{t('first')}</div>
             </>
-        )
+        ),
     },
 };
 
@@ -37,7 +37,7 @@ export const DirectionColumn: Story = {
                 <div>{t('first')}</div>
                 <div>{t('first')}</div>
             </>
-        )
+        ),
     },
 };
 
@@ -52,7 +52,7 @@ export const DirectionColumn16: Story = {
                 <div>{t('first')}</div>
                 <div>{t('first')}</div>
             </>
-        )
+        ),
     },
 };
 
@@ -67,7 +67,7 @@ export const RowGap4: Story = {
                 <div>{t('first')}</div>
                 <div>{t('first')}</div>
             </>
-        )
+        ),
     },
 };
 
@@ -82,7 +82,7 @@ export const RowGap8: Story = {
                 <div>{t('first')}</div>
                 <div>{t('first')}</div>
             </>
-        )
+        ),
     },
 };
 
@@ -97,6 +97,6 @@ export const RowGap16: Story = {
                 <div>{t('first')}</div>
                 <div>{t('first')}</div>
             </>
-        )
+        ),
     },
 };

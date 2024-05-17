@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {NotificationListItem} from './NotificationListItem';
+import type { Meta, StoryObj } from '@storybook/react';
+import { NotificationListItem } from './NotificationListItem';
 
 const meta = {
     title: 'entities/Notification/NotificationListItem',
@@ -15,13 +15,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
     args: {
-        item:
-            {
-                title: 'adasfa',
-                href: 'title.czx',
-                description: 'asfafafasfafa',
-                id: '1'
-            },
-
+        item: {
+            title: 'adasfa',
+            href: 'title.czx',
+            description: 'asfafafasfafa',
+            id: '1',
+        },
     },
 };

@@ -1,7 +1,7 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ArticleTypeTabs} from './ArticleTypeTabs';
-import {action} from "@storybook/addon-actions";
-import {ArticleType} from "@/entities/Article";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ArticleTypeTabs } from './ArticleTypeTabs';
+import { action } from '@storybook/addon-actions';
+import { ArticleType } from '@/entities/Article';
 
 const meta = {
     title: 'entities/Article/ArticleTypeTabs',
@@ -18,6 +18,6 @@ type Story = StoryObj<typeof meta>;
 export const Normal: Story = {
     args: {
         value: ArticleType.IT,
-        onChangeType: action('dasd')
+        onChangeType: action('dasd'),
     },
 };

@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ArticleList} from './ArticleList';
-import {ArticleView} from "../../model/types/article";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ArticleList } from './ArticleList';
+import { ArticleView } from '../../model/types/article';
 
 const meta = {
     title: 'entities/article/ArticleList',
@@ -18,7 +18,7 @@ export const isLoadingBig: Story = {
     args: {
         articles: [],
         isLoading: true,
-        view: ArticleView.BIG
+        view: ArticleView.BIG,
     },
 };
 
@@ -26,6 +26,6 @@ export const isLoadingSmall: Story = {
     args: {
         articles: [],
         isLoading: true,
-        view: ArticleView.SMALL
+        view: ArticleView.SMALL,
     },
 };

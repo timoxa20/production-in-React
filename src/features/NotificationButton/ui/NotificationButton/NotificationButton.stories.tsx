@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {NotificationButton} from './NotificationButton';
+import type { Meta, StoryObj } from '@storybook/react';
+import { NotificationButton } from './NotificationButton';
 
 const meta = {
     title: 'features/NotificationButton',

@@ -1,1 +1,5 @@
-export {loginActions, loginReducer, loginSlice} from './model/slice/loginSlice'
+export {
+    loginActions,
+    loginReducer,
+    loginSlice,
+} from './model/slice/loginSlice';

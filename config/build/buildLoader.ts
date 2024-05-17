@@ -1,13 +1,13 @@
-import webpack from 'webpack'
-import {BuildOptions} from "./types/config";
-import {buildCssLoaders} from "./loaders/buildCssLoaders";
-import {buildBabelLoader} from "./loaders/buildBabelLoder";
+import webpack from 'webpack';
+import { BuildOptions } from './types/config';
+import { buildCssLoaders } from './loaders/buildCssLoaders';
+import { buildBabelLoader } from './loaders/buildBabelLoder';
 
 export function buildLoader(options: BuildOptions): webpack.RuleSetRule[] {
-    const {isDev} = options
+    const { isDev } = options;
 
-    const codeBabelLoader = buildBabelLoader({...options, isTsx: false})
-    const tsxCodeBabelLoader = buildBabelLoader({...options, isTsx: true})
+    const codeBabelLoader = buildBabelLoader({ ...options, isTsx: false });
+    const tsxCodeBabelLoader = buildBabelLoader({ ...options, isTsx: true });
 
     const cssLoaders = buildCssLoaders(isDev);
 
@@ -17,11 +17,10 @@ export function buildLoader(options: BuildOptions): webpack.RuleSetRule[] {
     //     exclude: /node_modules/,
     // };
 
-    const  svgLoader = {
+    const svgLoader = {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
-    }
-
+    };
 
     const fileLoader = {
         test: /\.(png|jpe?g|gif|woff2|woff)$/i,
@@ -30,7 +29,7 @@ export function buildLoader(options: BuildOptions): webpack.RuleSetRule[] {
                 loader: 'file-loader',
             },
         ],
-    }
+    };
     return [
         codeBabelLoader,
         tsxCodeBabelLoader,
@@ -38,5 +37,5 @@ export function buildLoader(options: BuildOptions): webpack.RuleSetRule[] {
         svgLoader,
         fileLoader,
         // typescripLoader
-    ]
+    ];
 }

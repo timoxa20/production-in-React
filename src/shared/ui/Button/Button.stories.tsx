@@ -1,19 +1,18 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {fn} from '@storybook/test';
-import {Button, ButtonSize, ThemeButton} from './Button';
-import {ThemeDecorator} from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import {Theme} from "@/shared/const/theme";
+import type { Meta, StoryObj } from '@storybook/react';
+import { fn } from '@storybook/test';
+import { Button, ButtonSize, ThemeButton } from './Button';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import { Theme } from '@/shared/const/theme';
 
 const meta = {
     title: 'shared /Button',
     component: Button,
     parameters: {},
     tags: ['autodocs'],
-    argTypes: {
-    },
+    argTypes: {},
     args: {
         onClick: fn(),
-        theme: ThemeButton.CLEAR
+        theme: ThemeButton.CLEAR,
     },
 } satisfies Meta<typeof Button>;
 
@@ -22,35 +21,35 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
     args: {
-        children: 'Text'
+        children: 'Text',
     },
 };
 
 export const Clear: Story = {
     args: {
         children: 'Text',
-        theme: ThemeButton.CLEAR
+        theme: ThemeButton.CLEAR,
     },
 };
 
 export const ClearInverted: Story = {
     args: {
         children: 'Text',
-        theme: ThemeButton.CLEAR_INVERTED
+        theme: ThemeButton.CLEAR_INVERTED,
     },
 };
 
 export const BackgroundTheme: Story = {
     args: {
         children: 'Text',
-        theme: ThemeButton.BACKGROUND
+        theme: ThemeButton.BACKGROUND,
     },
 };
 
 export const BackgroundInvertedTheme: Story = {
     args: {
         children: 'Text',
-        theme: ThemeButton.BACKGROUND_INVERTED
+        theme: ThemeButton.BACKGROUND_INVERTED,
     },
 };
 
@@ -59,7 +58,7 @@ export const SquareSizeL: Story = {
         children: '>',
         theme: ThemeButton.BACKGROUND_INVERTED,
         square: true,
-        size: ButtonSize.L
+        size: ButtonSize.L,
     },
 };
 
@@ -68,7 +67,7 @@ export const SquareSizeM: Story = {
         children: '>',
         theme: ThemeButton.BACKGROUND_INVERTED,
         square: true,
-        size: ButtonSize.M
+        size: ButtonSize.M,
     },
 };
 
@@ -77,15 +76,14 @@ export const SquareSizeXL: Story = {
         children: '>',
         theme: ThemeButton.BACKGROUND_INVERTED,
         square: true,
-        size: ButtonSize.XL
+        size: ButtonSize.XL,
     },
 };
-
 
 export const Outline: Story = {
     args: {
         children: 'Text',
-        theme: ThemeButton.OUTLINE
+        theme: ThemeButton.OUTLINE,
     },
 };
 
@@ -93,7 +91,7 @@ export const OutlineSizeL: Story = {
     args: {
         children: 'Text',
         theme: ThemeButton.OUTLINE,
-        size: ButtonSize.L
+        size: ButtonSize.L,
     },
 };
 
@@ -101,23 +99,22 @@ export const OutlineSizeXL: Story = {
     args: {
         children: 'Text',
         theme: ThemeButton.OUTLINE,
-        size: ButtonSize.XL
+        size: ButtonSize.XL,
     },
 };
 
 export const OutlineDark: Story = {
     args: {
         children: 'Text',
-        theme: ThemeButton.OUTLINE
+        theme: ThemeButton.OUTLINE,
     },
-    decorators: [ThemeDecorator(Theme.DARK)]
+    decorators: [ThemeDecorator(Theme.DARK)],
 };
 
 export const Disebled: Story = {
     args: {
         children: 'Text',
         theme: ThemeButton.OUTLINE,
-        disabled: true
+        disabled: true,
     },
 };
-

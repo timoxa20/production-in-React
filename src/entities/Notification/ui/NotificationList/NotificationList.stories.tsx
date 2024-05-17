@@ -1,13 +1,12 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {NotificationList} from './NotificationList';
-import {StoreDecorator} from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-
+import type { Meta, StoryObj } from '@storybook/react';
+import { NotificationList } from './NotificationList';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const notifications = {
-    title: "Уведомление 1",
-    description: "Произошло какое-то событие",
-    userId: "1"
-}
+    title: 'Уведомление 1',
+    description: 'Произошло какое-то событие',
+    userId: '1',
+};
 
 const meta = {
     title: 'entities/Notification/NotificationList',
@@ -19,9 +18,9 @@ const meta = {
                 method: 'GET',
                 status: 200,
                 response: [
-                    {...notifications, id: '1'},
-                    {...notifications, id: '2'},
-                    {...notifications, id: '3'}
+                    { ...notifications, id: '1' },
+                    { ...notifications, id: '2' },
+                    { ...notifications, id: '3' },
                 ],
             },
         ],
@@ -29,7 +28,7 @@ const meta = {
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-    decorators: [StoreDecorator({})]
+    decorators: [StoreDecorator({})],
 } satisfies Meta<typeof NotificationList>;
 
 export default meta;

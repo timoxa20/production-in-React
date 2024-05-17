@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {Overlay} from './Overlay';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Overlay } from './Overlay';
 
 const meta = {
     title: 'shared /Overlay',

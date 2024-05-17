@@ -1,11 +1,10 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {CurrencySelect} from "./CurrencySelect";
+import type { Meta, StoryObj } from '@storybook/react';
+import { CurrencySelect } from './CurrencySelect';
 
 const meta = {
     title: 'entities /CurrencySelect ',
     component: CurrencySelect,
-    parameters: {
-    },
+    parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
@@ -15,11 +14,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const PRIMARY: Story = {
-    args:{},
+    args: {},
 };
-
-
-
-
-
-

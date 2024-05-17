@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ArticleDetailsComments} from './ArticleDetailsComments';
-import {StoreDecorator} from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ArticleDetailsComments } from './ArticleDetailsComments';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
     title: 'pages /ArticleDetailsComments',
@@ -9,12 +9,12 @@ const meta = {
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-    decorators: [StoreDecorator({})]
+    decorators: [StoreDecorator({})],
 } satisfies Meta<typeof ArticleDetailsComments>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-    args: {id: 'sdsa'},
+    args: { id: 'sdsa' },
 };

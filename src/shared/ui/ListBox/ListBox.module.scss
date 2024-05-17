@@ -1,32 +1,32 @@
 .ListBox {
-  position: relative;
+    position: relative;
 }
 
 .trigger {
-  background: none;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
 }
 
 .options {
-  background: var(--card-bg);
-  position: absolute;
-  z-index: 55;
-  border-radius: 12px;
-  box-shadow: 4px 4px 8px var(--card-bg);
+    background: var(--card-bg);
+    position: absolute;
+    z-index: 55;
+    border-radius: 12px;
+    box-shadow: 4px 4px 8px var(--card-bg);
 }
 
 .item {
-  padding: 10px 20px;
-  cursor: pointer;
+    padding: 10px 20px;
+    cursor: pointer;
 }
 
 [data-focus]:hover {
-  background: var(--inverted-secondary-color);
+    background: var(--inverted-secondary-color);
 }
 
 .label {
-  margin-right: 4px;
+    margin-right: 4px;
 }

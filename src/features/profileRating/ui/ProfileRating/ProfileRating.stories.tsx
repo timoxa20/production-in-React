@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import ProfileRating from './ProfileRating';
-import {StoreDecorator} from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
     title: 'features /ProfileRating',
@@ -9,12 +9,12 @@ const meta = {
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-    decorators: [StoreDecorator({})]
+    decorators: [StoreDecorator({})],
 } satisfies Meta<typeof ProfileRating>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
-    args: {profileId: '1'},
+    args: { profileId: '1' },
 };

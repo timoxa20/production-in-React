@@ -9,15 +9,15 @@ export enum AppRoute {
     ADMIN_PANEL = 'admin_panel',
     FORBIDDEN = 'forbidden',
     // last
-    NOT_FOUND = 'not_found'
+    NOT_FOUND = 'not_found',
 }
 
-export const getRouteMain = () => '/'
-export const getRouteAbout = () => '/about'
-export const getRouteProfile = (id: string) => `/profile/${id}`
-export const getRouteArticle = () => `/article`
-export const getRouteArticleDetails = (id: string) => `/article/${id}`
-export const getRouteArticleCreate = () => `/article/new`
-export const getRouteArticleEdit = (id: string) => `/article/${id}/edit`
-export const getRouteAdminPanel = () => `/admin`
-export const getRouteForbidden = () => `/forbidden`
+export const getRouteMain = () => '/';
+export const getRouteAbout = () => '/about';
+export const getRouteProfile = (id: string) => `/profile/${id}`;
+export const getRouteArticle = () => `/article`;
+export const getRouteArticleDetails = (id: string) => `/article/${id}`;
+export const getRouteArticleCreate = () => `/article/new`;
+export const getRouteArticleEdit = (id: string) => `/article/${id}/edit`;
+export const getRouteAdminPanel = () => `/admin`;
+export const getRouteForbidden = () => `/forbidden`;

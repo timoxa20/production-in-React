@@ -1,8 +1,8 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ProfileCard} from "./ProfileCard";
-import {Country} from "../../../Country";
-import {Currency} from "../../../Currency";
-import StoryIcon from '../../../../shared/assets/storybook.jpg'
+import type { Meta, StoryObj } from '@storybook/react';
+import { ProfileCard } from './ProfileCard';
+import { Country } from '../../../Country';
+import { Currency } from '../../../Currency';
+import StoryIcon from '../../../../shared/assets/storybook.jpg';
 
 const meta = {
     title: 'entities /ProfileCard',
@@ -26,23 +26,19 @@ export const Primary: Story = {
             first: 'Artem',
             city: 'SADAS',
             currency: Currency.EURO,
-            avatar: StoryIcon
-        }
+            avatar: StoryIcon,
+        },
     },
 };
 
 export const Loading: Story = {
     args: {
-        isLoading: true
+        isLoading: true,
     },
 };
 
 export const Error: Story = {
     args: {
-        error: 'error'
+        error: 'error',
     },
 };
-
-
-
-

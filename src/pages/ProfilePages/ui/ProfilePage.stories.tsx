@@ -1,21 +1,18 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ThemeDecorator} from "@/shared/config/storybook/ThemeDecorator/ThemeDecorator";
-import ProfilePage from "./ProfilePage";
-import {StoreDecorator} from "@/shared/config/storybook/StoreDecorator/StoreDecorator";
-import {Country} from "@/entities/Country";
-import {Currency} from "@/entities/Currency";
-import {Theme} from "@/shared/const/theme";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
+import ProfilePage from './ProfilePage';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
+import { Country } from '@/entities/Country';
+import { Currency } from '@/entities/Currency';
+import { Theme } from '@/shared/const/theme';
 
 const meta = {
     title: 'pages /ProfilePage ',
     component: ProfilePage,
-    parameters: {
-    },
+    parameters: {},
     tags: ['autodocs'],
-    argTypes: {
-    },
-    args: {
-    },
+    argTypes: {},
+    args: {},
 } satisfies Meta<typeof ProfilePage>;
 
 export default meta;
@@ -34,10 +31,10 @@ export const Normal: Story = {
                     first: 'Artem',
                     city: 'SADAS',
                     currency: Currency.EURO,
-                }
-            }
-        })
-    ]
+                },
+            },
+        }),
+    ],
 };
 
 export const Dark: Story = {
@@ -54,14 +51,8 @@ export const Dark: Story = {
                     first: 'Artem',
                     city: 'SADAS',
                     currency: Currency.EURO,
-                }
-            }
-        })
-    ]
+                },
+            },
+        }),
+    ],
 };
-
-
-
-
-
-

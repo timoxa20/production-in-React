@@ -1,56 +1,44 @@
-import { ReactNode, useEffect} from "react";
-import {useStore} from "react-redux";
-import {ReduxStoreWithManager, StateSchemaKey} from "@/app/providers/StoreProvider";
-import {Reducer} from "@reduxjs/toolkit";
+import { ReactNode, useEffect } from 'react';
+import { useStore } from 'react-redux';
+import {
+    ReduxStoreWithManager,
+    StateSchemaKey,
+} from '@/app/providers/StoreProvider';
+import { Reducer } from '@reduxjs/toolkit';
 
 export type ReducerList = {
-    [name in StateSchemaKey]?: Reducer
-}
+    [name in StateSchemaKey]?: Reducer;
+};
 
 // type ReducerListEntry = [StateSchemaKey, Reducer]
-
 
 interface DynamicModuleLoaderProps {
     children: ReactNode;
     reducers: ReducerList;
-    removeAfterUnmount?: boolean
+    removeAfterUnmount?: boolean;
 }
 
 export const DynamicModuleLoader = (props: DynamicModuleLoaderProps) => {
-    const {
-        children,
-        reducers,
-        removeAfterUnmount = true
-    } = props
-    const store = useStore() as ReduxStoreWithManager
+    const { children, reducers, removeAfterUnmount = true } = props;
+    const store = useStore() as ReduxStoreWithManager;
 
     useEffect(() => {
         const mountedReducer = store.reducerManager.getMountedReducer();
         Object.entries(reducers).forEach(([name, reducer]) => {
-            const mounted = mountedReducer[name as StateSchemaKey]
+            const mounted = mountedReducer[name as StateSchemaKey];
             if (!mounted) {
-                store.reducerManager.add(name as StateSchemaKey, reducer)
+                store.reducerManager.add(name as StateSchemaKey, reducer);
             }
-
-        })
-
+        });
 
         return () => {
             Object.entries(reducers).forEach(([name]) => {
                 if (removeAfterUnmount) {
-                    store.reducerManager.remove(name as StateSchemaKey)
+                    store.reducerManager.remove(name as StateSchemaKey);
                 }
-            })
+            });
+        };
+    }, [reducers, removeAfterUnmount, store.reducerManager]);
 
-        }
-    }, [reducers, removeAfterUnmount, store.reducerManager])
-
-    return (
-        <>
-            {children}
-        </>
-    );
+    return <>{children}</>;
 };
-
-
-

@@ -1,50 +1,55 @@
-import {classNames} from "@/shared/lib/classNames/classNames";
-import cls from './ArticlePages.module.scss'
-import {memo, useCallback} from "react";
-import {DynamicModuleLoader, ReducerList} from "@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader";
-import {articlePagesReducer} from "../../model/slice/articlePagesSlice";
-import {useInitialEffect} from "@/shared/lib/hooks/useInitialEffect/useInitialEffect";
-import {useAppDispatch} from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-import {Page} from "@/widgets/Page";
-import {fetchNextArticlePage} from "../../model/service/fetchNextArticlePage/fetchNextArticlePage";
-import {initedArticlePage} from "../../model/service/initedArticlePage/initedArticlePage";
-import {ArticlePagesFilter} from "../ArticlePagesFilter/ArticlePagesFilter";
-import {useSearchParams} from "react-router-dom";
-import {ArticleInfiniteList} from "../ArticleInfiniteList/ArticleInfiniteList";
-
+import { classNames } from '@/shared/lib/classNames/classNames';
+import cls from './ArticlePages.module.scss';
+import { memo, useCallback } from 'react';
+import {
+    DynamicModuleLoader,
+    ReducerList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import { articlePagesReducer } from '../../model/slice/articlePagesSlice';
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { Page } from '@/widgets/Page';
+import { fetchNextArticlePage } from '../../model/service/fetchNextArticlePage/fetchNextArticlePage';
+import { initedArticlePage } from '../../model/service/initedArticlePage/initedArticlePage';
+import { ArticlePagesFilter } from '../ArticlePagesFilter/ArticlePagesFilter';
+import { useSearchParams } from 'react-router-dom';
+import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 
 interface ArticlePagesProps {
     className?: string;
 }
 
 const reducers: ReducerList = {
-    articlePages: articlePagesReducer
-}
+    articlePages: articlePagesReducer,
+};
 
-const ArticlePages = ({className}: ArticlePagesProps) => {
-    const dispatch = useAppDispatch()
-    const [searchParams] = useSearchParams()
+const ArticlePages = ({ className }: ArticlePagesProps) => {
+    const dispatch = useAppDispatch();
+    const [searchParams] = useSearchParams();
 
     const onLoadNextPart = useCallback(() => {
-        dispatch(fetchNextArticlePage())
-    }, [dispatch])
+        dispatch(fetchNextArticlePage());
+    }, [dispatch]);
 
     useInitialEffect(() => {
-        dispatch(initedArticlePage(searchParams))
-    })
+        dispatch(initedArticlePage(searchParams));
+    });
 
     return (
-        <DynamicModuleLoader reducers={reducers} removeAfterUnmount={false}>
+        <DynamicModuleLoader
+            reducers={reducers}
+            removeAfterUnmount={false}
+        >
             <Page
                 data-testid={'ArticlePage'}
                 onScrollEnd={onLoadNextPart}
-                className={classNames(cls.ArticlePages, {}, [className])}>
-                <ArticlePagesFilter/>
-                <ArticleInfiniteList className={cls.list}/>
+                className={classNames(cls.ArticlePages, {}, [className])}
+            >
+                <ArticlePagesFilter />
+                <ArticleInfiniteList className={cls.list} />
             </Page>
         </DynamicModuleLoader>
     );
 };
 
-export default memo(ArticlePages)
-
+export default memo(ArticlePages);

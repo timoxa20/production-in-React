@@ -1,5 +1,5 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {CommentCard} from './CommentCard';
+import type { Meta, StoryObj } from '@storybook/react';
+import { CommentCard } from './CommentCard';
 
 const meta = {
     title: 'entities/Comment/CommentCard',
@@ -18,13 +18,13 @@ export const Normal: Story = {
         comment: {
             id: '1',
             text: 'hello word',
-            user: {id: '1', username: 'Artem'}
-        }
+            user: { id: '1', username: 'Artem' },
+        },
     },
 };
 
 export const Loading: Story = {
     args: {
-        isLoading: true
+        isLoading: true,
     },
 };

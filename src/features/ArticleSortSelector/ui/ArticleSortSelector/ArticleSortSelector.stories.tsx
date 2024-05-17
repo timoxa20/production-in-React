@@ -1,7 +1,7 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {ArticleSortSelector} from './ArticleSortSelector';
-import {action} from "@storybook/addon-actions";
-import {ArticleSortField} from "@/entities/Article";
+import type { Meta, StoryObj } from '@storybook/react';
+import { ArticleSortSelector } from './ArticleSortSelector';
+import { action } from '@storybook/addon-actions';
+import { ArticleSortField } from '@/entities/Article';
 
 const meta = {
     title: 'shared /ArticleSortSelector',
@@ -20,6 +20,6 @@ export const Normal: Story = {
         sort: ArticleSortField.TITLE,
         order: 'asc',
         onChangeSort: action('saas'),
-        onChangeOrder: action('asd')
+        onChangeOrder: action('asd'),
     },
 };

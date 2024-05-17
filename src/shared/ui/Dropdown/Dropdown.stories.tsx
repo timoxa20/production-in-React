@@ -1,7 +1,7 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {Dropdown} from './Dropdown';
-import {Button} from "../Button/Button";
-import {action} from "@storybook/addon-actions";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Dropdown } from './Dropdown';
+import { Button } from '../Button/Button';
+import { action } from '@storybook/addon-actions';
 
 const meta = {
     title: 'shared /Dropdown',
@@ -21,16 +21,16 @@ export const Normal: Story = {
         items: [
             {
                 content: '4343q4',
-                onClick: action('adasdsa')
+                onClick: action('adasdsa'),
             },
             {
                 content: '4343q4',
-                onClick: action('adasdsa')
+                onClick: action('adasdsa'),
             },
             {
                 content: '4343q4',
-                onClick: action('adasdsa')
-            }
-        ]
+                onClick: action('adasdsa'),
+            },
+        ],
     },
 };

@@ -1,11 +1,10 @@
-import {classNames} from "@/shared/lib/classNames/classNames";
-import {memo} from "react";
-import {Text, TextAlign} from "@/shared/ui/Text";
-import {useTranslation} from "react-i18next";
-import {CommentCard} from "../CommentCard/CommentCard";
-import {Comment} from '../../model/types/comment'
-import {VStack} from "@/shared/ui/Stack";
-
+import { classNames } from '@/shared/lib/classNames/classNames';
+import { memo } from 'react';
+import { Text, TextAlign } from '@/shared/ui/Text';
+import { useTranslation } from 'react-i18next';
+import { CommentCard } from '../CommentCard/CommentCard';
+import { Comment } from '../../model/types/comment';
+import { VStack } from '@/shared/ui/Stack';
 
 interface CommentListProps {
     className?: string;
@@ -14,33 +13,44 @@ interface CommentListProps {
 }
 
 export const CommentList = memo((props: CommentListProps) => {
-    const {
-        className,
-        comments,
-        isLoading
-    } = props
-    const {t} = useTranslation()
+    const { className, comments, isLoading } = props;
+    const { t } = useTranslation();
 
     if (isLoading) {
         return (
-            <VStack gap='8' max className={classNames('', {}, [className])}>
-                <CommentCard isLoading/>
-                <CommentCard isLoading/>
-                <CommentCard isLoading/>
+            <VStack
+                gap="8"
+                max
+                className={classNames('', {}, [className])}
+            >
+                <CommentCard isLoading />
+                <CommentCard isLoading />
+                <CommentCard isLoading />
             </VStack>
-        )
+        );
     }
 
     return (
-        <VStack gap='16' max className={classNames('', {}, [className])}>
-            {comments?.length
-                ? comments.map((coment) => (
-                    <CommentCard key={coment.id} comment={coment}/>
+        <VStack
+            gap="16"
+            max
+            className={classNames('', {}, [className])}
+        >
+            {comments?.length ? (
+                comments.map((coment) => (
+                    <CommentCard
+                        key={coment.id}
+                        comment={coment}
+                    />
                 ))
-                : <Text align={TextAlign.CENTER} text={t('Комментарий отсудствуют')}/>
-            }
+            ) : (
+                <Text
+                    align={TextAlign.CENTER}
+                    text={t('Комментарий отсудствуют')}
+                />
+            )}
         </VStack>
     );
 });
 
-CommentList.displayName = 'CommentList'
+CommentList.displayName = 'CommentList';

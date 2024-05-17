@@ -1,6 +1,6 @@
-import type {Meta, StoryObj} from '@storybook/react';
-import {Card} from './Card';
-import {Text} from "../Text/Text";
+import type { Meta, StoryObj } from '@storybook/react';
+import { Card } from './Card';
+import { Text } from '../Text/Text';
 
 const meta = {
     title: 'shared /Card',
@@ -16,6 +16,11 @@ type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
     args: {
-        children: <Text title={'World'} text={'Hello'} />
+        children: (
+            <Text
+                title={'World'}
+                text={'Hello'}
+            />
+        ),
     },
 };
