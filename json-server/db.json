@@ -803,6 +803,10 @@
             "username": "admin",
             "password": "123",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
         },
         {
@@ -810,6 +814,10 @@
             "username": "user",
             "password": "123",
             "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
             "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
         },
         {
@@ -817,6 +825,10 @@
             "username": "manager",
             "password": "123",
             "roles": ["MANAGER"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": true
+            },
             "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
         },
         {
@@ -824,6 +836,10 @@
             "username": "testuser",
             "password": "123",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://ae04.alicdn.com/kf/S644f58fa841b4caa9b54bdcb2f2b4722N.jpg"
         }
     ],
