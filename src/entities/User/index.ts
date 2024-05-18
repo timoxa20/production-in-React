@@ -11,3 +11,10 @@ export {
     isUserManager,
     getUserRole,
 } from './model/selectors/roleSelectors/roleSelectors';
+
+export {
+    useJsonSettings,
+    getJsonSettings
+} from './model/selectors/jsonSelectors/jsonSelectors'
+
+export {saveJsonSettings} from './model/services/saveJsonSettings'

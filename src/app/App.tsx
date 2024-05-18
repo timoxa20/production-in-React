@@ -5,7 +5,7 @@ import { AppRouter } from './providers/router';
 import { Nawbar } from '@/widgets/nawbar';
 import { Sidebar } from '@/widgets/Sidebar';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserInited, userActions } from '@/entities/User';
+import { getUserInited, userActions } from "@/entities/User";
 
 const App = () => {
     const { theme } = useTheme();
