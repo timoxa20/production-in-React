@@ -29,6 +29,19 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation("article");
     const { id } = useParams<{ id: string }>();
     const isArticleRatingEnabled = getFeatureFlag("isArticleRatingEnabled");
+    // const isCounterEnabled = getFeatureFlag("isCounterEnabled");
+    //
+    // const counter = toggleFeatures({
+    //     name: "isCounterEnabled",
+    //     on: () => <ArticleDetailsPageHeaders/>,
+    //     off: () => <ArticleDetailsPageHeaders/>
+    // });
+    //
+    // toggleFeatures({
+    //     name: "isCounterEnabled",
+    //     on: () => console.log("NEW ON"),
+    //     off: () => console.log("NEW OFF")
+    // });
 
     if (!id) {
         return (
