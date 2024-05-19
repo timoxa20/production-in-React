@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { ThemeContext } from '@/shared/lib/context/ThemeContext';
-import { Theme } from '@/shared/const/theme';
+import { ThemeContext } from "@/shared/lib/context/ThemeContext";
+import { Theme } from "@/shared/const/theme";
 import { useJsonSettings } from "@/entities/User";
 
 
@@ -9,13 +9,13 @@ interface ThemeProviderProps {
     initialTheme?: Theme;
 }
 const ThemeProvider = ({ children, initialTheme }: ThemeProviderProps) => {
-    const {theme: defaultTheme = Theme.NORMAL} = useJsonSettings()
+    const {theme: defaultTheme} = useJsonSettings()
     const [isThemeInited, setIsThemeInited] = useState(false)
 
-    const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme);
+    const [theme, setTheme] = useState<Theme>(initialTheme || defaultTheme || Theme.NORMAL);
 
     useEffect(() => {
-        if (!isThemeInited) {
+        if (!isThemeInited && defaultTheme) {
             setTheme(defaultTheme)
             setIsThemeInited(true)
         }
