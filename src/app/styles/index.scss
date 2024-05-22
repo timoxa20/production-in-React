@@ -17,6 +17,17 @@
     color: var(--primary-color);
 }
 
+.app__redesigned {
+    min-height: 100vh;
+    background: var(--bg-redesigned);
+    font: var(--font-m-redesigned);
+    color: var(--text-redesigned);
+}
+
+.appLogo {
+    padding-top: 20px;
+}
+
 .content-page {
     display: flex;
 }

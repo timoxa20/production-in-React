@@ -1,13 +1,13 @@
-import { FeatureFlag } from "../../types/featureFlag";
+import { FeatureFlag } from '../../types/featureFlag';
 
-let featureFlag: FeatureFlag;
+let featureFlags: FeatureFlag;
 
-export function setFeatureFlag(newFeatureFlag?: FeatureFlag) {
-    if (newFeatureFlag) {
-        featureFlag = newFeatureFlag;
+export function setFeatureFlag(newFeatureFlags?: FeatureFlag) {
+    if (newFeatureFlags) {
+        featureFlags = newFeatureFlags;
     }
 }
 
 export function getFeatureFlag(flag: keyof FeatureFlag) {
-    return featureFlag[flag];
+    return featureFlags[flag];
 }
