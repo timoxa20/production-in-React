@@ -1,12 +1,11 @@
-import { classNames } from "@/shared/lib/classNames/classNames";
-import IconsLight from "@/shared/assets/icons/theme-light.svg?react";
-import IconsDark from "@/shared/assets/icons/theme-dark.svg?react";
-import { Button, ThemeButton } from "@/shared/ui/Button";
-import { memo, useCallback } from "react";
-import { Theme } from "@/shared/const/theme";
-import { useTheme } from "@/shared/lib/hooks/useTheme/useTheme";
-import { useAppDispatch } from "@/shared/lib/hooks/useAppDispatch/useAppDispatch";
-import { saveJsonSettings } from "@/entities/User";
+import { classNames } from '@/shared/lib/classNames/classNames';
+import ThemeIcon from '@/shared/assets/icons/theme-dark.svg?react';
+import { Button, ThemeButton } from '@/shared/ui/Button';
+import { memo, useCallback } from 'react';
+import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
+import { saveJsonSettings } from '@/entities/User';
+import { Icon } from '@/shared/ui/Icon';
 
 interface ThemeSwitcherProps {
     className?: string;
@@ -24,12 +23,17 @@ export const ThemeSwitcher = memo(({ className }: ThemeSwitcherProps) => {
     return (
         <Button
             theme={ThemeButton.CLEAR}
-            className={classNames("", {}, [className])}
+            className={classNames('', {}, [className])}
             onClick={onToggleHandler}
         >
-            {theme === Theme.DARK ? <IconsDark /> : <IconsLight />}
+            <Icon
+                Svg={ThemeIcon}
+                width={40}
+                height={40}
+                inverted
+            />
         </Button>
     );
 });
 
-ThemeSwitcher.displayName = "ThemeSwitcher";
+ThemeSwitcher.displayName = 'ThemeSwitcher';

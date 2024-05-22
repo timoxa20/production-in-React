@@ -19,7 +19,24 @@ export function buildLoader(options: BuildOptions): webpack.RuleSetRule[] {
 
     const svgLoader = {
         test: /\.svg$/,
-        use: ['@svgr/webpack'],
+        use: [
+            {
+                loader: '@svgr/webpack',
+                options: {
+                    icon: true,
+                    svgoConfig: {
+                        plugins: [
+                            {
+                                name: 'convertColor',
+                                param: {
+                                    currentColor: true,
+                                },
+                            },
+                        ],
+                    },
+                },
+            },
+        ],
     };
 
     const fileLoader = {
