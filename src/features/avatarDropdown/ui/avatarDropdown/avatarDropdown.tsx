@@ -1,8 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import React, { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Avatar } from '@/shared/ui/Avatar';
-import { Dropdown } from '@/shared/ui/Dropdown';
+import { Avatar } from '@/shared/ui/deprecated/Avatar';
 import { useDispatch, useSelector } from 'react-redux';
 import {
     getUserAuthData,
@@ -11,6 +10,7 @@ import {
     userActions,
 } from '@/entities/User';
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/route';
+import { Dropdown } from '@/shared/ui/deprecated/Dropdown';
 
 interface avatarDropdownProps {
     className?: string;

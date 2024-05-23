@@ -3,11 +3,11 @@ import React, { memo, ReactNode, useCallback, useEffect } from 'react';
 import {
     AnimationProvider,
     useAnimationLibs,
-} from '../../lib/hooks/useAnimation';
-import { Overlay } from '../Overlay/Overlay';
+} from '../../../lib/hooks/useAnimation';
 import cls from './Drawer.module.scss';
-import { Portal } from '../Portal/Portal';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
+import { Overlay } from '../Overlay';
+import { Portal } from '../Portal';
 
 interface DrawerProps {
     className?: string;

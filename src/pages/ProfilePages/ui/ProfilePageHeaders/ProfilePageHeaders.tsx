@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Text } from '@/shared/ui/Text';
-import { Button, ThemeButton } from '@/shared/ui/Button';
+import { Text } from '@/shared/ui/deprecated/Text';
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
 import { useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';

@@ -4,8 +4,8 @@ import { memo } from 'react';
 import { ArticleView } from '@/entities/Article';
 import ListIcons from '@/shared/assets/icons/list-24-24.svg?react';
 import TiledIcons from '@/shared/assets/icons/tiled-24-24.svg?react';
-import { Button, ThemeButton } from '@/shared/ui/Button';
-import { Icon } from '@/shared/ui/Icon';
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Icon } from '@/shared/ui/deprecated/Icon';
 
 interface ArticleViewSelectProps {
     className?: string;

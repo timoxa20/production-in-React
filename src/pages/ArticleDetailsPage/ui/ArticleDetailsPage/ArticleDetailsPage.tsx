@@ -15,7 +15,7 @@ import { VStack } from '@/shared/ui/Stack';
 import { ArticleReacommendationList } from '@/features/articleReacommendationList';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
-import { getFeatureFlag, ToggleFeature } from '@/shared/lib/features';
+import { ToggleFeature } from '@/shared/lib/features';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -28,8 +28,6 @@ const reducer: ReducerList = {
 const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
     const { t } = useTranslation('article');
     const { id } = useParams<{ id: string }>();
-    const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled');
-    const isCounterEnabled = getFeatureFlag('isCounterEnabled');
 
     if (!id) {
         return (
