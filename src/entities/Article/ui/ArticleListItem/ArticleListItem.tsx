@@ -13,7 +13,7 @@ import { Icon } from '@/shared/ui/deprecated/Icon';
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg?react';
 import { Card } from '@/shared/ui/deprecated/Card';
 import { Avatar } from '@/shared/ui/deprecated/Avatar';
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { AppLinks } from '@/shared/ui/deprecated/AppLink';
 import { getRouteArticleDetails } from '@/shared/const/route';
@@ -100,7 +100,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                             target={target}
                             to={getRouteArticleDetails(article?.id)}
                         >
-                            <Button theme={ThemeButton.OUTLINE}>
+                            <Button variant={'outline'}>
                                 {t('Читать дальше')}
                             </Button>
                         </AppLinks>

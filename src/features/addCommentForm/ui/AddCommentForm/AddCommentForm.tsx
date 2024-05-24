@@ -3,7 +3,7 @@ import cls from './AddCommentForm.module.scss';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Input } from '@/shared/ui/deprecated/Input';
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { useSelector } from 'react-redux';
 import {
     addCommentFormSelectorError,
@@ -72,7 +72,7 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
                 <Button
                     data-testid="AddCommentForm.Button"
                     onClick={onSendHandler}
-                    theme={ThemeButton.OUTLINE}
+                    variant={'outline'}
                 >
                     {t('Отправить')}
                 </Button>

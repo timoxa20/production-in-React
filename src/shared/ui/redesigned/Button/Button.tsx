@@ -3,54 +3,42 @@ import { ButtonHTMLAttributes, memo } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import React from 'react';
 
-export enum ThemeButton {
-    CLEAR = 'clear',
-    CLEAR_INVERTED = 'clearInverted',
-    OUTLINE = 'outline',
-    OUTLINE_RED = 'outlineRed',
-    BACKGROUND = 'background',
-    BACKGROUND_INVERTED = 'backgroundInverted',
-}
+export type ThemeVariant = 'clear' | 'outline';
 
-export enum ButtonSize {
-    M = 'size_m',
-    L = 'size_l',
-    XL = 'size_xl',
-}
+export type ButtonSize = 'size_m' | 'size_l' | 'size_xl';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
-    theme?: ThemeButton;
+    variant?: ThemeVariant;
     square?: boolean;
     size?: ButtonSize;
     disabled?: boolean;
 }
 
-/**
- * @deprecated
- */
-
 export const Button = memo((props: ButtonProps) => {
     const {
         children,
-        theme = ThemeButton.OUTLINE,
+        variant = 'outline',
         className,
         square,
-        size = ButtonSize.M,
+        size = 'size_m',
         disabled,
         ...otherProps
     } = props;
 
     const mods: Mods = {
         [cls.square]: square,
-        [cls[size]]: true,
         [cls.disabled]: disabled,
     };
 
     return (
         <button
             type={'button'}
-            className={classNames(cls.Button, mods, [className, cls[theme]])}
+            className={classNames(cls.Button, mods, [
+                className,
+                cls[variant],
+                cls[size],
+            ])}
             disabled={disabled}
             {...otherProps}
         >

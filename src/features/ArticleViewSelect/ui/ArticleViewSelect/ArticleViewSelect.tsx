@@ -4,7 +4,7 @@ import { memo } from 'react';
 import { ArticleView } from '@/entities/Article';
 import ListIcons from '@/shared/assets/icons/list-24-24.svg?react';
 import TiledIcons from '@/shared/assets/icons/tiled-24-24.svg?react';
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 
 interface ArticleViewSelectProps {
@@ -38,7 +38,7 @@ export const ArticleViewSelect = memo((props: ArticleViewSelectProps) => {
             {viewTypes.map((viewType) => (
                 <Button
                     key={viewType.view}
-                    theme={ThemeButton.CLEAR}
+                    variant={'clear'}
                     onClick={onClickView(viewType.view)}
                 >
                     <Icon

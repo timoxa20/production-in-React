@@ -1,50 +1,102 @@
 .Sidebar {
-    height: calc(100vh - var(--navbar-height));
-    width: var(--sidebar-width);
-    background: var(--inverted-bg-color);
-    position: relative;
-    transition: width 0.3s;
-}
+  height: calc(100vh - var(--navbar-height));
+  width: var(--sidebar-width);
+  background: var(--inverted-bg-color);
+  position: relative;
+  transition: width 0.3s;
 
-.switcher {
+  .switcher {
     position: absolute;
     bottom: 20px;
     display: flex;
     justify-content: center;
     width: 100%;
-}
+  }
 
-.lang {
+  .lang {
     margin-left: 20px;
-}
+  }
 
-.collapsedBtn {
+  .collapsedBtn {
     position: absolute;
     right: -32px;
     bottom: 32px;
-}
+  }
 
-.Items {
+  .Items {
     margin-top: 20px;
-    margin-left: 30px;
+  }
 }
 
 .collapsed {
-    width: var(--sidebar-width-collapsed);
+  width: var(--sidebar-width-collapsed);
 
-    .switcher {
-        flex-direction: column;
-        align-items: center;
-    }
+  .switcher {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .lang {
-        margin-left: 0;
-    }
+  .lang {
+    margin-left: 0;
+  }
 }
 
 .SidebarRedesigned {
-    background: var(--light-bg-redesigned);
-    width: 220px;
-    border-radius: 32px;
-    height: 100%;
+  background: var(--light-bg-redesigned);
+  width: 220px;
+  border-radius: 32px;
+  height: 100%;
+  position: relative;
+
+  .appLogo {
+    margin-top: 20px;
+  }
+
+  .Items {
+    margin-top: 40px;
+  }
+
+  .collapsedBtn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: rotate(90deg);
+  }
+
+  .switcher {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 16px;
+  }
+}
+
+.collapsedRedesigned {
+  width: 50px;
+
+  .switcher {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Items {
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .lang {
+    margin-left: 0;
+  }
+
+  .collapsedBtn {
+    transform: rotate(-90deg);
+  }
+
+  .switcher {
+    flex-direction: column;
+    align-items: center;
+  }
 }

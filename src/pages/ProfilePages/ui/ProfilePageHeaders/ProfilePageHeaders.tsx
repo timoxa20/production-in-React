@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Text } from '@/shared/ui/deprecated/Text';
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { useSelector } from 'react-redux';
 import { useCallback } from 'react';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
@@ -49,7 +49,7 @@ export const ProfilePageHeaders = ({ className }: ProfilePageHeadersProps) => {
                 <>
                     {readonly ? (
                         <Button
-                            theme={ThemeButton.OUTLINE}
+                            variant={'clear'}
                             onClick={onEdit}
                             data-testid="EditableProfileCardHeader.EditButton"
                         >
@@ -58,14 +58,14 @@ export const ProfilePageHeaders = ({ className }: ProfilePageHeadersProps) => {
                     ) : (
                         <HStack gap="8">
                             <Button
-                                theme={ThemeButton.OUTLINE}
+                                variant={'clear'}
                                 onClick={onCancelEdit}
                                 data-testid="EditableProfileCardHeader.CancelButton"
                             >
                                 {t('Отмена')}
                             </Button>
                             <Button
-                                theme={ThemeButton.OUTLINE_RED}
+                                variant={'clear'}
                                 onClick={onSave}
                                 data-testid="EditableProfileCardHeader.SaveButton"
                             >

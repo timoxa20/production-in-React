@@ -1,4 +1,4 @@
-import { Button } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { useEffect, useState } from 'react';
 
 //Компонент для тестирования

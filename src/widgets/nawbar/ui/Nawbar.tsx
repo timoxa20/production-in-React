@@ -2,7 +2,7 @@ import React, { memo, useCallback, useState } from 'react';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './Navbar.module.scss';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { LoginModal } from '@/features/AuthByUserName';
 import { useSelector } from 'react-redux';
 import { getUserAuthData } from '@/entities/User';
@@ -79,7 +79,7 @@ export const Nawbar = memo(({ className }: NavbarProps) => {
     return (
         <header className={classNames(cls.Navbar, {}, [className])}>
             <Button
-                theme={ThemeButton.CLEAR_INVERTED}
+                variant={'clear'}
                 className={cls.links}
                 onClick={onShowModal}
             >

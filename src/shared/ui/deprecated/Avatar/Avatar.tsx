@@ -11,7 +11,6 @@ interface AvatarProps {
     src?: string;
     size?: string;
     alt?: string;
-    fallbackInverted?: boolean;
 }
 
 /**
@@ -19,11 +18,10 @@ interface AvatarProps {
  */
 
 export const Avatar = (props: AvatarProps) => {
-    const { className, src, size = 100, alt, fallbackInverted } = props;
+    const { className, src, size = 100, alt } = props;
 
     const errorFallback = (
         <Icon
-            inverted={fallbackInverted}
             width={size}
             height={size}
             Svg={UserIcons}

@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { getArticleDetailsData } from '@/entities/Article';
@@ -38,14 +38,14 @@ export const ArticleDetailsPageHeaders = memo(
             >
                 <Button
                     onClick={onToBackList}
-                    theme={ThemeButton.OUTLINE}
+                    variant={'outline'}
                 >
                     {t('Назад к списку')}
                 </Button>
                 {canEdit && (
                     <Button
                         onClick={onEditArticle}
-                        theme={ThemeButton.OUTLINE}
+                        variant={'outline'}
                     >
                         {t('Редактировать')}
                     </Button>

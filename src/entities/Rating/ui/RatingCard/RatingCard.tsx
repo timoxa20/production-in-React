@@ -7,7 +7,7 @@ import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { Modal } from '@/shared/ui/deprecated/Modal';
 import { Input } from '@/shared/ui/deprecated/Input';
 import { useTranslation } from 'react-i18next';
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { Drawer } from '@/shared/ui/deprecated/Drower';
 
@@ -82,7 +82,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 <Button
                     data-testid="RatingCard.Close"
                     onClick={cancelHandle}
-                    theme={ThemeButton.OUTLINE_RED}
+                    variant={'outline'}
                 >
                     {t('Закрыть')}
                 </Button>

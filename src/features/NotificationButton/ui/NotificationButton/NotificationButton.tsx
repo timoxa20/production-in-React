@@ -1,7 +1,7 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './NotificationButton.module.scss';
 import React, { memo, useCallback, useState } from 'react';
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button';
+import { Button } from '@/shared/ui/redesigned/Button';
 import { Icon } from '@/shared/ui/deprecated/Icon';
 import NotificationIcons from '@/shared/assets/icons/notification-20-20.svg?react';
 import { NotificationList } from '@/entities/Notification';
@@ -28,12 +28,9 @@ export const NotificationButton = memo(
         const trigger = (
             <Button
                 onClick={openDrawer}
-                theme={ThemeButton.CLEAR}
+                variant={'clear'}
             >
-                <Icon
-                    Svg={NotificationIcons}
-                    inverted
-                />
+                <Icon Svg={NotificationIcons} />
             </Button>
         );
 
