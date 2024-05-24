@@ -14,6 +14,10 @@ interface AvatarProps {
     fallbackInverted?: boolean;
 }
 
+/**
+ * @deprecated
+ */
+
 export const Avatar = (props: AvatarProps) => {
     const { className, src, size = 100, alt, fallbackInverted } = props;
 

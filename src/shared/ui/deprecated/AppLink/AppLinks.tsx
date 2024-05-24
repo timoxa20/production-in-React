@@ -12,6 +12,10 @@ interface AppLinksProps extends LinkProps {
     theme?: AppLinkTheme;
     children?: ReactNode;
 }
+
+/**
+ * @deprecated
+ */
 export const AppLinks = memo((props: AppLinksProps) => {
     const {
         to,

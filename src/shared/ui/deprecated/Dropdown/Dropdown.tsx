@@ -18,6 +18,10 @@ interface DropdownProps {
     trigger: ReactNode;
 }
 
+/**
+ * @deprecated
+ */
+
 export function Dropdown(props: DropdownProps) {
     const { className, active, trigger, items } = props;
     return (

@@ -9,6 +9,10 @@ interface CodeProps {
     text: string;
 }
 
+/**
+ * @deprecated
+ */
+
 export const Code = memo(({ className, text }: CodeProps) => {
     const onCopy = useCallback(() => {
         navigator.clipboard.writeText(text);

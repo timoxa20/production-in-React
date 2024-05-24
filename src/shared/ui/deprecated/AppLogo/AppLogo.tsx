@@ -8,6 +8,9 @@ interface AppLogoProps {
     className?: string;
 }
 
+/**
+ * @deprecated
+ */
 export const AppLogo = memo(({ className }: AppLogoProps) => {
     return (
         <HStack

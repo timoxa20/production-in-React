@@ -8,7 +8,9 @@ interface PopoverProps {
     trigger?: ReactNode;
     children?: ReactNode;
 }
-
+/**
+ * @deprecated
+ */
 export function Popover(props: PopoverProps) {
     const { className, trigger, children } = props;
     return (

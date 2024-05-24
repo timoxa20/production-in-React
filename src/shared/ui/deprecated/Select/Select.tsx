@@ -15,7 +15,9 @@ interface SelectProps<T extends string> {
     onChange?: (value: T) => void;
     readonly?: boolean;
 }
-
+/**
+ * @deprecated
+ */
 // eslint-disable-next-line react/display-name
 export const Select = <T extends string>(props: SelectProps<T>) => {
     const { className, label, options, value, onChange, readonly } = props;

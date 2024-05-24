@@ -26,6 +26,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     disabled?: boolean;
 }
 
+/**
+ * @deprecated
+ */
+
 export const Button = memo((props: ButtonProps) => {
     const {
         children,

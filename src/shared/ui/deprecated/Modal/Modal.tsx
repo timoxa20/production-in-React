@@ -13,6 +13,10 @@ interface ModalProps {
     onClose?: () => void;
     lazy?: boolean;
 }
+
+/**
+ * @deprecated
+ */
 export const Modal = (props: ModalProps) => {
     const ANIMATION_DELAY = 300;
     const { theme } = useTheme();

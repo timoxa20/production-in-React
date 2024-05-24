@@ -25,6 +25,9 @@ interface ListBoxProps {
     label?: string;
 }
 
+/**
+ * @deprecated
+ */
 export function ListBox(props: ListBoxProps) {
     const { items, className, value, defaultValue, onChange, readonly, label } =
         props;
