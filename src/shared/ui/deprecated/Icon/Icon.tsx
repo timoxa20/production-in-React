@@ -19,6 +19,9 @@ interface ClickableIconProps extends IconBaseProps {
 }
 
 type IconProps = NonClickableIconProps | ClickableIconProps;
+/**
+ * @deprecated
+ */
 
 export const Icon = memo((props: IconProps) => {
     const {
