@@ -3,7 +3,7 @@ import { ButtonHTMLAttributes, memo } from 'react';
 import { classNames, Mods } from '@/shared/lib/classNames/classNames';
 import React from 'react';
 
-export type ThemeVariant = 'clear' | 'outline';
+export type ThemeVariant = 'clear' | 'outline' | 'field';
 
 export type ButtonSize = 'size_m' | 'size_l' | 'size_xl';
 

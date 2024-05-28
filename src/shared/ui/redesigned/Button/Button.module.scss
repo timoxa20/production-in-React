@@ -4,7 +4,7 @@
   padding: 10px 15px;
 
   &:hover {
-   color: var(--accent-redesigned);
+    color: var(--accent-redesigned);
   }
 }
 
@@ -13,6 +13,14 @@
   border: none;
   background: none;
   outline: none;
+}
+
+.field {
+  background: var(--light-bg-redesigned);
+  border: none;
+  outline: none;
+  padding: 8px 16px;
+  border-radius: 32px;
 }
 
 

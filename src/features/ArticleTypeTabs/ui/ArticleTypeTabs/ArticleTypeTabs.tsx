@@ -1,7 +1,9 @@
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Tabs, TabsItem } from '@/shared/ui/deprecated/Tabs';
+import { Tabs as TabsDeprecated, TabsItem } from '@/shared/ui/deprecated/Tabs';
 import { ArticleType } from '@/entities/Article';
+import { ToggleFeature } from '@/shared/lib/features';
+import { Tabs } from '@/shared/ui/redesigned/Tabs';
 
 interface ArticleTypeTabsProps {
     value: ArticleType;
@@ -40,10 +42,23 @@ export const ArticleTypeTabs = memo(
             [onChangeType],
         );
         return (
-            <Tabs
-                tabs={typeTabs}
-                value={value}
-                onTabsClick={onTabsClick}
+            <ToggleFeature
+                feature={'isAppRedesigned'}
+                on={
+                    <Tabs
+                        direction={'colum'}
+                        tabs={typeTabs}
+                        value={value}
+                        onTabsClick={onTabsClick}
+                    />
+                }
+                off={
+                    <TabsDeprecated
+                        tabs={typeTabs}
+                        value={value}
+                        onTabsClick={onTabsClick}
+                    />
+                }
             />
         );
     },

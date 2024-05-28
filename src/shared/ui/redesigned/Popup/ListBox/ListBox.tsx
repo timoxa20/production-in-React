@@ -4,30 +4,34 @@ import {
     ListboxOption,
     ListboxOptions,
 } from '@headlessui/react';
-import { ReactNode } from 'react';
+import { ReactNode, useMemo } from 'react';
 import cls from './ListBox.module.scss';
-import { Button } from '@/shared/ui/redesigned/Button/Button';
 import { classNames } from '@/shared/lib/classNames/classNames';
+import { Button } from '../../Button';
 
-export interface ListBoxItems {
-    value: string;
+export interface ListBoxItems<T extends string> {
+    value: T;
     content: ReactNode;
     disabled?: boolean;
 }
 
-interface ListBoxProps {
-    items?: ListBoxItems[];
+interface ListBoxProps<T extends string> {
+    items?: ListBoxItems<T>[];
     className?: string;
-    value?: string;
+    value?: T;
     defaultValue?: string;
-    onChange: <T extends string>(value: T) => void;
+    onChange: (value: T) => void;
     readonly?: boolean;
     label?: string;
 }
 
-export function ListBox(props: ListBoxProps) {
+export function ListBox<T extends string>(props: ListBoxProps<T>) {
     const { items, className, value, defaultValue, onChange, readonly, label } =
         props;
+
+    const selectedItem = useMemo(() => {
+        return items?.find((item) => item.value === value);
+    }, [items, value]);
 
     return (
         <HListBox
@@ -42,7 +46,12 @@ export function ListBox(props: ListBoxProps) {
                 disabled={readonly}
                 className={cls.trigger}
             >
-                <Button disabled={readonly}>{value ?? defaultValue}</Button>
+                <Button
+                    variant="field"
+                    disabled={readonly}
+                >
+                    {selectedItem?.content ?? defaultValue}
+                </Button>
             </ListboxButton>
             <ListboxOptions
                 className={cls.options}

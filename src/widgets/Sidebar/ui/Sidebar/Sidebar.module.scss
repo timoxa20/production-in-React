@@ -44,26 +44,27 @@
 .SidebarRedesigned {
   background: var(--light-bg-redesigned);
   width: 220px;
-  border-radius: 32px;
   height: 100%;
+  border-radius: 32px;
   position: relative;
 
   .appLogo {
-    margin-top: 20px;
+    padding-top: 20px;
   }
 
-  .Items {
+  .items {
     margin-top: 40px;
   }
 
-  .collapsedBtn {
+  .collapseBtn {
     position: absolute;
     right: 0;
     top: 50%;
+    z-index: 10;
     transform: rotate(90deg);
   }
 
-  .switcher {
+  .switchers {
     position: absolute;
     bottom: 40px;
     display: flex;
@@ -76,13 +77,12 @@
 .collapsedRedesigned {
   width: 50px;
 
-  .switcher {
+  .switchers {
     flex-direction: column;
     align-items: center;
   }
 
-  .Items {
-    margin-left: 0;
+  .items {
     display: flex;
     align-items: center;
   }
@@ -91,11 +91,11 @@
     margin-left: 0;
   }
 
-  .collapsedBtn {
+  .collapseBtn {
     transform: rotate(-90deg);
   }
 
-  .switcher {
+  .switchers {
     flex-direction: column;
     align-items: center;
   }
