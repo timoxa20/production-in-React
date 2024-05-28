@@ -8,6 +8,8 @@ import { ReactNode, useMemo } from 'react';
 import cls from './ListBox.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button } from '../../Button';
+import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg?react';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 
 export interface ListBoxItems<T extends string> {
     value: T;
@@ -47,6 +49,7 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
                 className={cls.trigger}
             >
                 <Button
+                    addonRight={<Icon Svg={ArrowIcon} />}
                     variant="field"
                     disabled={readonly}
                 >

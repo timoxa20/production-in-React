@@ -9,6 +9,8 @@ import { VStack } from '@/shared/ui/Stack';
 import { useTranslation } from 'react-i18next';
 import { ArticleSortField, ArticleType } from '@/entities/Article';
 import { SortOrder } from '@/shared/types';
+import SearchIcon from '@/shared/assets/icons/search.svg?react';
+import { Icon } from '@/shared/ui/redesigned/Icon';
 
 interface ArticleFiltersProps {
     className?: string;
@@ -43,6 +45,7 @@ export const ArticleFilters = memo((props: ArticleFiltersProps) => {
         >
             <VStack gap="32">
                 <Input
+                    addonLeft={<Icon Svg={SearchIcon} />}
                     value={search}
                     onChange={onChangeSearch}
                     placeholder={t('Поиск')}
