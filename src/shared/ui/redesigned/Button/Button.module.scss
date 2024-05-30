@@ -33,6 +33,17 @@
   border-radius: 32px;
 }
 
+.outline {
+  background: none;
+  border: 1px solid var(--icon-redesigned);
+  outline: none;
+  border-radius: 32px;
+
+  &:hover {
+    border: 1px solid var(--accent-redesigned);
+  }
+}
+
 .addonLeft,
 .addonRight {
   display: flex;
