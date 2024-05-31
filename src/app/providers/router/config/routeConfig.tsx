@@ -19,13 +19,19 @@ import {
     getRouteForbidden,
     getRouteMain,
     getRouteProfile,
+    getRouteSettings,
 } from '@/shared/const/route';
 import { AppRouteProps } from '@/shared/types/route';
+import { SitingsPage } from '@/pages/SitingsPage';
 
 export const routeConfig: Record<AppRoute, AppRouteProps> = {
     [AppRoute.MAIN]: {
         path: getRouteMain(),
         element: <MainPage />,
+    },
+    [AppRoute.Settings]: {
+        path: getRouteSettings(),
+        element: <SitingsPage />,
     },
     [AppRoute.ABOUT]: {
         path: getRouteAbout(),

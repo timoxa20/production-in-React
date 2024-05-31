@@ -8,7 +8,11 @@ import {
     isUserManager,
     userActions,
 } from '@/entities/User';
-import { getRouteAdminPanel, getRouteProfile } from '@/shared/const/route';
+import {
+    getRouteAdminPanel,
+    getRouteProfile,
+    getRouteSettings,
+} from '@/shared/const/route';
 import { Dropdown } from '@/shared/ui/redesigned/Popup/Dropdown';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 
@@ -38,6 +42,10 @@ export const AvatarDropdown = memo(({ className }: avatarDropdownProps) => {
                   },
               ]
             : []),
+        {
+            content: t('Настройки'),
+            href: getRouteSettings(),
+        },
         {
             content: t('Выйти'),
             onClick: onLogout,
