@@ -16,6 +16,9 @@ import { ArticleReacommendationList } from '@/features/articleReacommendationLis
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
 import { ToggleFeature } from '@/shared/lib/features';
+import { StickyContentLayout } from '@/shared/layouts/StickyComponentLayout';
+import { ArticleDetailsContainer } from '@/pages/ArticleDetailsPage/ui/ArticleDetailsContainer/ArticleDetailsContainer';
+import { AdditionalInfoContainer } from '@/pages/ArticleDetailsPage/ui/AditiaonalInfoContainer/AditiaonalInfoContainer';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -44,25 +47,57 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
             reducers={reducer}
             removeAfterUnmount
         >
-            <Page
-                className={classNames(cls.ArticleDetailsPage, {}, [className])}
-            >
-                <VStack
-                    gap="16"
-                    max
-                >
-                    <ArticleDetailsPageHeaders />
-                    <ArticleDetails id={id} />
-                    <ToggleFeature
-                        on={<ArticleDetailsPageHeaders />}
-                        off={<ArticleDetailsPageHeaders />}
-                        feature={'isArticleRatingEnabled'}
+            <ToggleFeature
+                feature={'isAppRedesigned'}
+                on={
+                    <StickyContentLayout
+                        content={
+                            <Page
+                                className={classNames(
+                                    cls.ArticleDetailsPage,
+                                    {},
+                                    [className],
+                                )}
+                            >
+                                <VStack
+                                    gap="16"
+                                    max
+                                >
+                                    <ArticleDetailsContainer />
+                                    <ArticleDetailsPageHeaders />
+                                    <ArticleRating articleId={id} />
+                                    <ArticleReacommendationList />
+                                    <ArticleDetailsComments id={id} />
+                                </VStack>
+                            </Page>
+                        }
+                        right={<AdditionalInfoContainer />}
                     />
-                    <ArticleRating articleId={id} />
-                    <ArticleReacommendationList />
-                    <ArticleDetailsComments id={id} />
-                </VStack>
-            </Page>
+                }
+                off={
+                    <Page
+                        className={classNames(cls.ArticleDetailsPage, {}, [
+                            className,
+                        ])}
+                    >
+                        <VStack
+                            gap="16"
+                            max
+                        >
+                            <ArticleDetailsPageHeaders />
+                            <ArticleDetails id={id} />
+                            <ToggleFeature
+                                on={<ArticleDetailsPageHeaders />}
+                                off={<ArticleDetailsPageHeaders />}
+                                feature={'isArticleRatingEnabled'}
+                            />
+                            <ArticleRating articleId={id} />
+                            <ArticleReacommendationList />
+                            <ArticleDetailsComments id={id} />
+                        </VStack>
+                    </Page>
+                }
+            />
         </DynamicModuleLoader>
     );
 };
