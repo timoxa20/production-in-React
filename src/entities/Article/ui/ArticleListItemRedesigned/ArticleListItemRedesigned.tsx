@@ -5,11 +5,6 @@ import { useTranslation } from 'react-i18next';
 import { ArticleListItemProps } from '../ArticleListItem/ArticleListItem';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Icon } from '@/shared/ui/redesigned/Icon';
-import { ArticleView } from '@/entities/Article';
-import {
-    ArticleBlockType,
-    ArticleTextBlock,
-} from '@/entities/Article/model/types/article';
 import { Card } from '@/shared/ui/redesigned/Card';
 import { Avatar } from '@/shared/ui/redesigned/Avatar';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
@@ -19,10 +14,28 @@ import { getRouteArticleDetails } from '@/shared/const/route';
 import { Button } from '@/shared/ui/redesigned/Button';
 import EyeIcon from '@/shared/assets/icons/eye.svg?react';
 import { HStack, VStack } from '@/shared/ui/Stack';
+import {
+    ArticleBlockType,
+    ArticleTextBlock,
+    ArticleView,
+} from '../../model/types/article';
 
 export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
     const { article, target, view, className } = props;
     const { t } = useTranslation();
+
+    const userInfo = (
+        <>
+            <Avatar
+                size={'32px'}
+                src={article.user.avatar}
+            />
+            <Text
+                bold
+                text={article.user.username}
+            />
+        </>
+    );
 
     const types = (
         <Text
@@ -62,14 +75,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                         gap="8"
                         max
                     >
-                        <Avatar
-                            size={'32px'}
-                            src={article?.user.avatar}
-                        />
-                        <Text
-                            bold
-                            text={article?.user.username}
-                        />
+                        {userInfo}
                         <Text text={article?.createdAt} />
                     </HStack>
                     <Text
@@ -117,16 +123,21 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
             </Card>
         );
     }
-
-    return (
-        <AppLinks
-            data-testid="ArticleListItem"
-            target={target}
-            to={getRouteArticleDetails(article?.id)}
-            className={classNames(cls.ArticleListItem, {}, [className])}
-        >
-            <Card className={cls.Card}>
-                <div className={cls.imageWrapper}>
+    if (view === ArticleView.SMALL) {
+        return (
+            <AppLinks
+                data-testid="ArticleListItem"
+                target={target}
+                to={getRouteArticleDetails(article?.id)}
+                className={classNames(cls.ArticleListItem, {}, [
+                    className,
+                    cls[view],
+                ])}
+            >
+                <Card
+                    className={cls.Card}
+                    border="round"
+                >
                     <AppImage
                         fallback={
                             <Skeleton
@@ -138,20 +149,36 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                         src={article?.img}
                         alt={article?.title}
                     />
-                    <Text
-                        className={cls.date}
-                        text={article?.createdAt}
-                    />
-                </div>
-                <div className={cls.infoWrapper}>
-                    {types}
-                    {views}
-                </div>
-                <Text
-                    className={cls.title}
-                    text={article?.title}
-                />
-            </Card>
-        </AppLinks>
-    );
+                    <VStack
+                        className={cls.info}
+                        gap="4"
+                    >
+                        <Text
+                            title={article.title}
+                            className={cls.title}
+                        />
+                        <VStack
+                            gap="4"
+                            className={cls.footer}
+                            max
+                        >
+                            <HStack
+                                justify="between"
+                                max
+                            >
+                                <Text
+                                    text={article.createdAt}
+                                    className={cls.date}
+                                />
+                                {views}
+                            </HStack>
+                            <HStack gap="4">{userInfo}</HStack>
+                        </VStack>
+                    </VStack>
+                </Card>
+            </AppLinks>
+        );
+    }
 });
+
+ArticleListItemRedesigned.displayName = 'ArticleListItemRedesigned';
