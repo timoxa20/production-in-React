@@ -9,6 +9,7 @@ import { getUserAuthData } from '@/entities/User';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/NotificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
+import { toggleFeatures } from '@/shared/lib/features';
 
 interface NavbarProps {
     className?: string;
@@ -27,11 +28,15 @@ export const Nawbar = memo(({ className }: NavbarProps) => {
         setIsAuthModal(true);
     }, []);
 
+    const mainClass = toggleFeatures({
+        name: 'isAppRedesigned',
+        on: () => cls.NavbarRedesigned,
+        off: () => cls.Navbar,
+    });
+
     if (authData) {
         return (
-            <header
-                className={classNames(cls.NavbarRedesigned, {}, [className])}
-            >
+            <header className={classNames(mainClass, {}, [className])}>
                 <HStack
                     gap="16"
                     className={cls.actions}
@@ -44,7 +49,7 @@ export const Nawbar = memo(({ className }: NavbarProps) => {
     }
 
     return (
-        <header className={classNames(cls.Navbar, {}, [className])}>
+        <header className={classNames(mainClass, {}, [className])}>
             <Button
                 variant={'clear'}
                 className={cls.links}

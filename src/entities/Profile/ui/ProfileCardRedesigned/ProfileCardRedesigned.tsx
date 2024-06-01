@@ -112,7 +112,8 @@ export const Redesigned = (props: ProfileCardProps) => {
 
     return (
         <Card
-            padding={'24'}
+            border={'partial'}
+            padding={'16'}
             max
         >
             <VStack>

@@ -62,7 +62,7 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
             <Card
                 padding="24"
                 max
-                border="round"
+                border="partial"
             >
                 <HStack
                     data-testid="AddCommentForm"

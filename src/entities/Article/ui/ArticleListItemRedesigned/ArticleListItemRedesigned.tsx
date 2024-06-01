@@ -138,7 +138,7 @@ export const ArticleListItemRedesigned = memo((props: ArticleListItemProps) => {
                 <Card
                     padding="0"
                     className={cls.Card}
-                    border="round"
+                    border="partial"
                 >
                     <AppImage
                         fallback={

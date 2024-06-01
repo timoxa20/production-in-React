@@ -13,7 +13,7 @@ export const ArticleDetailsContainer = memo(
         return (
             <Card
                 max
-                border="round"
+                border="partial"
                 className={className}
                 padding="24"
             >

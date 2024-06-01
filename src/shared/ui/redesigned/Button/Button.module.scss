@@ -26,6 +26,19 @@
   outline: none;
 }
 
+.normal {
+  border: 2px solid var(--icon-redesigned);
+}
+
+.success {
+  border: 2px solid var(--cancel-redesigned)
+}
+
+.error {
+  border: 2px solid var(--save-redesigned)
+}
+
+
 .field {
   background: var(--light-bg-redesigned);
   border: none;
