@@ -28,10 +28,10 @@ import EyeIcon from '../../../../shared/assets/icons/eye-20-20.svg?react';
 import CalendarIcon from '../../../../shared/assets/icons/calendar-20-20.svg?react';
 import { Icon as IconDeprecated } from '@/shared/ui/deprecated/Icon';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import { renderArticleBlock } from '@/entities/Article/ui/ArticleDetails/renderBlock';
 import { ToggleFeature } from '@/shared/lib/features';
 import { AppImage } from '@/shared/ui/redesigned/AppImage';
 import { Skeleton } from '@/shared/ui/redesigned/Skeleton';
+import { renderArticleBlock } from './renderBlock';
 
 interface ArticleDetailsProps {
     className?: string;
@@ -116,7 +116,6 @@ const Redesigned = () => {
 export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
     const { t } = useTranslation();
     const dispatch = useAppDispatch();
-    const article = useSelector(getArticleDetailsData);
     const isLoading = useSelector(getArticleDetailsIsLoading);
     const error = useSelector(getArticleDetailsError);
 
@@ -130,41 +129,88 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
     if (isLoading) {
         content = (
-            <>
-                <SkeletonDeprecated
-                    className={cls.avatar}
-                    width={200}
-                    height={200}
-                    border={'50%'}
-                />
-                <SkeletonDeprecated
-                    className={cls.title}
-                    width={300}
-                    height={32}
-                />
-                <SkeletonDeprecated
-                    className={cls.skeleton}
-                    width={600}
-                    height={24}
-                />
-                <SkeletonDeprecated
-                    className={cls.skeleton}
-                    width="100%"
-                    height={200}
-                />
-                <SkeletonDeprecated
-                    className={cls.skeleton}
-                    width="100%"
-                    height={200}
-                />
-            </>
+            <ToggleFeature
+                feature={'isAppRedesigned'}
+                on={
+                    <>
+                        <Skeleton
+                            className={cls.avatar}
+                            width={200}
+                            height={200}
+                            border={'50%'}
+                        />
+                        <Skeleton
+                            className={cls.title}
+                            width={300}
+                            height={32}
+                        />
+                        <Skeleton
+                            className={cls.skeleton}
+                            width={600}
+                            height={24}
+                        />
+                        <Skeleton
+                            className={cls.skeleton}
+                            width="100%"
+                            height={200}
+                        />
+                        <Skeleton
+                            className={cls.skeleton}
+                            width="100%"
+                            height={200}
+                        />
+                    </>
+                }
+                off={
+                    <>
+                        <SkeletonDeprecated
+                            className={cls.avatar}
+                            width={200}
+                            height={200}
+                            border={'50%'}
+                        />
+                        <SkeletonDeprecated
+                            className={cls.title}
+                            width={300}
+                            height={32}
+                        />
+                        <SkeletonDeprecated
+                            className={cls.skeleton}
+                            width={600}
+                            height={24}
+                        />
+                        <SkeletonDeprecated
+                            className={cls.skeleton}
+                            width="100%"
+                            height={200}
+                        />
+                        <SkeletonDeprecated
+                            className={cls.skeleton}
+                            width="100%"
+                            height={200}
+                        />
+                    </>
+                }
+            />
         );
     } else if (error) {
         content = (
-            <TextDeprecated
-                align={TextAlign.CENTER}
-                title={t('Пойзошла ошибка')}
-                theme={TextTheme.ERROR}
+            <ToggleFeature
+                feature={'isAppRedesigned'}
+                on={
+                    <Text
+                        align={'center'}
+                        title={t('Пойзошла ошибка')}
+                        variant={'error'}
+                    />
+                }
+                off={
+                    <TextDeprecated
+                        align={TextAlign.CENTER}
+                        title={t('Пойзошла ошибка')}
+                        theme={TextTheme.ERROR}
+                    />
+                }
             />
         );
     } else {
