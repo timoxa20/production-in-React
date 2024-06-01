@@ -7,8 +7,10 @@ import { Sidebar } from '@/widgets/Sidebar';
 import { useSelector } from 'react-redux';
 import { getUserInited, initAuthData } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
-import { PageLoader } from '@/widgets/PageLoader';
 import { MainLayouts } from '@/shared/layouts/MainLayouts';
+import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
+import { ToggleFeature } from '@/shared/lib/features';
+import { PageLoader } from '@/widgets/PageLoader';
 
 const App = () => {
     const { theme } = useTheme();
@@ -20,7 +22,20 @@ const App = () => {
     }, [dispatch]);
 
     if (!inited) {
-        return <PageLoader />;
+        return (
+            <ToggleFeature
+                on={
+                    <div
+                        id={'app'}
+                        className={classNames('app__redesigned', {}, [theme])}
+                    >
+                        <AppLoaderLayout />
+                    </div>
+                }
+                off={<PageLoader />}
+                feature={'isAppRedesigned'}
+            />
+        );
     }
 
     return (
