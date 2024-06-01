@@ -2,7 +2,9 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleTextBlockComponent.module.scss';
 import { memo } from 'react';
 import { ArticleTextBlock } from '../../model/types/article';
-import { Text } from '@/shared/ui/deprecated/Text';
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
+import { Text } from '@/shared/ui/redesigned/Text';
+import { ToggleFeature } from '@/shared/lib/features';
 
 interface ArticleTextBlockComponentProps {
     className?: string;
@@ -18,16 +20,39 @@ export const ArticleTextBlockComponent = memo(
                 ])}
             >
                 {block.title && (
-                    <Text
-                        className={cls.title}
-                        title={block?.title}
+                    <ToggleFeature
+                        feature={'isAppRedesigned'}
+                        on={
+                            <Text
+                                className={cls.title}
+                                title={block?.title}
+                            />
+                        }
+                        off={
+                            <TextDeprecated
+                                className={cls.title}
+                                title={block?.title}
+                            />
+                        }
                     />
                 )}
                 {block?.paragraphs.map((par) => (
-                    <Text
-                        className={cls.paragraphs}
-                        text={par}
-                        key={par}
+                    <ToggleFeature
+                        feature={'isAppRedesigned'}
+                        on={
+                            <Text
+                                className={cls.paragraphs}
+                                text={par}
+                                key={par}
+                            />
+                        }
+                        off={
+                            <TextDeprecated
+                                className={cls.paragraphs}
+                                text={par}
+                                key={par}
+                            />
+                        }
                     />
                 ))}
             </div>
