@@ -2,7 +2,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './AddCommentForm.module.scss';
 import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input as InputDepracated } from '@/shared/ui/deprecated/Input';
 import { Input } from '@/shared/ui/redesigned/Input';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { useSelector } from 'react-redux';
@@ -20,7 +19,6 @@ import {
     ReducerList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { HStack } from '@/shared/ui/Stack';
-import { ToggleFeature } from '@/shared/lib/features';
 import { Card } from '@/shared/ui/redesigned/Card';
 
 export interface AddCommentFormProps {

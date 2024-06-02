@@ -2,7 +2,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleDetailsPage.module.scss';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { ArticleDetails } from '@/entities/Article';
 import { useParams } from 'react-router-dom';
 import {
     DynamicModuleLoader,
@@ -15,7 +14,6 @@ import { VStack } from '@/shared/ui/Stack';
 import { ArticleReacommendationList } from '@/features/articleReacommendationList';
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments';
 import { ArticleRating } from '@/features/articleRating';
-import { ToggleFeature } from '@/shared/lib/features';
 import { StickyContentLayout } from '@/shared/layouts/StickyComponentLayout';
 import { ArticleDetailsContainer } from '../ArticleDetailsContainer/ArticleDetailsContainer';
 import { AdditionalInfoContainer } from '../AditiaonalInfoContainer/AditiaonalInfoContainer';

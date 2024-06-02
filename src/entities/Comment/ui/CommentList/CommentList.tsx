@@ -1,12 +1,10 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo } from 'react';
-import { Text as TextDeprecated, TextAlign } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { useTranslation } from 'react-i18next';
 import { CommentCard } from '../CommentCard/CommentCard';
 import { Comment } from '../../model/types/comment';
 import { VStack } from '@/shared/ui/Stack';
-import { ToggleFeature } from '@/shared/lib/features';
 
 interface CommentListProps {
     className?: string;

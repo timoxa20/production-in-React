@@ -45,16 +45,13 @@ export function ListBox<T extends string>(props: ListBoxProps<T>) {
         >
             {label && <span className={cls.label}>{label + '>'}</span>}
             <ListboxButton
+                as={Button}
                 disabled={readonly}
                 className={cls.trigger}
+                addonRight={<Icon Svg={ArrowIcon} />}
+                variant="field"
             >
-                <Button
-                    addonRight={<Icon Svg={ArrowIcon} />}
-                    variant="field"
-                    disabled={readonly}
-                >
-                    {selectedItem?.content ?? defaultValue}
-                </Button>
+                {selectedItem?.content ?? defaultValue}
             </ListboxButton>
             <ListboxOptions
                 className={cls.options}

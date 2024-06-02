@@ -1,10 +1,8 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './StarRating.module.scss';
 import { memo, useState } from 'react';
-import { Icon as IconDeprecated } from '../Icon/Icon';
 import { Icon } from '../../redesigned/Icon/Icon';
 import StartIcons from '../../../assets/icons/star.svg?react';
-import { ToggleFeature, toggleFeatures } from '@/shared/lib/features';
 
 interface StarRatingProps {
     className?: string;
@@ -43,13 +41,7 @@ export const StarRating = memo((props: StarRatingProps) => {
     };
 
     return (
-        <div
-            className={classNames(
-                cls.StarRatingRedesigned,
-                {},
-                [className],
-            )}
-        >
+        <div className={classNames(cls.StarRatingRedesigned, {}, [className])}>
             {start.map((startNumber) => {
                 const commontProps = {
                     className: classNames(
@@ -62,7 +54,6 @@ export const StarRating = memo((props: StarRatingProps) => {
                         ],
                     ),
                     Svg: StartIcons,
-                    key: startNumber,
                     width: size,
                     height: size,
                     onMouseLeave: onLeave,
@@ -73,9 +64,10 @@ export const StarRating = memo((props: StarRatingProps) => {
                 };
                 return (
                     <Icon
-                                                    clickable={!isSelected}
-                                                    {...commontProps}
-                                                />
+                        key={startNumber}
+                        clickable={!isSelected}
+                        {...commontProps}
+                    />
                 );
             })}
         </div>

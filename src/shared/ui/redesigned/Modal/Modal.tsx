@@ -5,7 +5,6 @@ import { useModal } from '@/shared/lib/hooks/useModal/useModal';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { Overlay } from '../Overlay';
 import { Portal } from '../Portal';
-import { toggleFeatures } from '@/shared/lib/features';
 
 interface ModalProps {
     className?: string;

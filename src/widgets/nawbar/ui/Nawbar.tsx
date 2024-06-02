@@ -9,7 +9,6 @@ import { getUserAuthData } from '@/entities/User';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/NotificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
-import { toggleFeatures } from '@/shared/lib/features';
 
 interface NavbarProps {
     className?: string;

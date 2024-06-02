@@ -11,10 +11,8 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch
 import { Page } from '@/widgets/Page';
 import { fetchNextArticlePage } from '../../model/service/fetchNextArticlePage/fetchNextArticlePage';
 import { initedArticlePage } from '../../model/service/initedArticlePage/initedArticlePage';
-import { ArticlePagesFilter } from '../ArticlePagesFilter/ArticlePagesFilter';
 import { useSearchParams } from 'react-router-dom';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
-import { ToggleFeature } from '@/shared/lib/features';
 import { StickyContentLayout } from '@/shared/layouts/StickyComponentLayout';
 import { ViewSelectorContainer } from '../ViewSelectorContainer/ViewSelectorContainer';
 import { FiltersContainer } from '../../ui/FiltersContainer/FiltersContainer';

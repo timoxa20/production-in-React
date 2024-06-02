@@ -2,9 +2,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import cls from './ArticleImageBlockComponent.module.scss';
 import { memo } from 'react';
 import { ArticleImageBlock } from '../../model/types/article';
-import { Text as TextDeprecated, TextAlign } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
-import { ToggleFeature } from '@/shared/lib/features';
 
 interface ArticleImageBlockComponentProps {
     className?: string;

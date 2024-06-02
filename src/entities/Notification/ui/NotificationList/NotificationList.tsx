@@ -3,9 +3,7 @@ import { memo } from 'react';
 import { useNotifications } from '../../api/notificationApi';
 import { VStack } from '@/shared/ui/Stack';
 import { NotificationListItem } from '../NotificationListItem/NotificationListItem';
-import { Skeleton as SkeletonDeprecated } from '@/shared/ui/deprecated/Skeleton';
 import { Skeleton as SkeletonRedesigned } from '@/shared/ui/redesigned/Skeleton';
-import { toggleFeatures } from '@/shared/lib/features';
 
 interface NotificationListProps {
     className?: string;

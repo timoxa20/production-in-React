@@ -1,12 +1,10 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo } from 'react';
-import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { ArticleList } from '@/entities/Article';
 import { VStack } from '@/shared/ui/Stack';
 import { useArticleRecommendationList } from '../../api/articleRecommendationApi';
-import { ToggleFeature } from '@/shared/lib/features';
 
 interface ArticleReacommendationListProps {
     className?: string;

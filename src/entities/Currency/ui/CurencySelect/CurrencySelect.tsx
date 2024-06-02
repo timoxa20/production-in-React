@@ -2,8 +2,6 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { Currency } from '../../model/types/curency';
 import { memo, useCallback } from 'react';
-import { ListBox as ListBoxDeprecated } from '@/shared/ui/deprecated/ListBox';
-import { ToggleFeature } from '@/shared/lib/features';
 import { ListBox } from '@/shared/ui/redesigned/Popup/ListBox';
 
 interface CurrencySelectProps {

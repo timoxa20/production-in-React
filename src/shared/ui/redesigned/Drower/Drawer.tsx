@@ -8,7 +8,6 @@ import cls from './Drawer.module.scss';
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme';
 import { Overlay } from '../Overlay';
 import { Portal } from '../Portal';
-import { toggleFeatures } from '@/shared/lib/features';
 
 interface DrawerProps {
     className?: string;

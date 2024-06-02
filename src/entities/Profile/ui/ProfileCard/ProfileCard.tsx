@@ -1,12 +1,8 @@
 import { Profile } from '../../model/types/profile';
 import { Currency } from '../../../Currency';
 import { Country } from '../../../Country';
-import { ToggleFeature } from '@/shared/lib/features';
-import {
-    Deprecated,
-    ProfileCardDeprecated,
-    ProfileCardDeprecatedError,
-} from '../ProfileCardDeprecated/ProfileCardDeprecated';
+
+
 import {
     ProfileCardsRedesignedError,
     ProfileCardsRedesignedSkeleton,

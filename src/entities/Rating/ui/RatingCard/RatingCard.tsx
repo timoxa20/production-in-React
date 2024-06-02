@@ -1,17 +1,12 @@
-import { classNames } from '@/shared/lib/classNames/classNames';
 import { memo, useCallback, useState } from 'react';
-import { Card as CardDeprecated } from '@/shared/ui/deprecated/Card';
 import { HStack, VStack } from '@/shared/ui/Stack';
-import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { StarRating } from '@/shared/ui/deprecated/StarRating';
 import { Modal } from '@/shared/ui/redesigned/Modal';
-import { Input as InputDeprecated } from '@/shared/ui/deprecated/Input';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { BrowserView, MobileView } from 'react-device-detect';
 import { Drawer } from '@/shared/ui/redesigned/Drower';
-import { ToggleFeature } from '@/shared/lib/features';
 import { Input } from '@/shared/ui/redesigned/Input';
 import { Card } from '@/shared/ui/redesigned/Card';
 
@@ -26,15 +21,8 @@ interface RatingCardProps {
 }
 
 export const RatingCard = memo((props: RatingCardProps) => {
-    const {
-        className,
-        title,
-        feedbackTitle,
-        hasFeedback,
-        onCancel,
-        onAccept,
-        rate,
-    } = props;
+    const { title, feedbackTitle, hasFeedback, onCancel, onAccept, rate } =
+        props;
     const { t } = useTranslation();
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [startCount, setStartCount] = useState(rate);
@@ -72,14 +60,14 @@ export const RatingCard = memo((props: RatingCardProps) => {
             gap="24"
         >
             <>
-                                    <Text title={feedbackTitle} />
-                                    <Input
-                                        data-testid="RatingCard.Input"
-                                        value={feedback}
-                                        onChange={setFeedback}
-                                        placeholder={t('Ваш отзыв')}
-                                    />
-                                </>
+                <Text title={feedbackTitle} />
+                <Input
+                    data-testid="RatingCard.Input"
+                    value={feedback}
+                    onChange={setFeedback}
+                    placeholder={t('Ваш отзыв')}
+                />
+            </>
             <HStack
                 max
                 gap="16"
@@ -108,9 +96,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 align="center"
                 gap="16"
             >
-                <Text
-                                            title={startCount ? t('Спасибо за оценку') : title}
-                                        />
+                <Text title={startCount ? t('Спасибо за оценку') : title} />
                 <StarRating
                     selectStart={startCount}
                     size={40}
@@ -137,12 +123,12 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
     return (
         <Card
-                            border="partial"
-                            max
-                            padding={'24'}
-                        >
-                            {content}
-                        </Card>
+            border="partial"
+            max
+            padding={'24'}
+        >
+            {content}
+        </Card>
     );
 });
 

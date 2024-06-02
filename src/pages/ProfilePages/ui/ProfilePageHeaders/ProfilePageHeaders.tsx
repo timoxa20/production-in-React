@@ -1,6 +1,5 @@
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text';
 import { Text } from '@/shared/ui/redesigned/Text';
 import { Button } from '@/shared/ui/redesigned/Button';
 import { useSelector } from 'react-redux';
@@ -14,7 +13,6 @@ import {
     updateProfileData,
 } from '@/features/editableProfileCard';
 import { profileActions } from '@/features/editableProfileCard';
-import { ToggleFeature } from '@/shared/lib/features';
 import { Card } from '@/shared/ui/redesigned/Card';
 
 interface ProfilePageHeadersProps {
