@@ -1,23 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card } from './Card';
-import { Text } from '../Text/Text';
+import { Card as CardDeprecated } from './Card';
+import { Text as TextDeprecated } from '../Text/Text';
 
-const meta = {
-    title: 'shared /Card',
-    component: Card,
+const metaDeprecated = {
+    title: 'shared/deprecated /CardDeprecated',
+    component: CardDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Card>;
+} satisfies Meta<typeof CardDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const Normal: Story = {
     args: {
         children: (
-            <Text
+            <TextDeprecated
                 title={'World'}
                 text={'Hello'}
             />

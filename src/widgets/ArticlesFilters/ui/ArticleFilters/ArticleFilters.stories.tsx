@@ -4,7 +4,7 @@ import { ArticleSortField, ArticleType } from '@/entities/Article';
 import { action } from '@storybook/addon-actions';
 
 const meta = {
-    title: 'shared /ArticleFilters',
+    title: 'widget /ArticleFilters',
     component: ArticleFilters,
     parameters: {},
     tags: ['autodocs'],

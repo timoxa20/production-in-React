@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { AppLogo } from './AppLogo';
 
 const meta = {
-    title: 'shared /AppLogo',
+    title: 'shared/redesigned /AppLogo',
     component: AppLogo,
     parameters: {},
     tags: ['autodocs'],

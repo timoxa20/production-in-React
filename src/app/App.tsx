@@ -5,13 +5,14 @@ import { AppRouter } from './providers/router';
 import { Nawbar } from '@/widgets/nawbar';
 import { Sidebar } from '@/widgets/Sidebar';
 import { useSelector } from 'react-redux';
-import { getUserInited, initAuthData } from '@/entities/User';
+import { getUserInited, initAuthData, useJsonSettings } from '@/entities/User';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { MainLayouts } from '@/shared/layouts/MainLayouts';
 import { AppLoaderLayout } from '@/shared/layouts/AppLoaderLayout';
 import { ToggleFeature } from '@/shared/lib/features';
 import { PageLoader } from '@/widgets/PageLoader';
 import { useAppToolbar } from './lib/useAppToolbar/useAppToolbar';
+import { ThemeProvider } from '@/app/providers/ThemeProvider';
 
 const App = () => {
     const { theme } = useTheme();
@@ -57,4 +58,15 @@ const App = () => {
     );
 };
 
-export default App;
+const widthTheme = (Comment: React.ComponentType) => {
+    return () => {
+        const { theme: defaultTheme } = useJsonSettings();
+        return (
+            <ThemeProvider initialTheme={defaultTheme}>
+                <Comment />
+            </ThemeProvider>
+        );
+    };
+};
+
+export default widthTheme(App);

@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UiDesignedSwitcher } from './UiDesignedSwitcher';
+import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator';
 
 const meta = {
     title: 'features /UiDesignedSwitcher ',
@@ -8,6 +9,7 @@ const meta = {
     tags: ['autodocs'],
     argTypes: {},
     args: {},
+    decorators: [StoreDecorator({})],
 } satisfies Meta<typeof UiDesignedSwitcher>;
 
 export default meta;

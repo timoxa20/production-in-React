@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Dropdown } from './Dropdown';
-import { Button } from '@/shared/ui/redesigned/Button/Button';
+import { Dropdown as DropdownDeprecated } from './Dropdown';
+import { Button } from '../../redesigned/Button/Button';
 import { action } from '@storybook/addon-actions';
 
-const meta = {
-    title: 'shared /Dropdown',
-    component: Dropdown,
+const metaDeprecated = {
+    title: 'shared/deprecated /DropdownDeprecated',
+    component: DropdownDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Dropdown>;
+} satisfies Meta<typeof DropdownDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const Normal: Story = {
     args: {

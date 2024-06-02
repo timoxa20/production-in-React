@@ -144,3 +144,5 @@ export const ArticleListItemDeprecated = memo((props: ArticleListItemProps) => {
         </AppLinks>
     );
 });
+
+ArticleListItemDeprecated.displayName = 'ArticleListItemDeprecated';

@@ -16,7 +16,7 @@ export const NotificationList = memo(({ className }: NotificationListProps) => {
         pollingInterval: 5000,
     });
 
-    const showSkeleton = toggleFeatures({
+    const Skeleton = toggleFeatures({
         name: 'isAppRedesigned',
         on: () => SkeletonRedesigned,
         off: () => SkeletonDeprecated,
@@ -29,17 +29,17 @@ export const NotificationList = memo(({ className }: NotificationListProps) => {
                 max
                 className={classNames('', {}, [className])}
             >
-                <SkeletonDeprecated
+                <Skeleton
                     width={500}
                     border={'8px'}
                     height={80}
                 />
-                <SkeletonDeprecated
+                <Skeleton
                     width={500}
                     border={'8px'}
                     height={80}
                 />
-                <SkeletonDeprecated
+                <Skeleton
                     width={500}
                     border={'8px'}
                     height={80}

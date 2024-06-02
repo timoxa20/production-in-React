@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select } from './Select';
+import { Select as SelectDeprecated } from './Select';
 
-const meta = {
-    title: 'shared /Select ',
-    component: Select,
+const metaDeprecated = {
+    title: 'shared/deprecated /SelectDeprecated ',
+    component: SelectDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Select>;
+} satisfies Meta<typeof SelectDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const PRIMARY: Story = {
     args: {

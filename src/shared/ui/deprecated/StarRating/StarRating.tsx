@@ -77,6 +77,7 @@ export const StarRating = memo((props: StarRatingProps) => {
                 };
                 return (
                     <ToggleFeature
+                        key={startNumber}
                         on={
                             <Icon
                                 clickable={!isSelected}

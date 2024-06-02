@@ -11,6 +11,7 @@ const meta = {
     tags: ['autodocs'],
     argTypes: {},
     args: {},
+    decorators: [StoreDecorator({})],
 } satisfies Meta<typeof AboutPage>;
 
 export default meta;
@@ -18,7 +19,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Normal: Story = {
     args: {},
-    decorators: [StoreDecorator({})],
 };
 
 export const Dark: Story = {

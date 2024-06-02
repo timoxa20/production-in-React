@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ListBox } from './ListBox';
+import { ListBox as ListBoxDeprecated } from './ListBox';
 import { action } from '@storybook/addon-actions';
 
-const meta = {
-    title: 'shared /ListBox',
-    component: ListBox,
+const metaDeprecated = {
+    title: 'shared/deprecated /ListBoxDeprecated',
+    component: ListBoxDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof ListBox>;
+} satisfies Meta<typeof ListBoxDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const Normal: Story = {
     args: {

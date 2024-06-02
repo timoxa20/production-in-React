@@ -15,7 +15,6 @@ const defaultAsyncReducers: ReducerList = {
     addCommentForm: addCommentFormReducer,
     articleDetailsPage: articleDetailsPageReducer,
 };
-// eslint-disable-next-line react/display-name
 export const StoreDecorator =
     (state: Partial<StateSchema>): Decorator =>
     (Story) => (

@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { StarRating } from './StarRating';
+import { StarRating as StarRatingDeprecated } from './StarRating';
 import { action } from '@storybook/addon-actions';
 
-const meta = {
-    title: 'shared /StarRating',
-    component: StarRating,
+const metaDeprecated = {
+    title: 'shared/deprecated /StarRatingDeprecated',
+    component: StarRatingDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof StarRating>;
+} satisfies Meta<typeof StarRatingDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const Normal: Story = {
     args: { size: 30, onSelect: action('afafdasf') },

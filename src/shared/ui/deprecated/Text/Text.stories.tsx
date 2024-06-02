@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Text, TextSize, TextTheme } from './Text';
+import { Text as TextDeprecated, TextSize, TextTheme } from './Text';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 
-const meta = {
-    title: 'shared /Text',
-    component: Text,
+const metaDeprecated = {
+    title: 'shared/deprecated /TextDeprecated',
+    component: TextDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Text>;
+} satisfies Meta<typeof TextDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const Primary: Story = {
     args: {
@@ -27,12 +27,6 @@ export const Error: Story = {
         title: 'Title lorem',
         text: 'Text describe',
         theme: TextTheme.ERROR,
-    },
-};
-
-export const onlyTitle: Story = {
-    args: {
-        title: 'Title lorem',
     },
 };
 

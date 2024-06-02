@@ -3,7 +3,7 @@ import { ListBox } from './ListBox';
 import { action } from '@storybook/addon-actions';
 
 const meta = {
-    title: 'shared /ListBox',
+    title: 'shared/redesigned /ListBox',
     component: ListBox,
     parameters: {},
     tags: ['autodocs'],

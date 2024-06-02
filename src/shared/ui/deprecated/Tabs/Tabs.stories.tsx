@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Tabs } from './Tabs';
+import { Tabs as TabsDeprecated } from './Tabs';
 import { action } from '@storybook/addon-actions';
 
-const meta = {
-    title: 'shared /Tabs',
-    component: Tabs,
+const metaDeprecated = {
+    title: 'shared/deprecated /TabsDeprecated',
+    component: TabsDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Tabs>;
+} satisfies Meta<typeof TabsDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const Normal: Story = {
     args: {

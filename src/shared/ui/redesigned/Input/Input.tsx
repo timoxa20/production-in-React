@@ -8,8 +8,8 @@ import React, {
     useRef,
     useState,
 } from 'react';
-import { HStack } from '@/shared/ui/Stack';
-import { Text } from '@/shared/ui/redesigned/Text';
+import { HStack } from '../../Stack';
+import { Text } from '../Text';
 
 type HTMLInputProps = Omit<
     InputHTMLAttributes<HTMLInputElement>,

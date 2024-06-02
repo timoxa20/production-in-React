@@ -1,19 +1,19 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Skeleton } from './Skeleton';
+import { Skeleton as SkeletonDeprecated } from './Skeleton';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from '@/shared/const/theme';
 
-const meta = {
-    title: 'shared /Skeleton',
-    component: Skeleton,
+const metaDeprecated = {
+    title: 'shared/deprecated /SkeletonDeprecated',
+    component: SkeletonDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Skeleton>;
+} satisfies Meta<typeof SkeletonDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const Normal: Story = {
     args: {

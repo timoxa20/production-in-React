@@ -65,3 +65,5 @@ export const UiDesignedSwitcher = memo((props: UiDesignedSwitcherProps) => {
         </HStack>
     );
 });
+
+UiDesignedSwitcher.displayName = 'UiDesignedSwitcher';

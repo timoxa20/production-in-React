@@ -5,7 +5,7 @@ import { AppLinks } from './AppLinks';
 import { Theme } from '@/shared/const/theme';
 
 const meta = {
-    title: 'shared /AppLinks ',
+    title: 'shared/redesigned /AppLinks ',
     component: AppLinks,
     parameters: {},
     tags: ['autodocs'],

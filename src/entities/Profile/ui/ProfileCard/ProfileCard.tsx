@@ -11,7 +11,7 @@ import {
     ProfileCardsRedesignedError,
     ProfileCardsRedesignedSkeleton,
     Redesigned,
-} from '@/entities/Profile/ui/ProfileCardRedesigned/ProfileCardRedesigned';
+} from '../ProfileCardRedesigned/ProfileCardRedesigned';
 
 export interface ProfileCardProps {
     className?: string;

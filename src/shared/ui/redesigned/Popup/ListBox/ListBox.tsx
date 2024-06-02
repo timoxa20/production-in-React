@@ -9,7 +9,7 @@ import cls from './ListBox.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import { Button } from '../../Button';
 import ArrowIcon from '@/shared/assets/icons/arrow-bottom.svg?react';
-import { Icon } from '@/shared/ui/redesigned/Icon';
+import { Icon } from '../../Icon';
 
 export interface ListBoxItems<T extends string> {
     value: T;

@@ -1,23 +1,24 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Avatar } from './Avatar';
-import StoryIcon from '../../assets/storybook.jpg';
+import { Avatar as AvatarDeprecated } from './Avatar';
+import StoryIcon from '../../../assets/storybook.jpg';
 
-const meta = {
-    title: 'shared /Avatar ',
-    component: Avatar,
+const metaDeprecated = {
+    title: 'shared/deprecated /AvatarDeprecated ',
+    component: AvatarDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Avatar>;
+} satisfies Meta<typeof AvatarDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const PRIMARY: Story = {
     args: {
         size: '150',
         src: StoryIcon,
+        alt: 'dasda',
     },
 };
 
@@ -25,5 +26,6 @@ export const Small: Story = {
     args: {
         size: '50',
         src: StoryIcon,
+        alt: 'dasda',
     },
 };

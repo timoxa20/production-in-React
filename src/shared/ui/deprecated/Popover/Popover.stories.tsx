@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Popover } from './Popover';
+import { Popover as PopoverDeprecated } from './Popover';
 
-const meta = {
-    title: 'shared /Popover',
-    component: Popover,
+const metaDeprecated = {
+    title: 'shared/deprecated /PopoverDeprecated',
+    component: PopoverDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Popover>;
+} satisfies Meta<typeof PopoverDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const Normal: Story = {
     args: { children: 'afadsdgas', trigger: 'fsdfasdfs' },

@@ -38,3 +38,5 @@ export const ArticleAdditionInfo = memo((props: ArticleAditionInfoProps) => {
         </VStack>
     );
 });
+
+ArticleAdditionInfo.displayName = 'ArticleAdditionInfo';

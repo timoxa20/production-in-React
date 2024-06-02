@@ -3,7 +3,7 @@ import { Drawer } from './Drawer';
 import { action } from '@storybook/addon-actions';
 
 const meta = {
-    title: 'shared /Drawer',
+    title: 'shared/redesigned /Drawer',
     component: Drawer,
     parameters: {},
     tags: ['autodocs'],

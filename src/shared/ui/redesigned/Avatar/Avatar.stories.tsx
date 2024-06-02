@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Avatar } from './Avatar';
-import StoryIcon from '../../assets/storybook.jpg';
+import StoryIcon from '../../../assets/storybook.jpg';
 
 const meta = {
-    title: 'shared /Avatar ',
+    title: 'shared/redesigned /Avatar ',
     component: Avatar,
     parameters: {},
     tags: ['autodocs'],

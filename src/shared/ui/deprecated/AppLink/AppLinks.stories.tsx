@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator';
-import { AppLinks, AppLinkTheme } from './AppLinks';
+import { AppLinks as AppLinksDeprecated, AppLinkTheme } from './AppLinks';
 
 import { Theme } from '@/shared/const/theme';
 
-const meta = {
-    title: 'shared /AppLinks ',
-    component: AppLinks,
+const metaDeprecated = {
+    title: 'shared/deprecated /AppLinksDeprecated ',
+    component: AppLinksDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
@@ -15,10 +15,10 @@ const meta = {
         children: 'TEXT',
         theme: AppLinkTheme.PRIMARY,
     },
-} satisfies Meta<typeof AppLinks>;
+} satisfies Meta<typeof AppLinksDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const PRIMARY: Story = {
     args: {

@@ -1,5 +1,4 @@
 import { memo } from 'react';
-import { useTranslation } from 'react-i18next';
 import { Icon } from '@/shared/ui/redesigned/Icon';
 import CircleIcon from '@/shared/assets/icons/circle-up.svg?react';
 
@@ -9,8 +8,6 @@ interface ScrollToTopButtonProps {
 
 export const ScrollToTopButton = memo(
     ({ className }: ScrollToTopButtonProps) => {
-        const { t } = useTranslation();
-
         const onClick = () => {
             window.scrollTo({
                 top: 0,

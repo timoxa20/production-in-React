@@ -1,17 +1,17 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Input } from './Input';
+import { Input as InputDeprecated } from './Input';
 
-const meta = {
-    title: 'shared /Input',
-    component: Input,
+const metaDeprecated = {
+    title: 'shared/deprecated /InputDeprecated',
+    component: InputDeprecated,
     parameters: {},
     tags: ['autodocs'],
     argTypes: {},
     args: {},
-} satisfies Meta<typeof Input>;
+} satisfies Meta<typeof InputDeprecated>;
 
-export default meta;
-type Story = StoryObj<typeof meta>;
+export default metaDeprecated;
+type Story = StoryObj<typeof metaDeprecated>;
 
 export const Primary: Story = {
     args: {
