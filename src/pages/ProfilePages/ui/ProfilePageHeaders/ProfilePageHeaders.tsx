@@ -52,11 +52,7 @@ export const ProfilePageHeaders = ({ className }: ProfilePageHeadersProps) => {
                 justify="between"
                 className={classNames('', {}, [className])}
             >
-                <ToggleFeature
-                    on={<Text title={t('Профиль')} />}
-                    off={<TextDeprecated title={t('Профиль')} />}
-                    feature={'isAppRedesigned'}
-                />
+                <Text title={t('Профиль')} />
                 {canEdit && (
                     <>
                         {readonly ? (

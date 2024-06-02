@@ -32,21 +32,10 @@ export const ArticleReacommendationList = memo(
                 gap="8"
                 className={classNames('', {}, [className])}
             >
-                <ToggleFeature
-                    feature={'isAppRedesigned'}
-                    on={
-                        <Text
-                            size={'l'}
-                            title={t('Рекомендуем')}
-                        />
-                    }
-                    off={
-                        <TextDeprecated
-                            size={TextSize.L}
-                            title={t('Рекомендуем')}
-                        />
-                    }
-                />
+                <Text
+                                            size={'l'}
+                                            title={t('Рекомендуем')}
+                                        />
 
                 <ArticleList
                     articles={articles}

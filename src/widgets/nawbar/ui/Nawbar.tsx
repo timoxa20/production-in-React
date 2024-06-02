@@ -28,11 +28,7 @@ export const Nawbar = memo(({ className }: NavbarProps) => {
         setIsAuthModal(true);
     }, []);
 
-    const mainClass = toggleFeatures({
-        name: 'isAppRedesigned',
-        on: () => cls.NavbarRedesigned,
-        off: () => cls.Navbar,
-    });
+    const mainClass = cls.NavbarRedesigned;
 
     if (authData) {
         return (

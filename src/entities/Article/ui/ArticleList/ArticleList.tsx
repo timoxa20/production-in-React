@@ -64,32 +64,15 @@ export const ArticleList = memo((props: ArticleListProps) => {
     }
 
     return (
-        <ToggleFeature
-            feature={'isAppRedesigned'}
-            on={
-                <HStack
-                    wrap={'wrap'}
-                    gap="16"
-                    data-testid={'ArticleList'}
-                    className={classNames(cls.ArticleListRedesigned, {}, [])}
-                >
-                    {articles?.length > 0 ? articles.map(renderArticles) : null}
-                    {isLoading && getSkeletons(view)}
-                </HStack>
-            }
-            off={
-                <div
-                    data-testid={'ArticleList'}
-                    className={classNames(cls.ArticleList, {}, [
-                        className,
-                        cls[view],
-                    ])}
-                >
-                    {articles?.length > 0 ? articles.map(renderArticles) : null}
-                    {isLoading && getSkeletons(view)}
-                </div>
-            }
-        />
+        <HStack
+                            wrap={'wrap'}
+                            gap="16"
+                            data-testid={'ArticleList'}
+                            className={classNames(cls.ArticleListRedesigned, {}, [])}
+                        >
+                            {articles?.length > 0 ? articles.map(renderArticles) : null}
+                            {isLoading && getSkeletons(view)}
+                        </HStack>
     );
 });
 

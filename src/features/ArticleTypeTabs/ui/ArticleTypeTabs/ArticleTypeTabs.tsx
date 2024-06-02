@@ -42,24 +42,12 @@ export const ArticleTypeTabs = memo(
             [onChangeType],
         );
         return (
-            <ToggleFeature
-                feature={'isAppRedesigned'}
-                on={
-                    <Tabs
-                        direction={'colum'}
-                        tabs={typeTabs}
-                        value={value}
-                        onTabsClick={onTabsClick}
-                    />
-                }
-                off={
-                    <TabsDeprecated
-                        tabs={typeTabs}
-                        value={value}
-                        onTabsClick={onTabsClick}
-                    />
-                }
-            />
+            <Tabs
+                                    direction={'colum'}
+                                    tabs={typeTabs}
+                                    value={value}
+                                    onTabsClick={onTabsClick}
+                                />
         );
     },
 );

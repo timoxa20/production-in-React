@@ -44,21 +44,10 @@ export const ArticleDetailsComments = memo(
                 gap="8"
                 className={classNames('', {}, [className])}
             >
-                <ToggleFeature
-                    feature={'isAppRedesigned'}
-                    on={
-                        <Text
-                            size={'l'}
-                            title={t('Комментарий')}
-                        />
-                    }
-                    off={
-                        <TextDeprecated
-                            size={TextSize.L}
-                            title={t('Комментарий')}
-                        />
-                    }
-                />
+                <Text
+                                            size={'l'}
+                                            title={t('Комментарий')}
+                                        />
 
                 <AddCommentForm onSendComment={onSendComment} />
                 <CommentList

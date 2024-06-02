@@ -46,21 +46,10 @@ export const CommentList = memo((props: CommentListProps) => {
                     />
                 ))
             ) : (
-                <ToggleFeature
-                    on={
-                        <Text
-                            align={'center'}
-                            text={t('Комментарий отсудствуют')}
-                        />
-                    }
-                    off={
-                        <TextDeprecated
-                            align={TextAlign.CENTER}
-                            text={t('Комментарий отсудствуют')}
-                        />
-                    }
-                    feature={'isAppRedesigned'}
-                />
+                <Text
+                                                align={'center'}
+                                                text={t('Комментарий отсудствуют')}
+                                            />
             )}
         </VStack>
     );

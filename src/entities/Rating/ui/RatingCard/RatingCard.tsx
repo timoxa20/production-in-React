@@ -71,31 +71,15 @@ export const RatingCard = memo((props: RatingCardProps) => {
             max
             gap="24"
         >
-            <ToggleFeature
-                feature={'isAppRedesigned'}
-                on={
-                    <>
-                        <Text title={feedbackTitle} />
-                        <Input
-                            data-testid="RatingCard.Input"
-                            value={feedback}
-                            onChange={setFeedback}
-                            placeholder={t('Ваш отзыв')}
-                        />
-                    </>
-                }
-                off={
-                    <>
-                        <TextDeprecated title={feedbackTitle} />
-                        <InputDeprecated
-                            data-testid="RatingCard.Input"
-                            value={feedback}
-                            onChange={setFeedback}
-                            placeholder={t('Ваш отзыв')}
-                        />
-                    </>
-                }
-            />
+            <>
+                                    <Text title={feedbackTitle} />
+                                    <Input
+                                        data-testid="RatingCard.Input"
+                                        value={feedback}
+                                        onChange={setFeedback}
+                                        placeholder={t('Ваш отзыв')}
+                                    />
+                                </>
             <HStack
                 max
                 gap="16"
@@ -124,19 +108,9 @@ export const RatingCard = memo((props: RatingCardProps) => {
                 align="center"
                 gap="16"
             >
-                <ToggleFeature
-                    feature={'isAppRedesigned'}
-                    on={
-                        <Text
-                            title={startCount ? t('Спасибо за оценку') : title}
-                        />
-                    }
-                    off={
-                        <TextDeprecated
-                            title={startCount ? t('Спасибо за оценку') : title}
-                        />
-                    }
-                />
+                <Text
+                                            title={startCount ? t('Спасибо за оценку') : title}
+                                        />
                 <StarRating
                     selectStart={startCount}
                     size={40}
@@ -162,27 +136,13 @@ export const RatingCard = memo((props: RatingCardProps) => {
     );
 
     return (
-        <ToggleFeature
-            feature={'isAppRedesigned'}
-            on={
-                <Card
-                    border="partial"
-                    max
-                    padding={'24'}
-                >
-                    {content}
-                </Card>
-            }
-            off={
-                <CardDeprecated
-                    data-testid="RatingCard"
-                    max
-                    className={classNames('', {}, [className])}
-                >
-                    {content}
-                </CardDeprecated>
-            }
-        />
+        <Card
+                            border="partial"
+                            max
+                            padding={'24'}
+                        >
+                            {content}
+                        </Card>
     );
 });
 

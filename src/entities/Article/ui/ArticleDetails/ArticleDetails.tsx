@@ -129,97 +129,46 @@ export const ArticleDetails = memo(({ className, id }: ArticleDetailsProps) => {
 
     if (isLoading) {
         content = (
-            <ToggleFeature
-                feature={'isAppRedesigned'}
-                on={
-                    <>
-                        <Skeleton
-                            className={cls.avatar}
-                            width={200}
-                            height={200}
-                            border={'50%'}
-                        />
-                        <Skeleton
-                            className={cls.title}
-                            width={300}
-                            height={32}
-                        />
-                        <Skeleton
-                            className={cls.skeleton}
-                            width={600}
-                            height={24}
-                        />
-                        <Skeleton
-                            className={cls.skeleton}
-                            width="100%"
-                            height={200}
-                        />
-                        <Skeleton
-                            className={cls.skeleton}
-                            width="100%"
-                            height={200}
-                        />
-                    </>
-                }
-                off={
-                    <>
-                        <SkeletonDeprecated
-                            className={cls.avatar}
-                            width={200}
-                            height={200}
-                            border={'50%'}
-                        />
-                        <SkeletonDeprecated
-                            className={cls.title}
-                            width={300}
-                            height={32}
-                        />
-                        <SkeletonDeprecated
-                            className={cls.skeleton}
-                            width={600}
-                            height={24}
-                        />
-                        <SkeletonDeprecated
-                            className={cls.skeleton}
-                            width="100%"
-                            height={200}
-                        />
-                        <SkeletonDeprecated
-                            className={cls.skeleton}
-                            width="100%"
-                            height={200}
-                        />
-                    </>
-                }
-            />
+            <>
+                                    <Skeleton
+                                        className={cls.avatar}
+                                        width={200}
+                                        height={200}
+                                        border={'50%'}
+                                    />
+                                    <Skeleton
+                                        className={cls.title}
+                                        width={300}
+                                        height={32}
+                                    />
+                                    <Skeleton
+                                        className={cls.skeleton}
+                                        width={600}
+                                        height={24}
+                                    />
+                                    <Skeleton
+                                        className={cls.skeleton}
+                                        width="100%"
+                                        height={200}
+                                    />
+                                    <Skeleton
+                                        className={cls.skeleton}
+                                        width="100%"
+                                        height={200}
+                                    />
+                                </>
         );
     } else if (error) {
         content = (
-            <ToggleFeature
-                feature={'isAppRedesigned'}
-                on={
-                    <Text
-                        align={'center'}
-                        title={t('Пойзошла ошибка')}
-                        variant={'error'}
-                    />
-                }
-                off={
-                    <TextDeprecated
-                        align={TextAlign.CENTER}
-                        title={t('Пойзошла ошибка')}
-                        theme={TextTheme.ERROR}
-                    />
-                }
-            />
+            <Text
+                                    align={'center'}
+                                    title={t('Пойзошла ошибка')}
+                                    variant={'error'}
+                                />
         );
     } else {
         content = (
-            <ToggleFeature
-                feature={'isAppRedesigned'}
-                on={<Redesigned />}
-                off={<Deprecated />}
-            />
+            <Redesigned />
         );
     }
 

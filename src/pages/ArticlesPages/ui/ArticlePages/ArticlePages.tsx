@@ -40,38 +40,23 @@ const ArticlePages = ({ className }: ArticlePagesProps) => {
     });
 
     const content = (
-        <ToggleFeature
-            on={
-                <StickyContentLayout
-                    left={<ViewSelectorContainer />}
-                    right={<FiltersContainer />}
-                    content={
-                        <Page
-                            data-testid={'ArticlePage'}
-                            onScrollEnd={onLoadNextPart}
-                            className={classNames(
-                                cls.ArticlePagesRedesigned,
-                                {},
-                                [className],
-                            )}
-                        >
-                            <ArticleInfiniteList className={cls.list} />
-                        </Page>
-                    }
-                />
-            }
-            off={
-                <Page
-                    data-testid={'ArticlePage'}
-                    onScrollEnd={onLoadNextPart}
-                    className={classNames(cls.ArticlePages, {}, [className])}
-                >
-                    <ArticlePagesFilter />
-                    <ArticleInfiniteList className={cls.list} />
-                </Page>
-            }
-            feature={'isAppRedesigned'}
-        />
+        <StickyContentLayout
+                            left={<ViewSelectorContainer />}
+                            right={<FiltersContainer />}
+                            content={
+                                <Page
+                                    data-testid={'ArticlePage'}
+                                    onScrollEnd={onLoadNextPart}
+                                    className={classNames(
+                                        cls.ArticlePagesRedesigned,
+                                        {},
+                                        [className],
+                                    )}
+                                >
+                                    <ArticleInfiniteList className={cls.list} />
+                                </Page>
+                            }
+                        />
     );
 
     return (

@@ -47,57 +47,29 @@ const ArticleDetailsPage = ({ className }: ArticleDetailsPageProps) => {
             reducers={reducer}
             removeAfterUnmount
         >
-            <ToggleFeature
-                feature={'isAppRedesigned'}
-                on={
-                    <StickyContentLayout
-                        content={
-                            <Page
-                                className={classNames(
-                                    cls.ArticleDetailsPage,
-                                    {},
-                                    [className],
-                                )}
-                            >
-                                <VStack
-                                    gap="16"
-                                    max
-                                >
-                                    <ArticleDetailsContainer />
-                                    <ArticleDetailsPageHeaders />
-                                    <ArticleRating articleId={id} />
-                                    <ArticleReacommendationList />
-                                    <ArticleDetailsComments id={id} />
-                                </VStack>
-                            </Page>
-                        }
-                        right={<AdditionalInfoContainer />}
-                    />
-                }
-                off={
-                    <Page
-                        className={classNames(cls.ArticleDetailsPage, {}, [
-                            className,
-                        ])}
-                    >
-                        <VStack
-                            gap="16"
-                            max
-                        >
-                            <ArticleDetailsPageHeaders />
-                            <ArticleDetails id={id} />
-                            <ToggleFeature
-                                on={<ArticleDetailsPageHeaders />}
-                                off={<ArticleDetailsPageHeaders />}
-                                feature={'isArticleRatingEnabled'}
-                            />
-                            <ArticleRating articleId={id} />
-                            <ArticleReacommendationList />
-                            <ArticleDetailsComments id={id} />
-                        </VStack>
-                    </Page>
-                }
-            />
+            <StickyContentLayout
+                                    content={
+                                        <Page
+                                            className={classNames(
+                                                cls.ArticleDetailsPage,
+                                                {},
+                                                [className],
+                                            )}
+                                        >
+                                            <VStack
+                                                gap="16"
+                                                max
+                                            >
+                                                <ArticleDetailsContainer />
+                                                <ArticleDetailsPageHeaders />
+                                                <ArticleRating articleId={id} />
+                                                <ArticleReacommendationList />
+                                                <ArticleDetailsComments id={id} />
+                                            </VStack>
+                                        </Page>
+                                    }
+                                    right={<AdditionalInfoContainer />}
+                                />
         </DynamicModuleLoader>
     );
 };

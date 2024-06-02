@@ -71,26 +71,12 @@ const AddCommentForm = ({ className, onSendComment }: AddCommentFormProps) => {
                     gap="16"
                     className={classNames(cls.AddCommentForm, {}, [className])}
                 >
-                    <ToggleFeature
-                        on={
-                            <Input
-                                className={cls.input}
-                                value={text}
-                                onChange={onCommentTextChange}
-                                placeholder={t('Введите текст коментария')}
-                            />
-                        }
-                        off={
-                            <InputDepracated
-                                data-testid="AddCommentForm.Input"
-                                className={cls.input}
-                                value={text}
-                                onChange={onCommentTextChange}
-                                placeholder={t('Введите текст коментария')}
-                            />
-                        }
-                        feature={'isAppRedesigned'}
-                    />
+                    <Input
+                                                    className={cls.input}
+                                                    value={text}
+                                                    onChange={onCommentTextChange}
+                                                    placeholder={t('Введите текст коментария')}
+                                                />
 
                     <Button
                         data-testid="AddCommentForm.Button"

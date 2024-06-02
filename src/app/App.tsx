@@ -26,18 +26,12 @@ const App = () => {
 
     if (!inited) {
         return (
-            <ToggleFeature
-                on={
-                    <div
-                        id={'app'}
-                        className={classNames('app__redesigned', {}, [theme])}
-                    >
-                        <AppLoaderLayout />
-                    </div>
-                }
-                off={<PageLoader />}
-                feature={'isAppRedesigned'}
-            />
+            <div
+                                    id={'app'}
+                                    className={classNames('app__redesigned', {}, [theme])}
+                                >
+                                    <AppLoaderLayout />
+                                </div>
         );
     }
 

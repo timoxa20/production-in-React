@@ -42,10 +42,6 @@ export const CurrencySelect = memo((props: CurrencySelectProps) => {
     };
 
     return (
-        <ToggleFeature
-            feature={'isAppRedesigned'}
-            on={<ListBox {...prop} />}
-            off={<ListBoxDeprecated {...prop} />}
-        />
+        <ListBox {...prop} />
     );
 });

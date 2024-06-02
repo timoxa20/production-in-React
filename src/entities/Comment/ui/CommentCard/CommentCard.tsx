@@ -23,11 +23,7 @@ interface CommentCardProps {
 
 export const CommentCard = memo(
     ({ className, comment, isLoading }: CommentCardProps) => {
-        const Skeleton = toggleFeatures({
-            name: 'isAppRedesigned',
-            on: () => SkeletonDeprecated,
-            off: () => SkeletonRedesigned,
-        });
+        const Skeleton = SkeletonDeprecated;
         if (isLoading) {
             return (
                 <VStack
@@ -66,79 +62,44 @@ export const CommentCard = memo(
 
         if (comment.user.id) {
             return (
-                <ToggleFeature
-                    feature={'isAppRedesigned'}
-                    on={
-                        <Card
-                            max
-                            border={'partial'}
-                            padding={'24'}
-                        >
-                            <VStack
-                                data-testid="CommentCard.Content"
-                                gap="8"
-                                max
-                                className={classNames(
-                                    cls.CommentCardRedesigned,
-                                    {},
-                                    [className],
-                                )}
-                            >
-                                <AppLinks
-                                    to={getRouteProfile(comment?.user.id)}
-                                    className={cls.header}
-                                >
-                                    <HStack gap="8">
-                                        {comment?.user.avatar ? (
-                                            <Avatar
-                                                size={'30px'}
-                                                src={comment?.user.avatar}
-                                            />
-                                        ) : null}
-                                    </HStack>
-                                    <Text
-                                        bold
-                                        text={comment?.user.username}
-                                    />
-                                </AppLinks>
-                                <Text
-                                    className={cls.text}
-                                    text={comment?.text}
-                                />
-                            </VStack>
-                        </Card>
-                    }
-                    off={
-                        <VStack
-                            data-testid="CommentCard.Content"
-                            gap="8"
-                            max
-                            className={classNames(cls.CommentCard, {}, [
-                                className,
-                            ])}
-                        >
-                            <AppLinksDeprecated
-                                to={getRouteProfile(comment?.user.id)}
-                                className={cls.header}
-                            >
-                                {comment?.user.avatar ? (
-                                    <AvatarDeprecated
-                                        size={'30px'}
-                                        src={comment?.user.avatar}
-                                    />
-                                ) : null}
-                                <TextDeprecated
-                                    className={cls.username}
-                                    title={comment?.user.username}
-                                />
-                            </AppLinksDeprecated>
-                            <TextDeprecated
-                                className={cls.text}
-                                text={comment?.text}
-                            />
-                        </VStack>
-                    }
-                />
+                <Card
+                                            max
+                                            border={'partial'}
+                                            padding={'24'}
+                                        >
+                                            <VStack
+                                                data-testid="CommentCard.Content"
+                                                gap="8"
+                                                max
+                                                className={classNames(
+                                                    cls.CommentCardRedesigned,
+                                                    {},
+                                                    [className],
+                                                )}
+                                            >
+                                                <AppLinks
+                                                    to={getRouteProfile(comment?.user.id)}
+                                                    className={cls.header}
+                                                >
+                                                    <HStack gap="8">
+                                                        {comment?.user.avatar ? (
+                                                            <Avatar
+                                                                size={'30px'}
+                                                                src={comment?.user.avatar}
+                                                            />
+                                                        ) : null}
+                                                    </HStack>
+                                                    <Text
+                                                        bold
+                                                        text={comment?.user.username}
+                                                    />
+                                                </AppLinks>
+                                                <Text
+                                                    className={cls.text}
+                                                    text={comment?.text}
+                                                />
+                                            </VStack>
+                                        </Card>
             );
         }
     },
