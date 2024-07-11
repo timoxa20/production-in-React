@@ -25,11 +25,11 @@ const App = () => {
     if (!inited) {
         return (
             <div
-                                    id={'app'}
-                                    className={classNames('app__redesigned', {}, [theme])}
-                                >
-                                    <AppLoaderLayout />
-                                </div>
+                id={'app'}
+                className={classNames('app__redesigned', {}, [theme])}
+            >
+                <AppLoaderLayout />
+            </div>
         );
     }
 
